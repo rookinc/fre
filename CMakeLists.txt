@@ -8,6 +8,13 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 option(FRE_ENABLE_OPENFHE "Enable the OpenFHE backend" OFF)
 
+set(
+    FRE_OPENFHE_PREFIX
+    ""
+    CACHE PATH
+    "Durable OpenFHE installation prefix"
+)
+
 add_library(fre_reference STATIC
     src/support_mode_reference.cpp
 )
@@ -72,8 +79,108 @@ if(BUILD_TESTING)
 endif()
 
 if(FRE_ENABLE_OPENFHE)
-    message(FATAL_ERROR
-        "OpenFHE backend gate is closed until its adapter is stubbed")
+    if(NOT FRE_OPENFHE_PREFIX)
+        message(FATAL_ERROR
+            "FRE_OPENFHE_PREFIX is required when OpenFHE is enabled")
+    endif()
+
+    set(_fre_openfhe_required
+        "${FRE_OPENFHE_PREFIX}/include/openfhe/pke/openfhe.h"
+        "${FRE_OPENFHE_PREFIX}/include/openfhe/core/openfhecore.h"
+        "${FRE_OPENFHE_PREFIX}/lib/libOPENFHEpke.so"
+        "${FRE_OPENFHE_PREFIX}/lib/libOPENFHEbinfhe.so"
+        "${FRE_OPENFHE_PREFIX}/lib/libOPENFHEcore.so"
+    )
+
+    foreach(_required_path IN LISTS _fre_openfhe_required)
+        if(NOT EXISTS "${_required_path}")
+            message(FATAL_ERROR
+                "Required OpenFHE path missing: ${_required_path}")
+        endif()
+    endforeach()
+
+    add_library(fre_openfhe_backend STATIC
+        src/backends/openfhe/openfhe_backend_status.cpp
+    )
+
+    target_include_directories(fre_openfhe_backend
+        PUBLIC
+            ${CMAKE_CURRENT_SOURCE_DIR}/include
+    )
+
+    target_include_directories(fre_openfhe_backend
+        SYSTEM PUBLIC
+            ${FRE_OPENFHE_PREFIX}/include/openfhe/pke
+            ${FRE_OPENFHE_PREFIX}/include/openfhe/core
+            ${FRE_OPENFHE_PREFIX}/include/openfhe/binfhe
+            ${FRE_OPENFHE_PREFIX}/include/openfhe
+            ${FRE_OPENFHE_PREFIX}/include/openfhe/cereal
+    )
+
+    target_compile_definitions(fre_openfhe_backend
+        PUBLIC
+            FRE_OPENFHE_PREFIX="${FRE_OPENFHE_PREFIX}"
+            FRE_OPENFHE_VERSION="1.5.1"
+    )
+
+    target_link_directories(fre_openfhe_backend
+        PUBLIC
+            ${FRE_OPENFHE_PREFIX}/lib
+    )
+
+    target_link_libraries(fre_openfhe_backend
+        PUBLIC
+            OPENFHEpke
+            OPENFHEbinfhe
+            OPENFHEcore
+            omp
+    )
+
+    add_executable(fre_openfhe_status
+        src/cli/fre_openfhe_status.cpp
+    )
+
+    target_link_libraries(fre_openfhe_status
+        PRIVATE
+            fre_openfhe_backend
+            OPENFHEpke
+            OPENFHEbinfhe
+            OPENFHEcore
+            omp
+    )
+
+    if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+        target_compile_options(fre_openfhe_backend
+            PRIVATE -Wall -Wextra -Werror
+        )
+        target_compile_options(fre_openfhe_status
+            PRIVATE -Wall -Wextra -Werror
+        )
+        target_link_options(fre_openfhe_status
+            PRIVATE -Wl,--no-as-needed
+        )
+    endif()
+
+    set_target_properties(fre_openfhe_status PROPERTIES
+        BUILD_RPATH "${FRE_OPENFHE_PREFIX}/lib"
+    )
+
+    if(BUILD_TESTING)
+        add_test(
+            NAME fre_openfhe_link_status
+            COMMAND fre_openfhe_status
+        )
+        set_tests_properties(fre_openfhe_link_status PROPERTIES
+            PASS_REGULAR_EXPRESSION
+                "linked[^a-z]*true.*profile_admitted[^a-z]*false.*crypto_allowed[^a-z]*false"
+        )
+    endif()
+
+    message(STATUS
+        "FRE OpenFHE link-only target configured")
+else()
+    message(STATUS
+        "FRE OpenFHE link-only target disabled")
 endif()
 
 message(STATUS "FRE plaintext reference target configured")

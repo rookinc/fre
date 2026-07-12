@@ -1,0 +1,77 @@
+{
+  "artifact_id": "fre.openfhe.link_status_audit.001",
+  "audit_pass": true,
+  "backend_status": {
+    "available": true,
+    "backend_id": "openfhe",
+    "backend_version": "1.5.1",
+    "boundary": "link_only_profile_pinned_no_crypto",
+    "crypto_allowed": false,
+    "install_prefix": "/data/data/com.termux/files/home/dev/cori/toolchains/openfhe-1.5.1-termux-aarch64",
+    "linked": true,
+    "profile_admitted": false,
+    "profile_pinned": true
+  },
+  "boundary": {
+    "backend_available": true,
+    "backend_linked": true,
+    "crypto_allowed": false,
+    "crypto_context_constructed": false,
+    "decryption_performed": false,
+    "encryption_performed": false,
+    "evaluation_performed": false,
+    "fre_receipt_emitted": false,
+    "key_generation_performed": false,
+    "link_target_only": true,
+    "observational_closure": false,
+    "physical_claim": false,
+    "production_security_claim": false,
+    "profile_admitted": false,
+    "profile_pinned": true,
+    "receipt_congruence_established": false
+  },
+  "checks": {
+    "backend_available": true,
+    "backend_linked": true,
+    "binfhe_dependency_present": true,
+    "boundary_link_only": true,
+    "core_dependency_present": true,
+    "crypto_not_allowed": true,
+    "durable_copy_ready": true,
+    "durable_prefix_exact": true,
+    "five_tests_passed": true,
+    "pke_dependency_present": true,
+    "profile_not_admitted": true,
+    "profile_pinned": true,
+    "source_profile_not_admitted": true
+  },
+  "durable_prefix_binding": {
+    "artifact_id": "fre.openfhe.durable_prefix.001",
+    "artifact_sha256": "d76fa197a0b46bd44f34c18343b1adf1faf0ac9e1ebd14adf7f8cd2b992fbac7",
+    "copy_ready": true,
+    "prefix": "/data/data/com.termux/files/home/dev/cori/toolchains/openfhe-1.5.1-termux-aarch64"
+  },
+  "dynamic_dependencies": [
+    "libOPENFHEpke.so.1",
+    "libOPENFHEbinfhe.so.1",
+    "libOPENFHEcore.so.1",
+    "libc++_shared.so",
+    "libdl.so",
+    "libm.so",
+    "libc.so"
+  ],
+  "profile_binding": {
+    "artifact_id": "fre.openfhe.executed_profile_provenance.001",
+    "artifact_sha256": "77a78f5741268dd64bf61212d4ef8d694449199f47751886458f6af225557359",
+    "profile_admitted": false,
+    "profile_id": "fre.openfhe.bgv.evalmult.executed.v0.1"
+  },
+  "source_hashes": {
+    "cmake_sha256": "beb2a81cfde944401c45b8eb0dfef54e4cb39ca23b0021a2f0bcc664efe539f8",
+    "status_cli_sha256": "26c1054c441e72b7f94ce620094b0cd5f561278d0b19e05c0cddc9394b44da7e",
+    "status_header_sha256": "02923c67dc48438ed950eec0f4cdf26f41144904eb848588ac67ce75e0652e17",
+    "status_source_sha256": "86c1f95a596e3e884351d6a0663cea27c283f3056263d6cb927920c048b680ca"
+  },
+  "test_count": 5,
+  "verdict": "fail_closed_openfhe_link_target_verified_no_crypto"
+}

@@ -1,0 +1,104 @@
+{
+  "artifact_id": "fre.openfhe.durable_prefix.001",
+  "boundary": {
+    "crypto_context_constructed": false,
+    "decryption_performed": false,
+    "encryption_performed": false,
+    "evaluation_performed": false,
+    "fre_backend_admitted": false,
+    "key_generation_performed": false,
+    "observational_closure": false,
+    "physical_claim": false,
+    "production_security_claim": false,
+    "profile_admitted_to_fre": false,
+    "receipt_congruence_established": false,
+    "source_deleted": false,
+    "toolchain_copy_only": true
+  },
+  "checks": {
+    "all_runtime_libraries_load": true,
+    "durable_prefix_exists": true,
+    "inventories_match": true,
+    "key_hashes_match": true,
+    "profile_hash_locked": true,
+    "selected_profile_local_test_only": true,
+    "selected_profile_version_matches": true,
+    "source_prefix_exists": true,
+    "source_preserved": true
+  },
+  "cmake_metadata": {
+    "direct_prefix_link_allowed": true,
+    "find_package_metadata_relocatable": false,
+    "old_prefix_reference_count": 2,
+    "old_prefix_reference_files": [
+      "lib/OpenFHE/OpenFHEConfig.cmake",
+      "lib/OpenFHE/OpenFHETargets.cmake"
+    ]
+  },
+  "copy_policy": "copy_then_verify_preserve_source",
+  "copy_ready": true,
+  "durable_inventory": {
+    "file_count": 361,
+    "symlink_count": 6,
+    "total_bytes": 11464165
+  },
+  "durable_prefix": "/data/data/com.termux/files/home/dev/cori/toolchains/openfhe-1.5.1-termux-aarch64",
+  "dynamic_tags": {
+    "lib/libOPENFHEbinfhe.so.1.5.1": [
+      "0x000000000000001d (RUNPATH)      Library runpath: [/data/data/com.termux/files/usr/bin/../../usr/lib]",
+      "0x0000000000000001 (NEEDED)       Shared library: [libOPENFHEcore.so.1]",
+      "0x0000000000000001 (NEEDED)       Shared library: [libc++_shared.so]",
+      "0x0000000000000001 (NEEDED)       Shared library: [libdl.so]",
+      "0x0000000000000001 (NEEDED)       Shared library: [libm.so]",
+      "0x0000000000000001 (NEEDED)       Shared library: [libc.so]"
+    ],
+    "lib/libOPENFHEcore.so.1.5.1": [
+      "0x000000000000001d (RUNPATH)      Library runpath: [/data/data/com.termux/files/usr/bin/../../usr/lib]",
+      "0x0000000000000001 (NEEDED)       Shared library: [libc++_shared.so]",
+      "0x0000000000000001 (NEEDED)       Shared library: [libdl.so]",
+      "0x0000000000000001 (NEEDED)       Shared library: [libm.so]",
+      "0x0000000000000001 (NEEDED)       Shared library: [libc.so]"
+    ],
+    "lib/libOPENFHEpke.so.1.5.1": [
+      "0x000000000000001d (RUNPATH)      Library runpath: [/data/data/com.termux/files/usr/bin/../../usr/lib]",
+      "0x0000000000000001 (NEEDED)       Shared library: [libOPENFHEbinfhe.so.1]",
+      "0x0000000000000001 (NEEDED)       Shared library: [libOPENFHEcore.so.1]",
+      "0x0000000000000001 (NEEDED)       Shared library: [libc++_shared.so]",
+      "0x0000000000000001 (NEEDED)       Shared library: [libdl.so]",
+      "0x0000000000000001 (NEEDED)       Shared library: [libm.so]",
+      "0x0000000000000001 (NEEDED)       Shared library: [libc.so]"
+    ]
+  },
+  "key_file_hashes": {
+    "include/openfhe/core/openfhecore.h": "e0f5548dcccd62b5a76379e9eaef5009aa235ade724fe986b102ebaff399fc6e",
+    "include/openfhe/pke/openfhe.h": "7d6a5a10e6f7c3d4cfa533f3b4876948c1295c65894962eecaf13a90b4dfafde",
+    "lib/OpenFHE/OpenFHEConfig.cmake": "4e2c6e81de52ebfd7bfabbab9a2e549327acfbc2395d0d046b85daefc08f1668",
+    "lib/OpenFHE/OpenFHEConfigVersion.cmake": "65133a6e04202225eeb254728e5578a7e40a388215b4470444505cff3c4c4ff6",
+    "lib/libOPENFHEbinfhe.so.1.5.1": "55f83c507ad39a11a3ac3d81bc72d19dc1a4dfa61f2db6ad1a998b9f7d4c8840",
+    "lib/libOPENFHEcore.so.1.5.1": "6affa81bcab2ad4cc5bdd33f6679e4f9539aee62b27177780dc8615f2c3a4ea3",
+    "lib/libOPENFHEpke.so.1.5.1": "e829d7b9e67ad7e4bdb0c307591ecbe90525e86e4000750a0bede7546dac59b4"
+  },
+  "openfhe_version": "1.5.1",
+  "platform": {
+    "machine": "aarch64",
+    "system": "Android"
+  },
+  "profile_binding": {
+    "artifact_id": "fre.openfhe.executed_profile_provenance.001",
+    "artifact_sha256": "77a78f5741268dd64bf61212d4ef8d694449199f47751886458f6af225557359",
+    "profile_admitted_to_fre": false,
+    "profile_id": "fre.openfhe.bgv.evalmult.executed.v0.1"
+  },
+  "runtime_library_loads": {
+    "lib/libOPENFHEbinfhe.so.1.5.1": true,
+    "lib/libOPENFHEcore.so.1.5.1": true,
+    "lib/libOPENFHEpke.so.1.5.1": true
+  },
+  "source_inventory": {
+    "file_count": 361,
+    "symlink_count": 6,
+    "total_bytes": 11464165
+  },
+  "source_prefix": "/data/data/com.termux/files/home/tmp/openfhe_build_probe/openfhe-local-install-fixed",
+  "verdict": "durable_openfhe_copy_verified_source_preserved"
+}

@@ -1,0 +1,106 @@
+{
+  "artifact_id": "fre.openfhe.executed_profile_provenance.001",
+  "boundary": {
+    "decryption_performed_now": false,
+    "encryption_performed_now": false,
+    "evaluation_performed_now": false,
+    "evidence_import_only": true,
+    "key_generation_performed_now": false,
+    "observational_closure": false,
+    "openfhe_backend_admitted": false,
+    "physical_claim": false,
+    "production_security_profile": false,
+    "profile_admitted_to_fre": false,
+    "receipt_congruence_established": false
+  },
+  "checks": {
+    "composite_failures_empty": true,
+    "composite_operation_evalmult": true,
+    "current_fixture_values_modulus_safe": true,
+    "execution_failures_empty": true,
+    "execution_profile_is_repair": true,
+    "execution_scheme_bgv": true,
+    "initial_depth_one_is_pre_evalmult": true,
+    "openfhe_version_resolved": true,
+    "planned_ring_dimension_displaced": true,
+    "source_parameters_exact": true,
+    "verified_result_exact": true
+  },
+  "executed_operation_surface": [
+    "KeyGen",
+    "EvalMultKeyGen",
+    "Encrypt",
+    "EvalMult",
+    "Decrypt"
+  ],
+  "fixture_compatibility": {
+    "fixture_set_id": "fre.support_mode.fixture_set.v0.1",
+    "max_expected_absolute": 288,
+    "modulus_wrap_expected": false,
+    "signed_safe_bound": 32768
+  },
+  "parameter_conflicts_resolved": [
+    {
+      "executed_value": 1024,
+      "field": "ring_dimension",
+      "planned_value": 2048,
+      "resolution": "executed_source_outranks_admission_plan"
+    },
+    {
+      "earlier_profile_value": 1,
+      "executed_evalmult_value": 2,
+      "field": "multiplicative_depth",
+      "resolution": "EvalMult_repair_profile_supersedes_add_profile"
+    }
+  ],
+  "pin_pass": true,
+  "selected_profile": {
+    "batch_size": 8,
+    "multiplicative_depth": 2,
+    "openfhe_version": "1.5.1",
+    "plaintext_modulus": 65537,
+    "profile_class": "local_test_only",
+    "profile_id": "fre.openfhe.bgv.evalmult.executed.v0.1",
+    "ring_dimension": 1024,
+    "scheme": "BGVRNS",
+    "security_level": "HEStd_NotSet",
+    "source_profile_id": "b32k_fre_openfhe_tiny_bgv_eval_mult_profile_001_repair",
+    "status": "pinned_source_evidence_not_fre_admitted"
+  },
+  "selection_rule": "Successful execution receipt, successful composite receipt, and exact executed smoke source outrank plans, admissions, and earlier profile declarations.",
+  "source_checks": {
+    "batch_size": true,
+    "decrypt": true,
+    "eval_mult": true,
+    "eval_mult_keygen": true,
+    "multiplicative_depth": true,
+    "plaintext_modulus": true,
+    "ring_dimension": true,
+    "security_level": true
+  },
+  "source_hashes": {
+    "composite_receipt_sha256": "ee4aec30d1fb055aea26bd6339b411a01a39e34761e24cf571b7b94a616704db",
+    "evalmult_admission_sha256": "0e8cb1c6d7032ad31c06fdccfcd485b376ac35a89796961b474b1467868374a5",
+    "executed_smoke_source_sha256": "b10e1afda3c3dc10ca6e6ad42902189ed9fe5a1ca017b2e90aab9a4d64327487",
+    "execution_receipt_sha256": "c28daec7d7f863831a810610e989c18bf626cf602096494e72a8afa45a5bc4a5",
+    "fixture_set_sha256": "bb7a62eb248a0ee47de9a6e46e69e778c015d415544d5cdce5591faa964a1f2d",
+    "initial_profile_sha256": "7469321466c76c077a6d11cec34027e7a45ea40b1d63497913759f2db0db0a6b",
+    "openfhe_config_version_sha256": "65133a6e04202225eeb254728e5578a7e40a388215b4470444505cff3c4c4ff6"
+  },
+  "source_project": {
+    "commit": "2cfc82cd7ed1b12e97e166e394a312d6934b559d",
+    "install_prefix": "/data/data/com.termux/files/home/tmp/openfhe_build_probe/openfhe-local-install-fixed",
+    "path": "/data/data/com.termux/files/home/dev/cori/research/aletheos"
+  },
+  "verdict": "executed_evalmult_profile_pinned_not_admitted",
+  "verified_result": [
+    10,
+    40,
+    90,
+    160,
+    0,
+    0,
+    0,
+    0
+  ]
+}
