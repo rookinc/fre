@@ -1,0 +1,219 @@
+{
+  "contract_id": "fre.support_mode.regularity.v0.1",
+  "contract_sha256": "25622e5185cd1289f28e51157d9236d13fc5ddaf863097522ac46b6d9e4ccda6",
+  "fixture_set_id": "fre.support_mode.fixture_set.v0.1",
+  "fixtures": [
+    {
+      "certification": {
+        "basis": "positive_uniform_ray",
+        "in_C_D": true,
+        "input_certification": "certified_fixture_set_v0.1"
+      },
+      "expected": {
+        "circuit": {
+          "K": 0,
+          "S": 60,
+          "d": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "claim": {
+          "result": true,
+          "status": "earned"
+        },
+        "well_typed": true
+      },
+      "fixture_id": "regular_uniform_10",
+      "h": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "kind": "admitted_geometric"
+    },
+    {
+      "certification": {
+        "basis": "positive_uniform_ray",
+        "in_C_D": true,
+        "input_certification": "certified_fixture_set_v0.1"
+      },
+      "expected": {
+        "circuit": {
+          "K": 0,
+          "S": 120,
+          "d": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "claim": {
+          "result": true,
+          "status": "earned"
+        },
+        "well_typed": true
+      },
+      "fixture_id": "regular_uniform_20",
+      "h": [
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "kind": "admitted_geometric"
+    },
+    {
+      "certification": {
+        "basis": "C_D_membership_not_yet_certified",
+        "in_C_D": null,
+        "input_certification": "unavailable"
+      },
+      "expected": {
+        "circuit": {
+          "K": 72,
+          "S": 60,
+          "d": [
+            6,
+            -6,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "claim": {
+          "result": null,
+          "status": "unavailable"
+        },
+        "well_typed": true
+      },
+      "fixture_id": "balanced_exchange_10",
+      "h": [
+        11,
+        9,
+        10,
+        10,
+        10,
+        10
+      ],
+      "kind": "algebraic_negative_control"
+    },
+    {
+      "certification": {
+        "basis": "C_D_membership_not_yet_certified",
+        "in_C_D": null,
+        "input_certification": "unavailable"
+      },
+      "expected": {
+        "circuit": {
+          "K": 288,
+          "S": 120,
+          "d": [
+            12,
+            -12,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "claim": {
+          "result": null,
+          "status": "unavailable"
+        },
+        "well_typed": true
+      },
+      "fixture_id": "balanced_exchange_20",
+      "h": [
+        22,
+        18,
+        20,
+        20,
+        20,
+        20
+      ],
+      "kind": "algebraic_scale_control"
+    },
+    {
+      "certification": {
+        "basis": "coordinate_count_not_six",
+        "in_C_D": null,
+        "input_certification": "rejected"
+      },
+      "expected": {
+        "circuit": null,
+        "claim": {
+          "result": null,
+          "status": "rejected"
+        },
+        "well_typed": false
+      },
+      "fixture_id": "invalid_coordinate_count",
+      "h": [
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "kind": "rejected_control"
+    },
+    {
+      "certification": {
+        "basis": "positive_integer_encoding_failed",
+        "in_C_D": null,
+        "input_certification": "rejected"
+      },
+      "expected": {
+        "circuit": null,
+        "claim": {
+          "result": null,
+          "status": "rejected"
+        },
+        "well_typed": false
+      },
+      "fixture_id": "invalid_nonpositive_support",
+      "h": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        0
+      ],
+      "kind": "rejected_control"
+    }
+  ],
+  "receipt_schema": "fre.support_mode.receipt.v0.1",
+  "receipt_schema_sha256": "6235f085e55fa00e07f380ab96531d50b0d45ef738ea6dc54f98a8e7a5d3bda9",
+  "relations": [
+    {
+      "expected": true,
+      "geometric_claim": false,
+      "left": "balanced_exchange_10",
+      "relation_id": "balanced_exchange_positive_scale",
+      "right": "balanced_exchange_20",
+      "rule": "right_h_equals_2_times_left_h"
+    }
+  ],
+  "scope": {
+    "algebraic_controls": "Nonuniform controls test the polynomial circuit only. They do not yet carry a C_D membership claim.",
+    "certified_geometric_inputs": "Positive uniform support registers are exact scaled regular dodecahedra in C_D.",
+    "rejected_controls": "Malformed packets must produce rejection rather than a successful regularity receipt."
+  },
+  "status": "mixed_certification",
+  "version": "0.1"
+}

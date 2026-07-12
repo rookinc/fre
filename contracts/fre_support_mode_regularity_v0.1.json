@@ -1,0 +1,99 @@
+{
+  "circuit": {
+    "circuit_id": "support_mode_polynomial_v0.1",
+    "claim": "For a certified input in C_D, the realization is regular if and only if K equals zero.",
+    "formulas": {
+      "K": "sum(d_i*d_i)",
+      "S": "sum(h_i)",
+      "d_i": "6*h_i - S",
+      "identity": "K = 36*sigma^2"
+    },
+    "inputs": [
+      "h_1",
+      "h_2",
+      "h_3",
+      "h_4",
+      "h_5",
+      "h_6"
+    ]
+  },
+  "claim_boundary": {
+    "cryptographic_security_theorem": false,
+    "decryption_performed": false,
+    "encryption_performed": false,
+    "evaluation_performed": false,
+    "external_truth_from_closure": false,
+    "folding_compiler_optimum": false,
+    "global_support_chamber_theorem": false,
+    "key_generation_performed": false,
+    "openfhe_backend_enabled": false,
+    "physical_claim": false
+  },
+  "comparison": {
+    "comparison_rule": "exact_integer_equality",
+    "negative_controls_required": true,
+    "predeclared": true,
+    "receipt_quotient": "regularity_boolean",
+    "tolerance": 0
+  },
+  "contract_id": "fre.support_mode.regularity.v0.1",
+  "next_gates": [
+    "public_receipt_schema",
+    "plaintext_reference_evaluator",
+    "certified_fixture_set",
+    "openfhe_adapter"
+  ],
+  "pipelines": {
+    "fre": {
+      "backend": "OpenFHE",
+      "implementation_status": "disabled",
+      "pipeline_id": "support_mode_openfhe_v0.1"
+    },
+    "reference": {
+      "implementation_status": "not_yet_written",
+      "pipeline_id": "support_mode_reference_v0.1"
+    }
+  },
+  "public_receipt_policy": {
+    "allowed": [
+      "receipt_schema",
+      "envelope_id",
+      "contract_id",
+      "source_class",
+      "input_certification",
+      "circuit_id",
+      "operation_names",
+      "gate",
+      "claim",
+      "comparison",
+      "controls",
+      "privacy",
+      "closure",
+      "boundary"
+    ],
+    "forbidden": [
+      "secret_inputs",
+      "secret_keys",
+      "ciphertexts",
+      "raw_runtime_objects",
+      "undeclared_intermediate_values"
+    ]
+  },
+  "purpose": "Compare an encrypted Euclidean support-mode regularity calculation with an independent plaintext reference calculation.",
+  "required_operations": [
+    "KeyGen",
+    "Encrypt",
+    "EvalAdd",
+    "EvalMult",
+    "DecryptVerify"
+  ],
+  "source": {
+    "arbitrary_C_D_membership_test_available": false,
+    "chamber_policy": "certified_fixture_only",
+    "coordinate_count": 6,
+    "encoding": "positive_integer_fixture_v0.1",
+    "source_class": "six_support_register"
+  },
+  "status": "predeclared_backend_disabled",
+  "version": "0.1"
+}

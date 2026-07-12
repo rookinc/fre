@@ -1,0 +1,12 @@
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+*.o
+*.a
+*.so
+.env
+runtime/
+private/
+keys/
+ciphertexts/

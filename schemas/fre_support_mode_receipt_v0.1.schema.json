@@ -1,0 +1,229 @@
+{
+  "$id": "https://aletheos.ai/schemas/fre_support_mode_receipt_v0.1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "boundary": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "circuit_id": {
+      "const": "support_mode_polynomial_v0.1"
+    },
+    "claim": {
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "result": {
+              "type": "boolean"
+            },
+            "status": {
+              "const": "earned"
+            },
+            "type": {
+              "const": "regularity"
+            }
+          },
+          "required": [
+            "type",
+            "status",
+            "result"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "result": {
+              "type": "null"
+            },
+            "status": {
+              "enum": [
+                "unavailable",
+                "rejected"
+              ]
+            },
+            "type": {
+              "const": "regularity"
+            }
+          },
+          "required": [
+            "type",
+            "status",
+            "result"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "closure": {
+      "additionalProperties": false,
+      "properties": {
+        "class": {
+          "enum": [
+            "open",
+            "local",
+            "historical",
+            "observational"
+          ]
+        },
+        "external_truth_claim": {
+          "const": false
+        }
+      },
+      "required": [
+        "class",
+        "external_truth_claim"
+      ],
+      "type": "object"
+    },
+    "comparison": {
+      "additionalProperties": false,
+      "properties": {
+        "contract_sha256": {
+          "const": "25622e5185cd1289f28e51157d9236d13fc5ddaf863097522ac46b6d9e4ccda6"
+        },
+        "fre_pipeline_id": {
+          "const": "support_mode_openfhe_v0.1"
+        },
+        "reference_congruence": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "reference_pipeline_id": {
+          "const": "support_mode_reference_v0.1"
+        },
+        "rule": {
+          "const": "exact_integer_equality"
+        },
+        "tolerance": {
+          "const": 0
+        }
+      },
+      "required": [
+        "rule",
+        "tolerance",
+        "reference_congruence",
+        "contract_sha256",
+        "reference_pipeline_id",
+        "fre_pipeline_id"
+      ],
+      "type": "object"
+    },
+    "contract_id": {
+      "const": "fre.support_mode.regularity.v0.1"
+    },
+    "controls": {
+      "additionalProperties": false,
+      "properties": {
+        "negative_controls_passed": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "negative_controls_passed"
+      ],
+      "type": "object"
+    },
+    "envelope_id": {
+      "pattern": "^[a-z0-9][a-z0-9._-]+$",
+      "type": "string"
+    },
+    "gate": {
+      "additionalProperties": false,
+      "properties": {
+        "admitted": {
+          "type": "boolean"
+        },
+        "reason": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "admitted",
+        "reason"
+      ],
+      "type": "object"
+    },
+    "input_certification": {
+      "enum": [
+        "certified_fixture_set_v0.1",
+        "rejected",
+        "unavailable"
+      ]
+    },
+    "operation_names": {
+      "items": {
+        "enum": [
+          "KeyGen",
+          "Encrypt",
+          "EvalAdd",
+          "EvalMult",
+          "DecryptVerify"
+        ]
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "privacy": {
+      "additionalProperties": false,
+      "properties": {
+        "ciphertexts_exposed": {
+          "const": false
+        },
+        "keys_exposed": {
+          "const": false
+        },
+        "private_material_committed": {
+          "const": false
+        },
+        "secret_inputs_exposed": {
+          "const": false
+        }
+      },
+      "required": [
+        "private_material_committed",
+        "secret_inputs_exposed",
+        "keys_exposed",
+        "ciphertexts_exposed"
+      ],
+      "type": "object"
+    },
+    "receipt_schema": {
+      "const": "fre.support_mode.receipt.v0.1"
+    },
+    "source_class": {
+      "const": "six_support_register"
+    }
+  },
+  "required": [
+    "receipt_schema",
+    "envelope_id",
+    "contract_id",
+    "source_class",
+    "input_certification",
+    "circuit_id",
+    "operation_names",
+    "gate",
+    "claim",
+    "comparison",
+    "controls",
+    "privacy",
+    "closure",
+    "boundary"
+  ],
+  "title": "FRE Support Mode Public Receipt v0.1",
+  "type": "object"
+}
