@@ -1,0 +1,72 @@
+{
+  "artifact_id": "fre.g900.native_generator.checkpoint_audit.001",
+  "audit_pass": true,
+  "bindings": {
+    ".gitattributes": {
+      "sha256": "f8cbc9348d04a505addbb20f32fc121b6508973ab8e6ca4aee3ebb1cf6762a79"
+    },
+    "artifacts/json/fre_g900_generator_target_congruence_audit_001.json": {
+      "sha256": "237760733f0ff1a368016db1a1a073b11cc687bbaea4e2f6ca9620525d701541"
+    },
+    "artifacts/json/fre_g900_native_generator_execution_audit_001.json": {
+      "sha256": "b395d390d6f836b6aae9508c473251a4a72cce05f9d8fcad0e7c387b61c7dadb"
+    },
+    "artifacts/json/fre_g900_sibling_negative_control_audit_001.json": {
+      "sha256": "f785f8c1fde74b9dd0701ba54cd9e5a0b9b3269a650007ca6c17eb52d555146f"
+    },
+    "artifacts/json/fre_g900_target_canonicalization_audit_001.json": {
+      "sha256": "e450c326271e3ff3a2656eeb5afb532dcb193e1f6d94b6cad2a224375648d52a"
+    }
+  },
+  "boundary": {
+    "earned_recursive_host_receipt": false,
+    "external_truth_claim": false,
+    "independent_bridge_present": false,
+    "observational_closure": false,
+    "recursive_host_admitted": false,
+    "transport_cycle_executed": false
+  },
+  "checks": {
+    "byte_policy_exact": true,
+    "congruence_audit_pass": true,
+    "congruence_result_true": true,
+    "construction_not_rerun_by_checkpoint_audit": true,
+    "generator_audit_pass": true,
+    "generator_digest_locked": true,
+    "hash_.gitattributes": true,
+    "hash_fre_g900_generator_target_congruence_audit_001": true,
+    "hash_fre_g900_native_generator_execution_audit_001": true,
+    "hash_fre_g900_sibling_negative_control_audit_001": true,
+    "hash_fre_g900_target_canonicalization_audit_001": true,
+    "negative_control_passed": true,
+    "no_independent_bridge": true,
+    "no_observational_closure": true,
+    "no_transport_cycle": true,
+    "nonisomorphism_not_claimed": true,
+    "positive_digest_congruent": true,
+    "raw_payloads_not_read_by_checkpoint_audit": true,
+    "recursive_host_not_admitted": true,
+    "sibling_audit_pass": true,
+    "sibling_delta_support_six": true,
+    "sibling_digest_distinct": true,
+    "sibling_digest_locked": true,
+    "target_audit_pass": true,
+    "target_digest_locked": true
+  },
+  "claim_scope": {
+    "graph_nonisomorphism_claim": false,
+    "native_generator_reproduction": "canonical_edge_digest_congruence",
+    "negative_control": "fixed_label_digest_separation",
+    "recursive_host_claim": false,
+    "universal_theorem_claim": false
+  },
+  "results": {
+    "canonical_edge_digest": "e261704922e6aa218126561bbf0d0b488d9eecd79b34fbeb08e66311e42bbd60",
+    "delta_support": 6,
+    "negative_control_passed": true,
+    "positive_congruence": true,
+    "sibling_edge_digest": "b7951eac5c82e49faeed6f3be342e2f0d546ae1bca90a22b4fc73edb79ed983c"
+  },
+  "status": "native_generator_checkpoint_recorded_fail_closed",
+  "verdict": "native_G900_generator_reproduces_pinned_carrier_and_sibling_control_separates"
+}

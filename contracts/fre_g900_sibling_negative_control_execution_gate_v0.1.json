@@ -1,0 +1,83 @@
+{
+  "admission": {
+    "allowed_command": [
+      "python",
+      "tools/generate_g900_sibling_control.py"
+    ],
+    "allowed_data_reads": [
+      "fixtures/g900/g15_slot_edges.csv",
+      "fixtures/g900/g60_local_edges.csv",
+      "fixtures/g900/sibling_candidate_signing_table.csv"
+    ],
+    "allowed_project_writes": [],
+    "forbidden_data_reads": [
+      "fixtures/g900/carrier_signing_table.csv",
+      "fixtures/g900/sibling_signing_delta.csv",
+      "fixtures/g900/x_sigma_edges.csv",
+      "fixtures/g900/sibling_x_sigma_edges.csv",
+      "$HOME/tmp/fre_g900_native_generator_run_001.json",
+      "$HOME/tmp/fre_g900_target_canonicalization_001.json",
+      "artifacts/json/fre_g900_generator_target_congruence_audit_001.json"
+    ],
+    "maximum_invocations": 1,
+    "run_id": "fre.g900.sibling_negative_control.run.001",
+    "runtime_capture": "$HOME/tmp/fre_g900_sibling_negative_control_001.json",
+    "runtime_capture_may_commit": false
+  },
+  "bindings": {
+    "control_source": {
+      "path": "tools/generate_g900_sibling_control.py",
+      "sha256": "0fd477ff9d6b16cec0d0907c75b4ea66319152b65a07b872f5a9ef91330d852b"
+    },
+    "positive_congruence_audit": {
+      "canonical_edge_digest": "e261704922e6aa218126561bbf0d0b488d9eecd79b34fbeb08e66311e42bbd60",
+      "path": "artifacts/json/fre_g900_generator_target_congruence_audit_001.json",
+      "read_by_control_source": false,
+      "sha256": "237760733f0ff1a368016db1a1a073b11cc687bbaea4e2f6ca9620525d701541"
+    },
+    "predeclaration_gate": {
+      "path": "contracts/fre_g900_sibling_negative_control_gate_v0.1.json",
+      "sha256": "c0852ec0f8402fe714057fdfc68b4b42da79736ed615da6db14e85d114ccba66"
+    },
+    "repository_head": "523f54f5adfac394f4fc66596bf8bfb70f6174c9"
+  },
+  "boundary": {
+    "external_truth_claim": false,
+    "negative_control_only": true,
+    "observational_closure": false,
+    "positive_congruence_claim_unchanged": true,
+    "recursive_host_admitted": false,
+    "transport_cycle_executed": false
+  },
+  "gate_id": "fre.g900.sibling_negative_control_execution_gate.v0.1",
+  "permissions": {
+    "bridge_execution_allowed": false,
+    "canonical_generator_rerun_allowed": false,
+    "control_execution_allowed_next_packet": true,
+    "control_source_modification_allowed": false,
+    "earned_receipt_allowed": false,
+    "flat_target_read_allowed": false,
+    "recursive_host_admission_allowed": false,
+    "transport_cycle_allowed": false
+  },
+  "predeclared_output_requirements": {
+    "canonical_edge_digest": "e261704922e6aa218126561bbf0d0b488d9eecd79b34fbeb08e66311e42bbd60",
+    "canonical_payload_read": false,
+    "carrier_edges": 1800,
+    "connected": true,
+    "control_id": "fre.g900.sibling_signing.negative_control.v0.1",
+    "degree_max": 8,
+    "degree_min": 8,
+    "delta_support": 6,
+    "distinct_from_canonical": true,
+    "internal_edges": 1800,
+    "sibling_edge_digest": {
+      "status": "to_be_observed"
+    },
+    "sibling_flat_target_read": false,
+    "total_edges": 3600,
+    "vertices": 900
+  },
+  "status": "one_locked_sibling_control_execution_admitted_not_executed",
+  "version": "0.1"
+}

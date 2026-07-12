@@ -1,0 +1,63 @@
+{
+  "artifact_id": "fre.g900.target_canonicalization.audit.001",
+  "audit_pass": true,
+  "bindings": {
+    "canonicalization_gate_sha256": "699e209a580ef7750255963188e7753c2ef7d205c453487c55b53bcdd511476b",
+    "canonicalizer_source_sha256": "f0d87e92ce330539c8603cce7a0ae3a40ed4cb29db592a7c2b90f89f7c2d5bef",
+    "capture_sha256": "6b1219278273fff451cf3b72489145a3c9227a21048f0c3385c39a82741e5b56",
+    "target_raw_sha256": "ea2679662f4322a9ea021fba1143c804ef73b1fae95f50c77ba76b7fe1092230"
+  },
+  "boundary": {
+    "earned_receipt_emitted": false,
+    "external_truth_claim": false,
+    "generator_digest_compared": false,
+    "generator_result_read": false,
+    "negative_control_executed": false,
+    "observational_closure": false,
+    "recursive_host_admitted": false,
+    "transport_cycle_executed": false
+  },
+  "checks": {
+    "binding_canonicalize_g900_target": true,
+    "binding_fre_g900_target_canonicalization_gate_v0.1": true,
+    "binding_x_sigma_edges": true,
+    "capture_hash_locked": true,
+    "comparison_not_performed": true,
+    "generator_result_not_read": true,
+    "observed_canonical_edge_digest": true,
+    "observed_comparison_performed": true,
+    "observed_generator_digest_read": true,
+    "observed_kind_counts": true,
+    "observed_maximum_vertex": true,
+    "observed_minimum_vertex": true,
+    "observed_normalized_edges": true,
+    "observed_target_id": true,
+    "observed_target_raw_sha256": true,
+    "observed_target_rows": true,
+    "observed_vertex_count": true,
+    "target_canonicalizer_not_rerun": true
+  },
+  "run": {
+    "canonicalizer_rerun_by_audit": false,
+    "maximum_invocations": 1,
+    "observed": {
+      "canonical_edge_digest": "e261704922e6aa218126561bbf0d0b488d9eecd79b34fbeb08e66311e42bbd60",
+      "comparison_performed": false,
+      "generator_digest_read": false,
+      "kind_counts": {
+        "external_signed_carrier": 1800,
+        "internal_thalion_copy": 1800
+      },
+      "maximum_vertex": 899,
+      "minimum_vertex": 0,
+      "normalized_edges": 3600,
+      "target_id": "fre.g900.flattened_target.canonical.v0.1",
+      "target_raw_sha256": "ea2679662f4322a9ea021fba1143c804ef73b1fae95f50c77ba76b7fe1092230",
+      "target_rows": 3600,
+      "vertex_count": 900
+    },
+    "run_id": "fre.g900.target_canonicalization.run.001"
+  },
+  "status": "independent_target_canonicalization_recorded_comparison_pending",
+  "verdict": "flat_G900_target_independently_canonicalized_generator_comparison_pending"
+}

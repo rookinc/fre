@@ -1,0 +1,93 @@
+{
+  "admission": {
+    "allowed_command": [
+      "python",
+      "tools/generate_g900_kernel.py"
+    ],
+    "allowed_project_writes": [],
+    "allowed_reads": [
+      {
+        "path": "fixtures/g900/g15_slot_edges.csv",
+        "sha256": "7b94834d507cf2995ec6faf73e2e227a685d831894aa98f2647556d8b922b8f6"
+      },
+      {
+        "path": "fixtures/g900/g60_local_edges.csv",
+        "sha256": "c700a185fab6a5f434da09b7acb716b96c76170774bee946af8ea907e4fe7f9f"
+      },
+      {
+        "path": "fixtures/g900/carrier_signing_table.csv",
+        "sha256": "9b3cf812cc0f6d7b065666c81fa6d16fd3e3b8a98955c264709337c7f3e7efb7"
+      }
+    ],
+    "forbidden_reads": [
+      "fixtures/g900/x_sigma_edges.csv",
+      "fixtures/g900/sibling_candidate_signing_table.csv",
+      "fixtures/g900/sibling_signing_delta.csv",
+      "fixtures/g900/sibling_x_sigma_edges.csv"
+    ],
+    "maximum_invocations": 1,
+    "run_id": "fre.g900.native_generator.run.001",
+    "runtime_capture": "$HOME/tmp/fre_g900_native_generator_run_001.json",
+    "runtime_capture_may_commit": false
+  },
+  "bindings": {
+    "byte_policy": {
+      "path": ".gitattributes",
+      "sha256": "f8cbc9348d04a505addbb20f32fc121b6508973ab8e6ca4aee3ebb1cf6762a79"
+    },
+    "generator_contract": {
+      "path": "contracts/fre_g900_native_generator_v0.1.json",
+      "sha256": "be609a89f694eff192cbc0ee7edda255f9efe930c33c6146ab0ae57ebebc0282"
+    },
+    "generator_source": {
+      "path": "tools/generate_g900_kernel.py",
+      "sha256": "f695b4ce6eee5a5bfde7ec2373ceb5511b758e0cf6ef9d02e5e2d8782e59f6a7"
+    },
+    "repository_head": "523f54f5adfac394f4fc66596bf8bfb70f6174c9"
+  },
+  "claim_boundary": {
+    "external_truth_claim": false,
+    "observational_closure": false,
+    "recursive_host_claim": false,
+    "runtime_structural_construction_only": true,
+    "universal_theorem_claim": false
+  },
+  "gate_id": "fre.g900.native_generator_execution_gate.v0.1",
+  "permissions": {
+    "bridge_execution_allowed": false,
+    "earned_receipt_allowed": false,
+    "native_generator_execution_allowed_next_packet": true,
+    "negative_control_execution_allowed": false,
+    "recursive_host_admission_allowed": false,
+    "target_comparison_allowed": false,
+    "target_digest_preparation_allowed": false,
+    "transport_cycle_allowed": false
+  },
+  "postconditions": {
+    "flattened_target_not_read": true,
+    "generated_edge_set_runtime_only": true,
+    "negative_control_generated": false,
+    "project_worktree_unchanged_by_execution": true,
+    "receipt_emitted": false,
+    "target_comparison_performed": false,
+    "transport_cycle_executed": false
+  },
+  "predeclared_output_requirements": {
+    "canonical_edge_digest": {
+      "algorithm": "sha256",
+      "status": "to_be_observed_from_locked_source"
+    },
+    "carrier_edges": 1800,
+    "connected": true,
+    "contract_id": "fre.g900.native_generator.v0.1",
+    "degree_max": 8,
+    "degree_min": 8,
+    "generator_id": "fre.g900.native_generator.reference.v0.1",
+    "internal_edges": 1800,
+    "target_read": false,
+    "total_edges": 3600,
+    "vertices": 900
+  },
+  "status": "one_native_generator_run_admitted_not_executed",
+  "version": "0.1"
+}

@@ -51,3 +51,14 @@ See [G900 recursive-host checkpoint](notes/g900_recursive_host_checkpoint_001.md
 The carrier is structurally validated. Recursive hosting is not
 admitted; no independent bridge, transport cycle, earned claim, or
 observational closure is claimed.
+
+## Native G900 generator checkpoint
+
+The compact G15 x G60 signed half-flip law now independently reproduces
+the pinned G900 carrier's canonical edge digest. A six-toggle sibling
+signing preserves the gross graph invariants while changing that digest.
+
+See [G900 native-generator checkpoint](notes/g900_native_generator_checkpoint_001.md).
+
+This remains a structural result. No transport cycle, independent
+bridge, recursive-host admission, or observational closure is claimed.

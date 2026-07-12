@@ -1,0 +1,63 @@
+{
+  "artifact_id": "fre.g900.generator_target.congruence_audit.001",
+  "audit_pass": true,
+  "bindings": {
+    "comparator_source_sha256": "6b302409dadba7bb77ef0386e88027d6189735097b202872e5f26d601e6bd211",
+    "comparison_capture_sha256": "3d9a9615521c05e216838968df176cab3bb1c997a2561b6990e876dfe1c30f03",
+    "comparison_gate_sha256": "43fcb31bb04234b39fad988bb1668742ff921adb96fbc1d804fce227a52061d9",
+    "generator_audit_sha256": "b395d390d6f836b6aae9508c473251a4a72cce05f9d8fcad0e7c387b61c7dadb",
+    "target_audit_sha256": "e450c326271e3ff3a2656eeb5afb532dcb193e1f6d94b6cad2a224375648d52a"
+  },
+  "boundary": {
+    "earned_recursive_host_receipt": false,
+    "external_truth_claim": false,
+    "independent_bridge_present": false,
+    "negative_control_pending": true,
+    "observational_closure": false,
+    "recursive_host_admitted": false,
+    "transport_cycle_executed": false
+  },
+  "checks": {
+    "binding_compare_g900_generator_target": true,
+    "binding_fre_g900_generator_target_comparison_gate_v0.1": true,
+    "binding_fre_g900_native_generator_execution_audit_001": true,
+    "binding_fre_g900_target_canonicalization_audit_001": true,
+    "capture_hash_locked": true,
+    "comparator_not_rerun_by_audit": true,
+    "comparison_id_exact": true,
+    "congruent": true,
+    "generator_not_rerun": true,
+    "left_digest_locked": true,
+    "raw_payloads_not_read": true,
+    "right_digest_locked": true,
+    "runtime_captures_not_read": true,
+    "target_not_recanonicalized": true,
+    "tolerance_zero": true
+  },
+  "claim_scope": {
+    "algorithm": "sha256",
+    "byte_for_byte_source_equality_claim": false,
+    "canonical_serialization": "sorted normalized ASCII u,v followed by LF",
+    "claim": "canonical_edge_digest_congruence",
+    "collision_resistance_assumption": true,
+    "recursive_host_claim": false,
+    "universal_theorem_claim": false
+  },
+  "comparison": {
+    "algorithm": "sha256",
+    "comparison_id": "fre.g900.generator_target.digest_comparison.v0.1",
+    "congruent": true,
+    "generator_rerun": false,
+    "left_artifact_id": "fre.g900.native_generator.execution_audit.001",
+    "left_digest": "e261704922e6aa218126561bbf0d0b488d9eecd79b34fbeb08e66311e42bbd60",
+    "raw_payloads_read": false,
+    "right_artifact_id": "fre.g900.target_canonicalization.audit.001",
+    "right_digest": "e261704922e6aa218126561bbf0d0b488d9eecd79b34fbeb08e66311e42bbd60",
+    "rule": "exact_lowercase_hex_string_equality",
+    "runtime_captures_read": false,
+    "target_recanonicalized": false,
+    "tolerance": 0
+  },
+  "status": "native_generator_flat_target_digest_congruence_recorded",
+  "verdict": "native_generator_reproduces_pinned_G900_canonical_edge_digest"
+}

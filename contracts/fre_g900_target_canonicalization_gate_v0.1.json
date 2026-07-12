@@ -1,0 +1,102 @@
+{
+  "admission": {
+    "allowed_command": [
+      "python",
+      "tools/canonicalize_g900_target.py"
+    ],
+    "allowed_data_reads": [
+      "fixtures/g900/x_sigma_edges.csv"
+    ],
+    "allowed_project_writes": [],
+    "forbidden_data_reads": [
+      "fixtures/g900/g15_slot_edges.csv",
+      "fixtures/g900/g60_local_edges.csv",
+      "fixtures/g900/carrier_signing_table.csv",
+      "fixtures/g900/sibling_candidate_signing_table.csv",
+      "fixtures/g900/sibling_signing_delta.csv",
+      "fixtures/g900/sibling_x_sigma_edges.csv",
+      "$HOME/tmp/fre_g900_native_generator_run_001.json",
+      "artifacts/json/fre_g900_native_generator_execution_audit_001.json"
+    ],
+    "maximum_invocations": 1,
+    "run_id": "fre.g900.target_canonicalization.run.001",
+    "runtime_capture": "$HOME/tmp/fre_g900_target_canonicalization_001.json",
+    "runtime_capture_may_commit": false
+  },
+  "bindings": {
+    "byte_policy": {
+      "path": ".gitattributes",
+      "sha256": "f8cbc9348d04a505addbb20f32fc121b6508973ab8e6ca4aee3ebb1cf6762a79"
+    },
+    "generator_execution_audit": {
+      "path": "artifacts/json/fre_g900_native_generator_execution_audit_001.json",
+      "read_by_canonicalizer": false,
+      "sha256": "b395d390d6f836b6aae9508c473251a4a72cce05f9d8fcad0e7c387b61c7dadb"
+    },
+    "native_generator_contract": {
+      "path": "contracts/fre_g900_native_generator_v0.1.json",
+      "sha256": "be609a89f694eff192cbc0ee7edda255f9efe930c33c6146ab0ae57ebebc0282"
+    },
+    "repository_head": "523f54f5adfac394f4fc66596bf8bfb70f6174c9",
+    "target": {
+      "path": "fixtures/g900/x_sigma_edges.csv",
+      "sha256": "ea2679662f4322a9ea021fba1143c804ef73b1fae95f50c77ba76b7fe1092230"
+    }
+  },
+  "canonicalization": {
+    "digest_algorithm": "sha256",
+    "duplicate_normalized_edges_forbidden": true,
+    "endpoint_rule": "vertex=60*slot+local",
+    "loop_edges_forbidden": true,
+    "normalization": "(min(u_vertex,v_vertex),max(u_vertex,v_vertex))",
+    "ordering": "lexicographic",
+    "required_columns": [
+      "u_vertex",
+      "v_vertex",
+      "u_slot",
+      "u_local",
+      "v_slot",
+      "v_local",
+      "kind"
+    ],
+    "serialization": "ASCII u,v followed by LF",
+    "vertex_range": [
+      0,
+      899
+    ]
+  },
+  "claim_boundary": {
+    "external_truth_claim": false,
+    "generator_congruence_claim": false,
+    "observational_closure": false,
+    "recursive_host_claim": false,
+    "target_normalization_only": true
+  },
+  "gate_id": "fre.g900.target_canonicalization_gate.v0.1",
+  "permissions": {
+    "bridge_execution_allowed": false,
+    "earned_receipt_allowed": false,
+    "generator_rerun_allowed": false,
+    "generator_result_read_allowed": false,
+    "negative_control_execution_allowed": false,
+    "target_canonicalization_allowed_next_packet": true,
+    "target_comparison_allowed": false,
+    "transport_cycle_allowed": false
+  },
+  "predeclared_output_requirements": {
+    "canonical_edge_digest": {
+      "status": "to_be_observed_independently"
+    },
+    "comparison_performed": false,
+    "generator_digest_read": false,
+    "maximum_vertex": 899,
+    "minimum_vertex": 0,
+    "normalized_edges": 3600,
+    "target_id": "fre.g900.flattened_target.canonical.v0.1",
+    "target_raw_sha256": "ea2679662f4322a9ea021fba1143c804ef73b1fae95f50c77ba76b7fe1092230",
+    "target_rows": 3600
+  },
+  "purpose": "Canonicalize the committed flattened G900 target without reading generator inputs, source, runtime capture, or audit.",
+  "status": "one_independent_target_canonicalization_admitted_not_executed",
+  "version": "0.1"
+}

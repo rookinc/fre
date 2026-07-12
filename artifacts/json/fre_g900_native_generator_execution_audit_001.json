@@ -1,0 +1,59 @@
+{
+  "artifact_id": "fre.g900.native_generator.execution_audit.001",
+  "audit_pass": true,
+  "bindings": {
+    "capture_sha256": "256f3424fe17a55a5165e6a144bc32350510eb3b41a962acd51cc64a319361db",
+    "execution_gate_sha256": "705ef4aa1c07f21a01c75240aaf9830177b62229b6173597a3492b2cc1f59a23",
+    "generator_contract_sha256": "be609a89f694eff192cbc0ee7edda255f9efe930c33c6146ab0ae57ebebc0282",
+    "generator_source_sha256": "f695b4ce6eee5a5bfde7ec2373ceb5511b758e0cf6ef9d02e5e2d8782e59f6a7"
+  },
+  "boundary": {
+    "earned_receipt_emitted": false,
+    "external_truth_claim": false,
+    "flattened_target_compared": false,
+    "negative_control_executed": false,
+    "observational_closure": false,
+    "recursive_host_admitted": false,
+    "transport_cycle_executed": false
+  },
+  "checks": {
+    "binding_fre_g900_native_generator_execution_gate_v0.1": true,
+    "binding_fre_g900_native_generator_v0.1": true,
+    "binding_generate_g900_kernel": true,
+    "capture_hash_locked": true,
+    "flattened_target_not_read": true,
+    "generator_not_rerun": true,
+    "observed_canonical_edge_digest": true,
+    "observed_carrier_edges": true,
+    "observed_connected": true,
+    "observed_contract_id": true,
+    "observed_degree_max": true,
+    "observed_degree_min": true,
+    "observed_generator_id": true,
+    "observed_internal_edges": true,
+    "observed_target_read": true,
+    "observed_total_edges": true,
+    "observed_vertices": true,
+    "sibling_inputs_not_read": true
+  },
+  "run": {
+    "generator_rerun_by_audit": false,
+    "maximum_invocations": 1,
+    "observed": {
+      "canonical_edge_digest": "e261704922e6aa218126561bbf0d0b488d9eecd79b34fbeb08e66311e42bbd60",
+      "carrier_edges": 1800,
+      "connected": true,
+      "contract_id": "fre.g900.native_generator.v0.1",
+      "degree_max": 8,
+      "degree_min": 8,
+      "generator_id": "fre.g900.native_generator.reference.v0.1",
+      "internal_edges": 1800,
+      "target_read": false,
+      "total_edges": 3600,
+      "vertices": 900
+    },
+    "run_id": "fre.g900.native_generator.run.001"
+  },
+  "status": "native_generator_observation_recorded_target_not_compared",
+  "verdict": "locked_primitives_generated_expected_G900_invariants_target_comparison_pending"
+}

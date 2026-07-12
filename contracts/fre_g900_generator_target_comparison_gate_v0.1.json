@@ -1,0 +1,89 @@
+{
+  "admission": {
+    "allowed_command": [
+      "python",
+      "tools/compare_g900_generator_target.py"
+    ],
+    "allowed_data_reads": [
+      "artifacts/json/fre_g900_native_generator_execution_audit_001.json",
+      "artifacts/json/fre_g900_target_canonicalization_audit_001.json"
+    ],
+    "allowed_project_writes": [],
+    "forbidden_data_reads": [
+      "fixtures/g900/g15_slot_edges.csv",
+      "fixtures/g900/g60_local_edges.csv",
+      "fixtures/g900/carrier_signing_table.csv",
+      "fixtures/g900/x_sigma_edges.csv",
+      "fixtures/g900/sibling_candidate_signing_table.csv",
+      "fixtures/g900/sibling_signing_delta.csv",
+      "fixtures/g900/sibling_x_sigma_edges.csv",
+      "$HOME/tmp/fre_g900_native_generator_run_001.json",
+      "$HOME/tmp/fre_g900_target_canonicalization_001.json",
+      "tools/generate_g900_kernel.py",
+      "tools/canonicalize_g900_target.py"
+    ],
+    "maximum_invocations": 1,
+    "run_id": "fre.g900.generator_target_comparison.run.001",
+    "runtime_capture": "$HOME/tmp/fre_g900_generator_target_comparison_001.json",
+    "runtime_capture_may_commit": false
+  },
+  "bindings": {
+    "left_generator_audit": {
+      "artifact_id": "fre.g900.native_generator.execution_audit.001",
+      "canonical_edge_digest": "e261704922e6aa218126561bbf0d0b488d9eecd79b34fbeb08e66311e42bbd60",
+      "path": "artifacts/json/fre_g900_native_generator_execution_audit_001.json",
+      "sha256": "b395d390d6f836b6aae9508c473251a4a72cce05f9d8fcad0e7c387b61c7dadb"
+    },
+    "native_generator_contract": {
+      "path": "contracts/fre_g900_native_generator_v0.1.json",
+      "sha256": "be609a89f694eff192cbc0ee7edda255f9efe930c33c6146ab0ae57ebebc0282"
+    },
+    "repository_head": "523f54f5adfac394f4fc66596bf8bfb70f6174c9",
+    "right_target_audit": {
+      "artifact_id": "fre.g900.target_canonicalization.audit.001",
+      "canonical_edge_digest": "e261704922e6aa218126561bbf0d0b488d9eecd79b34fbeb08e66311e42bbd60",
+      "path": "artifacts/json/fre_g900_target_canonicalization_audit_001.json",
+      "sha256": "e450c326271e3ff3a2656eeb5afb532dcb193e1f6d94b6cad2a224375648d52a"
+    }
+  },
+  "claim_boundary": {
+    "external_truth_claim": false,
+    "native_generator_reproduction_claim_if_passed": "canonical_edge_digest_congruence_only",
+    "observational_closure": false,
+    "ordinary_induced_subgraph_claim": false,
+    "recursive_host_claim": false,
+    "universal_theorem_claim": false
+  },
+  "comparison": {
+    "algorithm": "sha256",
+    "collision_resistance_assumption_explicit": true,
+    "expected_result": true,
+    "left_field": "run.observed.canonical_edge_digest",
+    "right_field": "run.observed.canonical_edge_digest",
+    "rule": "exact_lowercase_hex_string_equality",
+    "semantics": "computational congruence of identical canonical edge-set serializations",
+    "tolerance": 0
+  },
+  "gate_id": "fre.g900.generator_target_comparison_gate.v0.1",
+  "permissions": {
+    "bridge_execution_allowed": false,
+    "comparison_execution_allowed_next_packet": true,
+    "earned_receipt_allowed": false,
+    "generator_rerun_allowed": false,
+    "negative_control_execution_allowed": false,
+    "recursive_host_admission_allowed": false,
+    "target_recanonicalization_allowed": false,
+    "transport_cycle_allowed": false
+  },
+  "predeclared_output_requirements": {
+    "comparison_id": "fre.g900.generator_target.digest_comparison.v0.1",
+    "congruent": true,
+    "generator_rerun": false,
+    "left_digest": "e261704922e6aa218126561bbf0d0b488d9eecd79b34fbeb08e66311e42bbd60",
+    "right_digest": "e261704922e6aa218126561bbf0d0b488d9eecd79b34fbeb08e66311e42bbd60",
+    "target_recanonicalized": false
+  },
+  "purpose": "Compare independently recorded canonical G900 edge-set digests without reopening either construction path.",
+  "status": "one_locked_digest_comparison_admitted_not_executed",
+  "version": "0.1"
+}

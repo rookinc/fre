@@ -1,0 +1,2 @@
+# Preserve exact hash-pinned G900 payload bytes.
+fixtures/g900/*.csv -text

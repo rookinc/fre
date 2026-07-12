@@ -1,0 +1,64 @@
+{
+  "artifact_id": "fre.g900.sibling_negative_control.audit.001",
+  "audit_pass": true,
+  "bindings": {
+    "capture_sha256": "1487593bfe1361c85139e8645d61d4b5e3b7f2d07e7acdbfe0293e6093fd9066",
+    "control_source_sha256": "0fd477ff9d6b16cec0d0907c75b4ea66319152b65a07b872f5a9ef91330d852b",
+    "execution_gate_sha256": "421a72af3aabf257b73fbf4913088d14df52bb7df3b889c7ec947ceb9e260ca0",
+    "positive_congruence_audit_sha256": "237760733f0ff1a368016db1a1a073b11cc687bbaea4e2f6ca9620525d701541"
+  },
+  "boundary": {
+    "earned_recursive_host_receipt": false,
+    "external_truth_claim": false,
+    "flat_sibling_target_compared": false,
+    "independent_bridge_present": false,
+    "observational_closure": false,
+    "recursive_host_admitted": false,
+    "transport_cycle_executed": false
+  },
+  "checks": {
+    "binding_fre_g900_generator_target_congruence_audit_001": true,
+    "binding_fre_g900_sibling_negative_control_execution_gate_v0.1": true,
+    "binding_generate_g900_sibling_control": true,
+    "canonical_digest_locked": true,
+    "canonical_payload_not_read": true,
+    "capture_hash_locked": true,
+    "carrier_edges_1800": true,
+    "connected": true,
+    "control_id_exact": true,
+    "control_not_rerun_by_audit": true,
+    "degree_eight": true,
+    "delta_support_six": true,
+    "fixed_label_digest_separated": true,
+    "internal_edges_1800": true,
+    "sibling_digest_locked": true,
+    "sibling_target_not_read": true,
+    "total_edges_3600": true,
+    "vertices_900": true
+  },
+  "claim_scope": {
+    "fixed_label_edge_set_digest_distinct": true,
+    "graph_nonisomorphism_claim": false,
+    "negative_control_passed": true,
+    "recursive_host_claim": false,
+    "universal_cocycle_claim": false
+  },
+  "control": {
+    "canonical_edge_digest": "e261704922e6aa218126561bbf0d0b488d9eecd79b34fbeb08e66311e42bbd60",
+    "canonical_payload_read": false,
+    "carrier_edges": 1800,
+    "connected": true,
+    "control_id": "fre.g900.sibling_signing.negative_control.v0.1",
+    "degree_max": 8,
+    "degree_min": 8,
+    "delta_support": 6,
+    "distinct_from_canonical": true,
+    "internal_edges": 1800,
+    "sibling_edge_digest": "b7951eac5c82e49faeed6f3be342e2f0d546ae1bca90a22b4fc73edb79ed983c",
+    "sibling_flat_target_read": false,
+    "total_edges": 3600,
+    "vertices": 900
+  },
+  "status": "six_toggle_sibling_negative_control_recorded",
+  "verdict": "six_toggle_sibling_preserves_gross_invariants_and_separates_fixed_label_digest"
+}

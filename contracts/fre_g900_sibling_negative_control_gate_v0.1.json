@@ -1,0 +1,103 @@
+{
+  "admission": {
+    "allowed_command": [
+      "python",
+      "tools/generate_g900_sibling_control.py"
+    ],
+    "allowed_data_reads": [
+      {
+        "path": "fixtures/g900/g15_slot_edges.csv",
+        "role": "G15_slot_graph",
+        "sha256": "7b94834d507cf2995ec6faf73e2e227a685d831894aa98f2647556d8b922b8f6"
+      },
+      {
+        "path": "fixtures/g900/g60_local_edges.csv",
+        "role": "G60_local_graph",
+        "sha256": "c700a185fab6a5f434da09b7acb716b96c76170774bee946af8ea907e4fe7f9f"
+      },
+      {
+        "path": "fixtures/g900/sibling_candidate_signing_table.csv",
+        "role": "sibling_signing",
+        "sha256": "8ad921c2af2f48e220e6c1c8a3a72aaecc64f56791bbfbd15b66f2211af11eba"
+      }
+    ],
+    "allowed_project_writes": [],
+    "forbidden_data_reads": [
+      "fixtures/g900/carrier_signing_table.csv",
+      "fixtures/g900/sibling_signing_delta.csv",
+      "fixtures/g900/x_sigma_edges.csv",
+      "fixtures/g900/sibling_x_sigma_edges.csv",
+      "$HOME/tmp/fre_g900_native_generator_run_001.json",
+      "$HOME/tmp/fre_g900_target_canonicalization_001.json",
+      "artifacts/json/fre_g900_native_generator_execution_audit_001.json",
+      "artifacts/json/fre_g900_target_canonicalization_audit_001.json",
+      "artifacts/json/fre_g900_generator_target_congruence_audit_001.json"
+    ],
+    "maximum_invocations": 1,
+    "run_id": "fre.g900.sibling_negative_control.run.001",
+    "runtime_capture": "$HOME/tmp/fre_g900_sibling_negative_control_001.json",
+    "runtime_capture_may_commit": false
+  },
+  "bindings": {
+    "positive_congruence_audit": {
+      "canonical_edge_digest": "e261704922e6aa218126561bbf0d0b488d9eecd79b34fbeb08e66311e42bbd60",
+      "path": "artifacts/json/fre_g900_generator_target_congruence_audit_001.json",
+      "read_by_control_generator": false,
+      "sha256": "237760733f0ff1a368016db1a1a073b11cc687bbaea4e2f6ca9620525d701541"
+    },
+    "repository_head": "523f54f5adfac394f4fc66596bf8bfb70f6174c9"
+  },
+  "claim_boundary": {
+    "external_truth_claim": false,
+    "negative_control_role_only": true,
+    "observational_closure": false,
+    "positive_reproduction_claim_changed": false,
+    "recursive_host_claim": false,
+    "universal_theorem_claim": false
+  },
+  "gate_id": "fre.g900.sibling_negative_control_gate.v0.1",
+  "permissions": {
+    "bridge_execution_allowed": false,
+    "canonical_generator_rerun_allowed": false,
+    "control_execution_allowed": false,
+    "control_source_allowed_next_packet": true,
+    "earned_receipt_allowed": false,
+    "recursive_host_admission_allowed": false,
+    "sibling_target_canonicalization_allowed": false,
+    "transport_cycle_allowed": false
+  },
+  "predeclared_output_requirements": {
+    "canonical_edge_digest": "e261704922e6aa218126561bbf0d0b488d9eecd79b34fbeb08e66311e42bbd60",
+    "canonical_payload_read": false,
+    "carrier_edges": 1800,
+    "connected": true,
+    "control_id": "fre.g900.sibling_signing.negative_control.v0.1",
+    "degree_max": 8,
+    "degree_min": 8,
+    "delta_support": 6,
+    "distinct_from_canonical": true,
+    "internal_edges": 1800,
+    "sibling_edge_digest": {
+      "status": "to_be_observed_from_locked_control_source"
+    },
+    "sibling_flat_target_read": false,
+    "total_edges": 3600,
+    "vertices": 900
+  },
+  "purpose": "Generate the six-toggle sibling signing as an independent negative control and require canonical digest separation.",
+  "sibling_signing_law": {
+    "columns": [
+      "slot_a",
+      "slot_b",
+      "canonical_sign",
+      "delta",
+      "sibling_sign"
+    ],
+    "expected_delta_support": 6,
+    "half_flip": "sign=1 applies alpha+30_mod_60",
+    "identity": "sign=0 preserves alpha",
+    "sign_relation": "sibling_sign=canonical_sign XOR delta"
+  },
+  "status": "one_sibling_negative_control_run_admitted_not_executed",
+  "version": "0.1"
+}

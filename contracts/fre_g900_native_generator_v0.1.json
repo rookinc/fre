@@ -1,0 +1,108 @@
+{
+  "bindings": {
+    "byte_policy": {
+      "path": ".gitattributes",
+      "sha256": "f8cbc9348d04a505addbb20f32fc121b6508973ab8e6ca4aee3ebb1cf6762a79"
+    },
+    "payload_provenance": {
+      "path": "artifacts/json/fre_g900_payload_provenance_001.json",
+      "sha256": "c13bd8b4fc4901b0eb618b4918e77281a01dae1ba0f13ba5adbd9cc8170ce052"
+    },
+    "recursive_host_contract": {
+      "path": "contracts/fre_g900_recursive_host_v0.1.json",
+      "sha256": "8b8baa98a8d0252f7433f800a5c118c995dee7e078c55be5db787cade1b0d83c"
+    },
+    "repository_head": "523f54f5adfac394f4fc66596bf8bfb70f6174c9",
+    "structural_audit": {
+      "path": "artifacts/json/fre_g900_structural_audit_001.json",
+      "sha256": "e92dbcf6e14b83a7af81cca05da683f51633579fabe1781337a6d2664e8ad271"
+    }
+  },
+  "claim_boundary": {
+    "external_truth_claim": false,
+    "observational_closure": false,
+    "physical_claim": false,
+    "structural_reproduction_only": true,
+    "universal_recursive_host_theorem": false
+  },
+  "construction": {
+    "carrier_edge_law": "for signed G15 edge {s,t} with epsilon in {0,1} and each alpha, emit {60*s+alpha,60*t+((alpha+30*epsilon) mod 60)}",
+    "duplicate_edges_forbidden": true,
+    "edge_normalization": "(min(u,v),max(u,v))",
+    "half_flip": "h(alpha)=alpha+30_mod_60",
+    "internal_edge_law": "for each slot s and G60 edge {a,b}, emit {60*s+a,60*s+b}",
+    "local_range": [
+      0,
+      59
+    ],
+    "slot_range": [
+      0,
+      14
+    ],
+    "vertex_encoding": "vertex=60*slot+local",
+    "vertex_set": "V(G15)xV(G60)"
+  },
+  "contract_id": "fre.g900.native_generator.v0.1",
+  "expected_invariants": {
+    "carrier_edges": 1800,
+    "connected": true,
+    "degree": 8,
+    "internal_edges": 1800,
+    "total_edges": 3600,
+    "vertices": 900
+  },
+  "generator_boundary": {
+    "allowed_inputs": [
+      {
+        "path": "fixtures/g900/g15_slot_edges.csv",
+        "role": "G15_slot_graph",
+        "sha256": "7b94834d507cf2995ec6faf73e2e227a685d831894aa98f2647556d8b922b8f6"
+      },
+      {
+        "path": "fixtures/g900/g60_local_edges.csv",
+        "role": "G60_local_graph",
+        "sha256": "c700a185fab6a5f434da09b7acb716b96c76170774bee946af8ea907e4fe7f9f"
+      },
+      {
+        "path": "fixtures/g900/carrier_signing_table.csv",
+        "role": "canonical_signing",
+        "sha256": "9b3cf812cc0f6d7b065666c81fa6d16fd3e3b8a98955c264709337c7f3e7efb7"
+      }
+    ],
+    "forbidden_generation_inputs": [
+      "fixtures/g900/x_sigma_edges.csv",
+      "fixtures/g900/sibling_candidate_signing_table.csv",
+      "fixtures/g900/sibling_signing_delta.csv",
+      "fixtures/g900/sibling_x_sigma_edges.csv"
+    ],
+    "independent_of_flattened_target": true,
+    "target_read_phase": "verification_only_after_generation"
+  },
+  "negative_control": {
+    "allowed_phase": "after_canonical_generation",
+    "expected_relation": "distinct_from_canonical_edge_set",
+    "signing_path": "fixtures/g900/sibling_candidate_signing_table.csv",
+    "signing_sha256": "8ad921c2af2f48e220e6c1c8a3a72aaecc64f56791bbfbd15b66f2211af11eba",
+    "target_path": "fixtures/g900/sibling_x_sigma_edges.csv",
+    "target_sha256": "13dbc8023eee15f8367d9d3309d60f2c447ac24c8ae5c43c71994705a562b425"
+  },
+  "permissions": {
+    "bridge_execution_allowed": false,
+    "earned_receipt_allowed": false,
+    "generator_execution_allowed": false,
+    "generator_source_allowed_next_packet": true,
+    "recursive_host_admission_allowed": false,
+    "target_comparison_allowed": false,
+    "transport_cycle_allowed": false
+  },
+  "purpose": "Reconstruct the canonical G900 edge set from G15, G60, the signing cocycle, and the half-flip without reading the flattened G900 target during generation.",
+  "status": "predeclared_native_generator_not_implemented_not_executed",
+  "verification": {
+    "byte_equality_required": false,
+    "canonical_digest_serialization": "sort normalized pairs lexicographically; serialize ASCII as u,v followed by LF",
+    "comparison_rule": "exact_undirected_edge_set_equality",
+    "target_path": "fixtures/g900/x_sigma_edges.csv",
+    "target_sha256": "ea2679662f4322a9ea021fba1143c804ef73b1fae95f50c77ba76b7fe1092230"
+  },
+  "version": "0.1"
+}
