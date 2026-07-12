@@ -38,3 +38,16 @@ See [OpenFHE support-mode throughline](notes/openfhe_support_mode_throughline_00
 
 The one-shot gate is consumed. Closure remains local, not observational.
 No production-security or external-truth claim is made.
+
+## Fail-closed G900 carrier checkpoint
+
+FRE now contains the hash-pinned 900-state signed half-flip carrier,
+its structural validator, sibling switching-class negative control,
+recursive-host contract, fail-closed receipt schema, and one
+nonexecution `unavailable` status receipt.
+
+See [G900 recursive-host checkpoint](notes/g900_recursive_host_checkpoint_001.md).
+
+The carrier is structurally validated. Recursive hosting is not
+admitted; no independent bridge, transport cycle, earned claim, or
+observational closure is claimed.

@@ -1,0 +1,76 @@
+{
+  "artifact_id": "fre.g900.fail_closed_checkpoint_audit.001",
+  "audit_pass": true,
+  "bindings": {
+    "artifacts/json/fre_g900_payload_provenance_001.json": "c13bd8b4fc4901b0eb618b4918e77281a01dae1ba0f13ba5adbd9cc8170ce052",
+    "artifacts/json/fre_g900_structural_audit_001.json": "e92dbcf6e14b83a7af81cca05da683f51633579fabe1781337a6d2664e8ad271",
+    "artifacts/receipts/fre_g900_recursive_host_unavailable_v000_001.json": "29a951e2467a8e090859446b4e704b0ad8165a5d27272bf75a2b0279f1e9a312",
+    "contracts/fre_g900_recursive_host_v0.1.json": "8b8baa98a8d0252f7433f800a5c118c995dee7e078c55be5db787cade1b0d83c",
+    "contracts/fre_g900_status_receipt_gate_v0.1.json": "a7387dac27472247833007af42fca2ccedd0e1499a8aaae623ebc89f55f9f8b3",
+    "schemas/fre_g900_recursive_host_receipt_v0.1.schema.json": "9f8ef85656d1536d71bf127f11986c547f16f603fe57543507416bdc4c07b0db",
+    "tools/emit_g900_status_receipt.py": "84f2cc2eb0660e5e2d626ec784eb86a0426050fd700a9f9fd9ebf95cbff6d7e8",
+    "tools/validate_g900_payload.py": "b854e30cabe104776978f7f01f405190ce775a068512f7a630aa4ba9f6c827c7"
+  },
+  "boundary": {
+    "earned_claim_emitted": false,
+    "external_truth_claim": false,
+    "independent_bridge_present": false,
+    "observational_closure": false,
+    "recursive_host_instance_admitted": false,
+    "structural_carrier_validated": true,
+    "transport_cycle_executed": false,
+    "universal_theorem_claim": false
+  },
+  "checks": {
+    "G15_L_Petersen": true,
+    "G900_degree_eight": true,
+    "G900_edges_3600": true,
+    "G900_vertices_900": true,
+    "bridge_fields_null": true,
+    "canonical_cocycle_nontrivial": true,
+    "claim_unavailable": true,
+    "closure_open": true,
+    "contract_candidate_not_admitted": true,
+    "cycle_not_admitted": true,
+    "event_gate_closed": true,
+    "existing_tracked_files_unchanged": true,
+    "external_truth_false": true,
+    "one_status_receipt_gate": true,
+    "seven_payload_files_pinned": true,
+    "sibling_delta_support_six": true,
+    "source_commit_unavailable_recorded": true,
+    "structural_audit_pass": true,
+    "trace_not_claimed": true,
+    "universal_theorem_false": true
+  },
+  "status_receipt": {
+    "claim_result": null,
+    "claim_status": "unavailable",
+    "closure": "open",
+    "cycle_t": 0,
+    "envelope_id": "fre.g900.recursive_host.unavailable.v000.001",
+    "outer_vertex": 0,
+    "phase_measure": "360+180+360=900"
+  },
+  "structural_result": {
+    "G15": "L(Petersen)",
+    "G30": "signed_2_lift_slip_layer",
+    "G60": "locked_chamber_layer",
+    "G900": {
+      "connected": true,
+      "degree": 8,
+      "edges": 3600,
+      "vertices": 900
+    },
+    "canonical_signing": {
+      "nontrivial_cocycle": true,
+      "one_edges": 15,
+      "zero_edges": 15
+    },
+    "sibling_control": {
+      "delta_support": 6,
+      "switching_class_distinct": true
+    }
+  },
+  "verdict": "G900_carrier_baked_in_recursive_host_not_admitted"
+}

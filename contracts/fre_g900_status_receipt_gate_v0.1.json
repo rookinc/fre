@@ -1,0 +1,71 @@
+{
+  "bindings": {
+    "contract_id": "fre.g900.recursive_host.v0.1",
+    "contract_sha256": "8b8baa98a8d0252f7433f800a5c118c995dee7e078c55be5db787cade1b0d83c",
+    "receipt_schema": "fre.g900.recursive_host.receipt.v0.1",
+    "receipt_schema_sha256": "9f8ef85656d1536d71bf127f11986c547f16f603fe57543507416bdc4c07b0db",
+    "structural_audit_id": "fre.g900.structural_audit.001",
+    "structural_audit_sha256": "e92dbcf6e14b83a7af81cca05da683f51633579fabe1781337a6d2664e8ad271"
+  },
+  "boundary": [
+    "status_receipt_is_not_a_G900_execution_receipt",
+    "unavailable_is_not_rejected_and_not_earned",
+    "structural_validation_is_not_recursive_host_admission",
+    "no_independent_bridge",
+    "no_transport_cycle",
+    "no_observational_closure",
+    "no_external_truth_claim",
+    "no_physical_claim"
+  ],
+  "controls": {
+    "circular_justification": false,
+    "no_receipts_no_true": true,
+    "pressure_is_authorization": false,
+    "sibling_switching_class_distinct": true
+  },
+  "gate_id": "fre.g900.nonexecution_status_receipt_gate.v0.1",
+  "permissions": {
+    "admit_G900_event": false,
+    "claim_observational_closure": false,
+    "claim_recursive_host_earned": false,
+    "claim_universal_recursive_host_theorem": false,
+    "emit_any_other_receipt": false,
+    "emit_exact_nonexecution_status_receipt": true,
+    "execute_transport_cycle": false
+  },
+  "reason": {
+    "ambient_trace_missing": true,
+    "distinct_environment_missing": true,
+    "independent_bridge_missing": true,
+    "receipt_congruence_unavailable": true,
+    "recursive_host_event_not_admitted": true,
+    "structural_payload_validated": true
+  },
+  "scope": {
+    "claim": {
+      "result": null,
+      "scope": "one_outer_vertex_instance",
+      "status": "unavailable",
+      "type": "vertex_local_recursive_host_admission"
+    },
+    "class": "nonexecution_status_receipt_only",
+    "closure_class": "open",
+    "cycle": {
+      "admitted": false,
+      "cycle_id": "fre.g900.cycle.probe.000",
+      "executed": false,
+      "t": 0,
+      "trace_preserved": false
+    },
+    "envelope_id": "fre.g900.recursive_host.unavailable.v000.001",
+    "outer_address": {
+      "address_law": "vertex=slot*60+local",
+      "local": 0,
+      "slot": 0,
+      "vertex": 0
+    },
+    "receipt_count": 1,
+    "selection_rule": "lexicographically_first_outer_address"
+  },
+  "status": "one_unavailable_status_receipt_admitted_not_emitted"
+}

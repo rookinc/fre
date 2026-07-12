@@ -1,0 +1,187 @@
+{
+  "admission": {
+    "G900_execution_allowed": false,
+    "G900_receipt_emission_allowed": false,
+    "ambient_witness_present": false,
+    "independent_bridge_present": false,
+    "kernel_payload_bound": false,
+    "observational_closure": false,
+    "policy": "pressure_exists_but_pressure_is_not_authorization",
+    "recursive_host_admitted": false,
+    "structural_validation_passed_in_FRE": false
+  },
+  "claim_boundary": {
+    "candidate_graph_identity_claim": false,
+    "external_truth_claim": false,
+    "physical_claim": false,
+    "production_security_claim": false,
+    "recursive_host_theorem_claim": false
+  },
+  "contract_id": "fre.g900.recursive_host.v0.1",
+  "contract_version": "0.1",
+  "cycle_grammar": {
+    "bounce_semantics": {
+      "operation": "close_current_cycle_and_emit_I_t",
+      "pre_and_post_receipt_states_are_distinct": true,
+      "return_is_receipted": true,
+      "same_base_route_may_be_retraced": true
+    },
+    "cycle_index_symbol": "t",
+    "inherited_continuity_symbol": "r_t_minus_1",
+    "local_ports": [
+      "W",
+      "X",
+      "Y",
+      "Z"
+    ],
+    "measure": {
+      "bounce": 180,
+      "class": "formal_cycle_measure_not_physical_angle",
+      "outbound": 360,
+      "return": 360,
+      "total": 900
+    },
+    "phase_word": [
+      "W_out",
+      "X_out",
+      "Y_out",
+      "Z_out",
+      "I_t",
+      "Z_return",
+      "Y_return",
+      "X_return",
+      "W_return"
+    ],
+    "receipt_symbol": "I_t"
+  },
+  "kernel": {
+    "candidate_invariants": {
+      "connected": true,
+      "diameter": 8,
+      "radius": 6,
+      "status": "prior_candidate_invariants_require_FRE_payload_reverification"
+    },
+    "components": {
+      "G15": {
+        "edge_count": 30,
+        "graph_class": "L(Petersen)",
+        "regular_degree": 4,
+        "role": "compact_relational_carrier_circuit",
+        "vertex_count": 15
+      },
+      "G30": {
+        "cover": "signed_2_lift_over_G15",
+        "role": "signed_sheet_slip_layer",
+        "sheet_set": [
+          "plus",
+          "minus"
+        ],
+        "slip_rule": "sigma(edge)=1_toggles_sheet",
+        "vertex_count": 30
+      },
+      "G60": {
+        "diameter": 6,
+        "edge_count": 120,
+        "regular_degree": 4,
+        "role": "sheet_resolved_locked_chamber_layer",
+        "shell_vector": [
+          1,
+          4,
+          8,
+          16,
+          24,
+          6,
+          1
+        ],
+        "vertex_count": 60
+      },
+      "h": {
+        "payload_status": "required_not_yet_bound_in_FRE",
+        "role": "signed_half_flip",
+        "rule": "h(alpha)=alpha+30_mod_60",
+        "type": "fixed_point_free_involution_on_G60"
+      },
+      "sigma": {
+        "payload_status": "required_not_yet_bound_in_FRE",
+        "role": "carrier_signing_and_slip_parity",
+        "type": "E(G15)->F2"
+      }
+    },
+    "definition": "K900=(G15,G60,sigma,h)",
+    "edge_law": {
+      "carrier_signed": {
+        "rule": "(i,alpha)~(j,h(alpha))_when_i~G15_j_and_sigma(ij)=1"
+      },
+      "carrier_unsigned": {
+        "rule": "(i,alpha)~(j,alpha)_when_i~G15_j_and_sigma(ij)=0"
+      },
+      "expected_carrier_edge_count": 1800,
+      "expected_regular_degree": 8,
+      "expected_total_edge_count": 3600,
+      "internal": {
+        "expected_edge_count": 1800,
+        "rule": "(i,alpha)~(i,beta)_when_alpha~G60_beta"
+      }
+    },
+    "kernel_id": "fre.g900.signed_half_flip_carrier.v0.1",
+    "vertex_law": {
+      "expected_vertex_count": 900,
+      "label": "v=(i,alpha)",
+      "set": "V(G15)xV(G60)"
+    }
+  },
+  "layer_semantics": {
+    "G15": "useful_circuit",
+    "G30": "slip_becomes_visible",
+    "G60": "native_chamber_address_is_locked",
+    "G900": "core_and_locked_chamber_become_relatable"
+  },
+  "phase": "g900_recursive_host_declaration",
+  "recursive_host": {
+    "host_boundary": "H_v",
+    "inner_embedding": "iota_v:G900_inner->H_v",
+    "meaning": [
+      "inner_G900_has_full_900_state_resolution_inside_H_v",
+      "outer_scale_reads_completed_inner_closure_as_one_vertex",
+      "inner_trace_must_cross_a_declared_interface",
+      "receipt_history_must_survive_outer_projection"
+    ],
+    "not_claimed": [
+      "radius_one_neighborhood_contains_900_visible_vertices",
+      "ordinary_induced_subgraph_embedding",
+      "unbounded_material_recursion",
+      "recursive_host_admission_without_bridge"
+    ],
+    "outer_projection": "pi_v(iota_v(G900_inner))=v",
+    "outer_vertex": "v=(i,alpha)",
+    "scope": "candidate_rule_for_every_outer_G900_vertex"
+  },
+  "relationship_to_support_mode": {
+    "class": "separate_transport_grammar_phase",
+    "support_mode_claims_transfer": false,
+    "support_mode_contract_modified": false,
+    "support_mode_receipts_modified": false
+  },
+  "required_payloads": [
+    "canonical_G15_edge_list",
+    "canonical_G60_edge_list",
+    "sigma_signing_on_30_G15_edges",
+    "G60_half_flip_permutation",
+    "quotient_and_lift_maps",
+    "independent_bridge_or_ambient_witness"
+  ],
+  "self_evaluator": {
+    "circular_justification_allowed": false,
+    "cyclic_communication_allowed": true,
+    "decision_rule": "no_receipts_no_true",
+    "predicate": "G900(x,E,C,T)",
+    "required": {
+      "admitted_cycle_C_through_E": true,
+      "distinct_environment_E": "E!=x",
+      "independent_bridge": true,
+      "preserved_receipt_trace_T": true,
+      "proposed_self_x": true
+    }
+  },
+  "status": "predeclared_recursive_host_candidate_not_admitted"
+}

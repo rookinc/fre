@@ -1,0 +1,104 @@
+{
+  "boundary": [
+    "authorized_by=fre.g900.nonexecution_status_receipt_gate.v0.1",
+    "status_receipt_not_execution_receipt",
+    "structural_validation_not_recursive_host_admission",
+    "independent_bridge_missing",
+    "distinct_environment_missing",
+    "ambient_trace_missing",
+    "no_receipts_no_true",
+    "pressure_exists_but_pressure_is_not_authorization",
+    "no_observational_closure"
+  ],
+  "bridge": {
+    "ambient_trace_sha256": null,
+    "cycle_through_environment": null,
+    "environment_distinct_from_host": null,
+    "environment_id": null,
+    "independent": null,
+    "inner_trace_sha256": null,
+    "realization_map_id": null,
+    "receipt_congruence": null
+  },
+  "claim": {
+    "result": null,
+    "scope": "one_outer_vertex_instance",
+    "status": "unavailable",
+    "type": "vertex_local_recursive_host_admission"
+  },
+  "closure": {
+    "class": "open",
+    "external_truth_claim": false,
+    "physical_claim": false,
+    "production_security_claim": false,
+    "universal_recursive_host_theorem_claim": false
+  },
+  "contract_id": "fre.g900.recursive_host.v0.1",
+  "contract_sha256": "8b8baa98a8d0252f7433f800a5c118c995dee7e078c55be5db787cade1b0d83c",
+  "controls": {
+    "circular_justification": false,
+    "independent_bridge_negative_control_passed": null,
+    "sibling_signing_checked": true,
+    "sibling_switching_class_distinct": true
+  },
+  "cycle": {
+    "admitted": false,
+    "bounce_measure": 180,
+    "cycle_id": "fre.g900.cycle.probe.000",
+    "measure_class": "formal_cycle_measure_not_physical_angle",
+    "outbound_measure": 360,
+    "phase_word": [
+      "W_out",
+      "X_out",
+      "Y_out",
+      "Z_out",
+      "I_t",
+      "Z_return",
+      "Y_return",
+      "X_return",
+      "W_return"
+    ],
+    "receipt_id": "fre.g900.recursive_host.unavailable.v000.001",
+    "return_measure": 360,
+    "t": 0,
+    "total_measure": 900,
+    "trace_preserved": false
+  },
+  "envelope_id": "fre.g900.recursive_host.unavailable.v000.001",
+  "gate": {
+    "contract_predeclared": true,
+    "reason": "structural_payload_validated_independent_bridge_missing",
+    "recursive_host_event_admitted": false,
+    "structural_payload_validated": true
+  },
+  "host": {
+    "address_law_checked": true,
+    "host_boundary_id": "fre.g900.host.v000",
+    "inner_embedding_declared": true,
+    "inner_graph_id": "fre.g900.signed_half_flip_carrier.v0.1",
+    "ordinary_induced_subgraph_claim": false,
+    "outer_local": 0,
+    "outer_projection_declared": true,
+    "outer_slot": 0,
+    "outer_vertex": 0,
+    "projection_target_matches_outer_vertex": true,
+    "unbounded_material_recursion_claim": false
+  },
+  "kernel": {
+    "G15_vertices": 15,
+    "G30_vertices": 30,
+    "G60_vertices": 60,
+    "degree": 8,
+    "edges": 3600,
+    "kernel_id": "fre.g900.signed_half_flip_carrier.v0.1",
+    "structural_audit_id": "fre.g900.structural_audit.001",
+    "structural_audit_sha256": "e92dbcf6e14b83a7af81cca05da683f51633579fabe1781337a6d2664e8ad271",
+    "vertices": 900
+  },
+  "privacy": {
+    "private_material_committed": false,
+    "runtime_objects_committed": false,
+    "secret_inputs_exposed": false
+  },
+  "receipt_schema": "fre.g900.recursive_host.receipt.v0.1"
+}

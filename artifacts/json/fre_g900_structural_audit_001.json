@@ -1,0 +1,83 @@
+{
+  "artifact_id": "fre.g900.structural_audit.001",
+  "audit_pass": true,
+  "boundary": {
+    "G900_execution_admitted": false,
+    "G900_receipt_emitted": false,
+    "external_truth_claim": false,
+    "independent_bridge_present": false,
+    "observational_closure": false,
+    "recursive_host_theorem_validated": false,
+    "structural_graph_identity_validated": true
+  },
+  "checks": {
+    "G15_degree_four": true,
+    "G15_edges_30": true,
+    "G15_is_L_Petersen": true,
+    "G15_vertices_15": true,
+    "G60_degree_four": true,
+    "G60_edges_120": true,
+    "G60_shell_vector_exact": true,
+    "G60_vertices_60": true,
+    "G900_connected": true,
+    "G900_degree_eight": true,
+    "G900_edges_3600": true,
+    "G900_vertices_900": true,
+    "canonical_cocycle_nontrivial": true,
+    "canonical_edge_law_exact": true,
+    "half_flip_fixed_point_free_involution": true,
+    "independent_bridge_present": false,
+    "payload_hashes_locked": true,
+    "recursive_host_admitted": false,
+    "sibling_control_distinct": true,
+    "sibling_switching_class_distinct": true
+  },
+  "contract_id": "fre.g900.recursive_host.v0.1",
+  "contract_sha256": "8b8baa98a8d0252f7433f800a5c118c995dee7e078c55be5db787cade1b0d83c",
+  "graphs": {
+    "G15": {
+      "degree": 4,
+      "edges": 30,
+      "graph_class": "L(Petersen)",
+      "shell_vector": [
+        1,
+        4,
+        8,
+        2
+      ],
+      "vertices": 15
+    },
+    "G60": {
+      "degree": 4,
+      "diameter": 6,
+      "edges": 120,
+      "shell_vector": [
+        1,
+        4,
+        8,
+        16,
+        24,
+        6,
+        1
+      ],
+      "vertices": 60
+    },
+    "G900": {
+      "carrier_edges": 1800,
+      "connected": true,
+      "degree": 8,
+      "edges": 3600,
+      "internal_edges": 1800,
+      "vertices": 900
+    }
+  },
+  "provenance_sha256": "c13bd8b4fc4901b0eb618b4918e77281a01dae1ba0f13ba5adbd9cc8170ce052",
+  "signing": {
+    "nontrivial_cocycle": true,
+    "one_edges": 15,
+    "sibling_delta_support": 6,
+    "sibling_switching_class_distinct": true,
+    "zero_edges": 15
+  },
+  "verdict": "signed_half_flip_G900_payload_structurally_validated_not_recursively_admitted"
+}

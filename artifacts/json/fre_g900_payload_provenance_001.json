@@ -1,0 +1,81 @@
+{
+  "artifact_id": "fre.g900.payload_provenance.001",
+  "checks": {
+    "active_source_not_backup": true,
+    "all_copies_exact": true,
+    "all_source_files_present": true,
+    "all_source_hashes_locked": true,
+    "canonical_files_four": true,
+    "graph_identity_admitted": false,
+    "negative_control_files_three": true,
+    "recursive_host_admitted": false,
+    "structural_validation_performed": false
+  },
+  "contract_id": "fre.g900.recursive_host.v0.1",
+  "contract_sha256": "8b8baa98a8d0252f7433f800a5c118c995dee7e078c55be5db787cade1b0d83c",
+  "files": [
+    {
+      "data_rows": 30,
+      "path": "fixtures/g900/carrier_signing_table.csv",
+      "role": "canonical_sigma_and_carrier_law",
+      "sha256": "9b3cf812cc0f6d7b065666c81fa6d16fd3e3b8a98955c264709337c7f3e7efb7"
+    },
+    {
+      "data_rows": 30,
+      "path": "fixtures/g900/g15_slot_edges.csv",
+      "role": "canonical_G15_edges",
+      "sha256": "7b94834d507cf2995ec6faf73e2e227a685d831894aa98f2647556d8b922b8f6"
+    },
+    {
+      "data_rows": 120,
+      "path": "fixtures/g900/g60_local_edges.csv",
+      "role": "canonical_G60_edges",
+      "sha256": "c700a185fab6a5f434da09b7acb716b96c76170774bee946af8ea907e4fe7f9f"
+    },
+    {
+      "data_rows": 30,
+      "path": "fixtures/g900/sibling_candidate_signing_table.csv",
+      "role": "negative_control_signing",
+      "sha256": "8ad921c2af2f48e220e6c1c8a3a72aaecc64f56791bbfbd15b66f2211af11eba"
+    },
+    {
+      "data_rows": 30,
+      "path": "fixtures/g900/sibling_signing_delta.csv",
+      "role": "negative_control_delta",
+      "sha256": "e75263b7e4de2b9c491b36b81e36674131c5f658842976b75da8e3303e146a50"
+    },
+    {
+      "data_rows": 3600,
+      "path": "fixtures/g900/sibling_x_sigma_edges.csv",
+      "role": "negative_control_G900_edges",
+      "sha256": "13dbc8023eee15f8367d9d3309d60f2c447ac24c8ae5c43c71994705a562b425"
+    },
+    {
+      "data_rows": 3600,
+      "path": "fixtures/g900/x_sigma_edges.csv",
+      "role": "canonical_G900_edges",
+      "sha256": "ea2679662f4322a9ea021fba1143c804ef73b1fae95f50c77ba76b7fe1092230"
+    }
+  ],
+  "selection": {
+    "canonical": [
+      "g15_slot_edges.csv",
+      "g60_local_edges.csv",
+      "carrier_signing_table.csv",
+      "x_sigma_edges.csv"
+    ],
+    "negative_controls": [
+      "sibling_candidate_signing_table.csv",
+      "sibling_signing_delta.csv",
+      "sibling_x_sigma_edges.csv"
+    ]
+  },
+  "source": {
+    "backup_source_used": false,
+    "locator": "~/dev/cori/research/thalean-graph-theory/18-g900-kernel-admission/source/kernel_payload",
+    "provenance_boundary": "unversioned_source_pinned_by_exact_file_hashes",
+    "source_commit_available": false,
+    "source_git_repository": false
+  },
+  "status": "source_payload_pinned_not_yet_structurally_validated"
+}

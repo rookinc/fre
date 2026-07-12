@@ -1,0 +1,584 @@
+{
+  "$id": "https://aletheos.ai/schemas/fre_g900_recursive_host_receipt_v0.1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "claim": {
+            "properties": {
+              "status": {
+                "const": "earned"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          }
+        },
+        "required": [
+          "claim"
+        ]
+      },
+      "then": {
+        "properties": {
+          "bridge": {
+            "properties": {
+              "ambient_trace_sha256": {
+                "pattern": "^[0-9a-f]{64}$",
+                "type": "string"
+              },
+              "cycle_through_environment": {
+                "const": true
+              },
+              "environment_distinct_from_host": {
+                "const": true
+              },
+              "environment_id": {
+                "type": "string"
+              },
+              "independent": {
+                "const": true
+              },
+              "inner_trace_sha256": {
+                "pattern": "^[0-9a-f]{64}$",
+                "type": "string"
+              },
+              "realization_map_id": {
+                "type": "string"
+              },
+              "receipt_congruence": {
+                "const": true
+              }
+            }
+          },
+          "closure": {
+            "properties": {
+              "class": {
+                "const": "observational"
+              }
+            }
+          },
+          "controls": {
+            "properties": {
+              "independent_bridge_negative_control_passed": {
+                "const": true
+              }
+            }
+          },
+          "cycle": {
+            "properties": {
+              "admitted": {
+                "const": true
+              },
+              "trace_preserved": {
+                "const": true
+              }
+            }
+          },
+          "gate": {
+            "properties": {
+              "recursive_host_event_admitted": {
+                "const": true
+              }
+            }
+          },
+          "host": {
+            "properties": {
+              "address_law_checked": {
+                "const": true
+              },
+              "inner_embedding_declared": {
+                "const": true
+              },
+              "outer_projection_declared": {
+                "const": true
+              },
+              "projection_target_matches_outer_vertex": {
+                "const": true
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "properties": {
+    "boundary": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "bridge": {
+      "additionalProperties": false,
+      "properties": {
+        "ambient_trace_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "cycle_through_environment": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "environment_distinct_from_host": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "environment_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "independent": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "inner_trace_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "realization_map_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "receipt_congruence": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "environment_id",
+        "environment_distinct_from_host",
+        "independent",
+        "cycle_through_environment",
+        "realization_map_id",
+        "inner_trace_sha256",
+        "ambient_trace_sha256",
+        "receipt_congruence"
+      ],
+      "type": "object"
+    },
+    "claim": {
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "result": {
+              "const": true
+            },
+            "scope": {
+              "const": "one_outer_vertex_instance"
+            },
+            "status": {
+              "const": "earned"
+            },
+            "type": {
+              "const": "vertex_local_recursive_host_admission"
+            }
+          },
+          "required": [
+            "type",
+            "scope",
+            "status",
+            "result"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "result": {
+              "type": "null"
+            },
+            "scope": {
+              "const": "one_outer_vertex_instance"
+            },
+            "status": {
+              "const": "unavailable"
+            },
+            "type": {
+              "const": "vertex_local_recursive_host_admission"
+            }
+          },
+          "required": [
+            "type",
+            "scope",
+            "status",
+            "result"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "result": {
+              "const": false
+            },
+            "scope": {
+              "const": "one_outer_vertex_instance"
+            },
+            "status": {
+              "const": "rejected"
+            },
+            "type": {
+              "const": "vertex_local_recursive_host_admission"
+            }
+          },
+          "required": [
+            "type",
+            "scope",
+            "status",
+            "result"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "closure": {
+      "additionalProperties": false,
+      "properties": {
+        "class": {
+          "enum": [
+            "open",
+            "local",
+            "historical",
+            "observational"
+          ]
+        },
+        "external_truth_claim": {
+          "const": false
+        },
+        "physical_claim": {
+          "const": false
+        },
+        "production_security_claim": {
+          "const": false
+        },
+        "universal_recursive_host_theorem_claim": {
+          "const": false
+        }
+      },
+      "required": [
+        "class",
+        "external_truth_claim",
+        "physical_claim",
+        "production_security_claim",
+        "universal_recursive_host_theorem_claim"
+      ],
+      "type": "object"
+    },
+    "contract_id": {
+      "const": "fre.g900.recursive_host.v0.1"
+    },
+    "contract_sha256": {
+      "const": "8b8baa98a8d0252f7433f800a5c118c995dee7e078c55be5db787cade1b0d83c"
+    },
+    "controls": {
+      "additionalProperties": false,
+      "properties": {
+        "circular_justification": {
+          "const": false
+        },
+        "independent_bridge_negative_control_passed": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "sibling_signing_checked": {
+          "const": true
+        },
+        "sibling_switching_class_distinct": {
+          "const": true
+        }
+      },
+      "required": [
+        "sibling_signing_checked",
+        "sibling_switching_class_distinct",
+        "independent_bridge_negative_control_passed",
+        "circular_justification"
+      ],
+      "type": "object"
+    },
+    "cycle": {
+      "additionalProperties": false,
+      "properties": {
+        "admitted": {
+          "type": "boolean"
+        },
+        "bounce_measure": {
+          "const": 180
+        },
+        "cycle_id": {
+          "pattern": "^[a-z0-9][a-z0-9._-]+$",
+          "type": "string"
+        },
+        "measure_class": {
+          "const": "formal_cycle_measure_not_physical_angle"
+        },
+        "outbound_measure": {
+          "const": 360
+        },
+        "phase_word": {
+          "items": false,
+          "maxItems": 9,
+          "minItems": 9,
+          "prefixItems": [
+            {
+              "const": "W_out"
+            },
+            {
+              "const": "X_out"
+            },
+            {
+              "const": "Y_out"
+            },
+            {
+              "const": "Z_out"
+            },
+            {
+              "const": "I_t"
+            },
+            {
+              "const": "Z_return"
+            },
+            {
+              "const": "Y_return"
+            },
+            {
+              "const": "X_return"
+            },
+            {
+              "const": "W_return"
+            }
+          ],
+          "type": "array"
+        },
+        "receipt_id": {
+          "pattern": "^[a-z0-9][a-z0-9._-]+$",
+          "type": "string"
+        },
+        "return_measure": {
+          "const": 360
+        },
+        "t": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "total_measure": {
+          "const": 900
+        },
+        "trace_preserved": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "cycle_id",
+        "t",
+        "phase_word",
+        "outbound_measure",
+        "bounce_measure",
+        "return_measure",
+        "total_measure",
+        "measure_class",
+        "receipt_id",
+        "admitted",
+        "trace_preserved"
+      ],
+      "type": "object"
+    },
+    "envelope_id": {
+      "pattern": "^[a-z0-9][a-z0-9._-]+$",
+      "type": "string"
+    },
+    "gate": {
+      "additionalProperties": false,
+      "properties": {
+        "contract_predeclared": {
+          "const": true
+        },
+        "reason": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "recursive_host_event_admitted": {
+          "type": "boolean"
+        },
+        "structural_payload_validated": {
+          "const": true
+        }
+      },
+      "required": [
+        "contract_predeclared",
+        "structural_payload_validated",
+        "recursive_host_event_admitted",
+        "reason"
+      ],
+      "type": "object"
+    },
+    "host": {
+      "additionalProperties": false,
+      "properties": {
+        "address_law_checked": {
+          "type": "boolean"
+        },
+        "host_boundary_id": {
+          "pattern": "^[a-z0-9][a-z0-9._-]+$",
+          "type": "string"
+        },
+        "inner_embedding_declared": {
+          "type": "boolean"
+        },
+        "inner_graph_id": {
+          "const": "fre.g900.signed_half_flip_carrier.v0.1"
+        },
+        "ordinary_induced_subgraph_claim": {
+          "const": false
+        },
+        "outer_local": {
+          "maximum": 59,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "outer_projection_declared": {
+          "type": "boolean"
+        },
+        "outer_slot": {
+          "maximum": 14,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "outer_vertex": {
+          "maximum": 899,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "projection_target_matches_outer_vertex": {
+          "type": "boolean"
+        },
+        "unbounded_material_recursion_claim": {
+          "const": false
+        }
+      },
+      "required": [
+        "outer_slot",
+        "outer_local",
+        "outer_vertex",
+        "address_law_checked",
+        "host_boundary_id",
+        "inner_graph_id",
+        "inner_embedding_declared",
+        "outer_projection_declared",
+        "projection_target_matches_outer_vertex",
+        "ordinary_induced_subgraph_claim",
+        "unbounded_material_recursion_claim"
+      ],
+      "type": "object"
+    },
+    "kernel": {
+      "additionalProperties": false,
+      "properties": {
+        "G15_vertices": {
+          "const": 15
+        },
+        "G30_vertices": {
+          "const": 30
+        },
+        "G60_vertices": {
+          "const": 60
+        },
+        "degree": {
+          "const": 8
+        },
+        "edges": {
+          "const": 3600
+        },
+        "kernel_id": {
+          "const": "fre.g900.signed_half_flip_carrier.v0.1"
+        },
+        "structural_audit_id": {
+          "const": "fre.g900.structural_audit.001"
+        },
+        "structural_audit_sha256": {
+          "const": "e92dbcf6e14b83a7af81cca05da683f51633579fabe1781337a6d2664e8ad271"
+        },
+        "vertices": {
+          "const": 900
+        }
+      },
+      "required": [
+        "kernel_id",
+        "structural_audit_id",
+        "structural_audit_sha256",
+        "vertices",
+        "edges",
+        "degree",
+        "G15_vertices",
+        "G30_vertices",
+        "G60_vertices"
+      ],
+      "type": "object"
+    },
+    "privacy": {
+      "additionalProperties": false,
+      "properties": {
+        "private_material_committed": {
+          "const": false
+        },
+        "runtime_objects_committed": {
+          "const": false
+        },
+        "secret_inputs_exposed": {
+          "const": false
+        }
+      },
+      "required": [
+        "private_material_committed",
+        "secret_inputs_exposed",
+        "runtime_objects_committed"
+      ],
+      "type": "object"
+    },
+    "receipt_schema": {
+      "const": "fre.g900.recursive_host.receipt.v0.1"
+    }
+  },
+  "required": [
+    "receipt_schema",
+    "envelope_id",
+    "contract_id",
+    "contract_sha256",
+    "kernel",
+    "cycle",
+    "gate",
+    "host",
+    "bridge",
+    "controls",
+    "claim",
+    "privacy",
+    "closure",
+    "boundary"
+  ],
+  "title": "FRE G900 recursive-host public receipt v0.1",
+  "type": "object"
+}
