@@ -1,0 +1,217 @@
+{
+  "circuit": {
+    "circuit_id": "support_mode_polynomial_v0.1",
+    "claim": "For a certified input in C_D, the realization is regular if and only if K equals zero.",
+    "formulas": {
+      "K": "sum(d_i*d_i)",
+      "S": "sum(h_i)",
+      "d_i": "6*h_i - S",
+      "identity": "K = 36*sigma^2"
+    },
+    "inputs": [
+      "h_1",
+      "h_2",
+      "h_3",
+      "h_4",
+      "h_5",
+      "h_6"
+    ]
+  },
+  "claim_boundary": {
+    "crypto_context_constructed": false,
+    "cryptographic_security_theorem": false,
+    "decryption_performed": false,
+    "encryption_performed": false,
+    "evaluation_performed": false,
+    "execution_gate_admitted": false,
+    "external_truth_from_closure": false,
+    "folding_compiler_optimum": false,
+    "global_support_chamber_theorem": false,
+    "key_generation_performed": false,
+    "openfhe_crypto_execution_enabled": false,
+    "openfhe_link_target_enabled": true,
+    "physical_claim": false,
+    "production_security_profile": false,
+    "profile_admitted": false,
+    "profile_pinned": true
+  },
+  "comparison": {
+    "comparison_rule": "exact_integer_equality",
+    "negative_controls_required": true,
+    "predeclared": true,
+    "receipt_quotient": "regularity_boolean",
+    "tolerance": 0
+  },
+  "contract_id": "fre.support_mode.regularity.v0.2",
+  "execution_model": {
+    "batch_operation_counts": {
+      "ContextGen": 1,
+      "DecryptVerify": 32,
+      "Encrypt": 28,
+      "EvalAdd": 184,
+      "EvalMult": 28,
+      "EvalMultKeyGen": 1,
+      "KeyGen": 1
+    },
+    "ciphertext_layout": {
+      "batch_size": 8,
+      "constant_ciphertext_count": 1,
+      "constant_value": -1,
+      "packing": "one_value_in_first_slot",
+      "rotations_required": false,
+      "support_ciphertext_count": 6
+    },
+    "circuit": [
+      {
+        "operation": "EvalAdd",
+        "result": "S",
+        "rule": "sum the six encrypted support values"
+      },
+      {
+        "operation": "EvalAdd",
+        "result": "six_h_i",
+        "rule": "add each encrypted h_i to itself six times"
+      },
+      {
+        "operation": "EvalMult",
+        "result": "negative_S",
+        "rule": "multiply encrypted S by encrypted minus one"
+      },
+      {
+        "operation": "EvalAdd",
+        "result": "d_i",
+        "rule": "add encrypted six_h_i and encrypted negative_S"
+      },
+      {
+        "operation": "EvalMult",
+        "result": "d_i_squared",
+        "rule": "multiply each encrypted d_i by itself"
+      },
+      {
+        "operation": "EvalAdd",
+        "result": "K",
+        "rule": "sum the six encrypted squared residuals"
+      }
+    ],
+    "fixture_max_expected_absolute": 288,
+    "key_scope": "one_disposable_keypair_for_fixture_batch",
+    "link_audit_id": "fre.openfhe.link_status_audit.001",
+    "link_audit_sha256": "8ea2500a8284caa1ac33152f6cfe7505b074c5aff2c8ad27780ea6ca5fe71ac2",
+    "modulus_wrap_expected": false,
+    "multiplicative_depth_required": 2,
+    "per_fixture_operation_counts": {
+      "DecryptVerify": 8,
+      "Encrypt": 7,
+      "EvalAdd": 46,
+      "EvalMult": 7
+    },
+    "plaintext_modulus": 65537,
+    "profile_id": "fre.openfhe.bgv.evalmult.executed.v0.1",
+    "profile_sha256": "77a78f5741268dd64bf61212d4ef8d694449199f47751886458f6af225557359",
+    "scope": "bounded_local_public_fixture_smoke",
+    "signed_safe_bound": 32768
+  },
+  "next_gates": [
+    "public_receipt_schema_v0.2",
+    "reference_audit_binding_v0.2",
+    "bounded_openfhe_execution_gate_v0.1"
+  ],
+  "pipelines": {
+    "fre": {
+      "backend": "OpenFHE",
+      "implementation_status": "link_verified_execution_not_admitted",
+      "pipeline_id": "support_mode_openfhe_v0.1"
+    },
+    "reference": {
+      "implementation_status": "verified_on_fixture_set_v0.1",
+      "pipeline_id": "support_mode_reference_v0.1"
+    }
+  },
+  "public_receipt_policy": {
+    "allowed": [
+      "receipt_schema",
+      "envelope_id",
+      "contract_id",
+      "source_class",
+      "input_certification",
+      "circuit_id",
+      "operation_names",
+      "gate",
+      "claim",
+      "comparison",
+      "controls",
+      "privacy",
+      "closure",
+      "boundary"
+    ],
+    "forbidden": [
+      "secret_inputs",
+      "secret_keys",
+      "ciphertexts",
+      "raw_runtime_objects",
+      "undeclared_intermediate_values"
+    ]
+  },
+  "purpose": "Compare an encrypted Euclidean support-mode regularity calculation with an independent plaintext reference calculation.",
+  "required_operations": [
+    "ContextGen",
+    "KeyGen",
+    "EvalMultKeyGen",
+    "Encrypt",
+    "EvalAdd",
+    "EvalMult",
+    "DecryptVerify"
+  ],
+  "revision_receipt": {
+    "added_constraints": [
+      "explicit fixture identifiers",
+      "coordinate bounds",
+      "ciphertext layout",
+      "operation counts",
+      "depth and modulus bounds"
+    ],
+    "added_operations": [
+      "ContextGen",
+      "EvalMultKeyGen"
+    ],
+    "anti_tuning_boundary_preserved": true,
+    "changed_before_encrypted_execution": true,
+    "revision_id": "fre.support_mode.contract_revision.v0.1_to_v0.2",
+    "unchanged": [
+      "support-mode formulas",
+      "regularity quotient",
+      "exact comparison rule",
+      "zero tolerance",
+      "geometric claim boundary",
+      "private-material prohibition"
+    ]
+  },
+  "source": {
+    "admitted_coordinate_max": 22,
+    "admitted_coordinate_min": 1,
+    "admitted_fixture_ids": [
+      "regular_uniform_10",
+      "regular_uniform_20",
+      "balanced_exchange_10",
+      "balanced_exchange_20"
+    ],
+    "arbitrary_C_D_membership_test_available": false,
+    "chamber_policy": "certified_fixture_only",
+    "coordinate_count": 6,
+    "encoding": "positive_integer_fixture_v0.1",
+    "fixture_set_id": "fre.support_mode.fixture_set.v0.1",
+    "rejected_fixture_ids": [
+      "invalid_coordinate_count",
+      "invalid_nonpositive_support"
+    ],
+    "source_class": "six_support_register"
+  },
+  "status": "predeclared_execution_extension_backend_linked_crypto_closed",
+  "supersedes": {
+    "base_contract_modified": false,
+    "contract_id": "fre.support_mode.regularity.v0.1",
+    "contract_sha256": "25622e5185cd1289f28e51157d9236d13fc5ddaf863097522ac46b6d9e4ccda6",
+    "reason": "The v0.1 operation list omitted ContextGen and EvalMultKeyGen, both required by the executed OpenFHE EvalMult throughline."
+  },
+  "version": "0.2"
+}

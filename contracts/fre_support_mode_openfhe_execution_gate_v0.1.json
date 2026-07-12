@@ -1,0 +1,168 @@
+{
+  "admitted_operations": [
+    "ContextGen",
+    "KeyGen",
+    "EvalMultKeyGen",
+    "Encrypt",
+    "EvalAdd",
+    "EvalMult",
+    "DecryptVerify"
+  ],
+  "admitted_scope": {
+    "coordinate_max": 22,
+    "coordinate_min": 1,
+    "fixture_ids": [
+      "regular_uniform_10",
+      "regular_uniform_20",
+      "balanced_exchange_10",
+      "balanced_exchange_20"
+    ],
+    "pre_gate_rejected_fixture_ids": [
+      "invalid_coordinate_count",
+      "invalid_nonpositive_support"
+    ],
+    "production_data_allowed": false,
+    "production_security_claim": false,
+    "public_test_data_only": true,
+    "scope": "one_local_public_fixture_batch"
+  },
+  "bindings": {
+    "contract_id": "fre.support_mode.regularity.v0.2",
+    "contract_sha256": "a7c28f080730aa5fa7f4183573b1270794c3246939137aac4240d90eaf5a69ba",
+    "durable_prefix_artifact_id": "fre.openfhe.durable_prefix.001",
+    "durable_prefix_sha256": "d76fa197a0b46bd44f34c18343b1adf1faf0ac9e1ebd14adf7f8cd2b992fbac7",
+    "fixture_set_id": "fre.support_mode.fixture_set.v0.1",
+    "fixture_set_sha256": "bb7a62eb248a0ee47de9a6e46e69e778c015d415544d5cdce5591faa964a1f2d",
+    "link_audit_id": "fre.openfhe.link_status_audit.001",
+    "link_audit_sha256": "8ea2500a8284caa1ac33152f6cfe7505b074c5aff2c8ad27780ea6ca5fe71ac2",
+    "profile_id": "fre.openfhe.bgv.evalmult.executed.v0.1",
+    "profile_sha256": "77a78f5741268dd64bf61212d4ef8d694449199f47751886458f6af225557359",
+    "receipt_schema": "fre.support_mode.receipt.v0.2",
+    "receipt_schema_sha256": "3b256060e49d2f6599e9a1713eaf2c2b3aa27e135e5537ca8b967ee937127741",
+    "reference_audit_id": "fre.support_mode.reference_audit.002",
+    "reference_audit_sha256": "000c24eae9ca214d6e2867bfbd41f936d1e23d183890731ddc65127fedcd3247"
+  },
+  "boundary": {
+    "admission_artifact_only": true,
+    "crypto_context_constructed_now": false,
+    "crypto_execution_performed_now": false,
+    "current_runtime_profile_admitted": false,
+    "decryption_performed_now": false,
+    "encryption_performed_now": false,
+    "evaluation_performed_now": false,
+    "fre_receipt_emitted": false,
+    "key_generation_performed_now": false,
+    "observational_closure": false,
+    "physical_claim": false,
+    "production_security_claim": false,
+    "profile_admission_effective_on_next_packet": true,
+    "receipt_congruence_established": false
+  },
+  "checks": {
+    "all_operations_receiptable": true,
+    "backend_available": true,
+    "backend_linked": true,
+    "current_crypto_closed": true,
+    "durable_copy_ready": true,
+    "link_audit_pass": true,
+    "modulus_safe": true,
+    "multiplicative_depth_two": true,
+    "no_rotations_required": true,
+    "profile_pin_pass": true,
+    "public_fixture_batch_only": true,
+    "reference_audit_v2_pass": true
+  },
+  "execution_allowed_for_next_packet": true,
+  "failure_conditions": [
+    "fixture outside admitted batch",
+    "coordinate outside declared bounds",
+    "profile or prefix binding mismatch",
+    "unexpected operation requested",
+    "reference comparison mismatch",
+    "negative control failure",
+    "receipt schema failure",
+    "private runtime material selected for commit"
+  ],
+  "gate_id": "fre.support_mode.openfhe_execution_gate.v0.1",
+  "gate_pass": true,
+  "parent_checkpoint_commit": "3cc24b5eb1db7eb07841b17fe8bd7381e8a0f6e6",
+  "profile": {
+    "batch_operation_counts": {
+      "ContextGen": 1,
+      "DecryptVerify": 32,
+      "Encrypt": 28,
+      "EvalAdd": 184,
+      "EvalMult": 28,
+      "EvalMultKeyGen": 1,
+      "KeyGen": 1
+    },
+    "ciphertext_layout": {
+      "batch_size": 8,
+      "constant_ciphertext_count": 1,
+      "constant_value": -1,
+      "packing": "one_value_in_first_slot",
+      "rotations_required": false,
+      "support_ciphertext_count": 6
+    },
+    "circuit": [
+      {
+        "operation": "EvalAdd",
+        "result": "S",
+        "rule": "sum the six encrypted support values"
+      },
+      {
+        "operation": "EvalAdd",
+        "result": "six_h_i",
+        "rule": "add each encrypted h_i to itself six times"
+      },
+      {
+        "operation": "EvalMult",
+        "result": "negative_S",
+        "rule": "multiply encrypted S by encrypted minus one"
+      },
+      {
+        "operation": "EvalAdd",
+        "result": "d_i",
+        "rule": "add encrypted six_h_i and encrypted negative_S"
+      },
+      {
+        "operation": "EvalMult",
+        "result": "d_i_squared",
+        "rule": "multiply each encrypted d_i by itself"
+      },
+      {
+        "operation": "EvalAdd",
+        "result": "K",
+        "rule": "sum the six encrypted squared residuals"
+      }
+    ],
+    "fixture_max_expected_absolute": 288,
+    "key_scope": "one_disposable_keypair_for_fixture_batch",
+    "link_audit_id": "fre.openfhe.link_status_audit.001",
+    "link_audit_sha256": "8ea2500a8284caa1ac33152f6cfe7505b074c5aff2c8ad27780ea6ca5fe71ac2",
+    "modulus_wrap_expected": false,
+    "multiplicative_depth_required": 2,
+    "per_fixture_operation_counts": {
+      "DecryptVerify": 8,
+      "Encrypt": 7,
+      "EvalAdd": 46,
+      "EvalMult": 7
+    },
+    "plaintext_modulus": 65537,
+    "profile_id": "fre.openfhe.bgv.evalmult.executed.v0.1",
+    "profile_sha256": "77a78f5741268dd64bf61212d4ef8d694449199f47751886458f6af225557359",
+    "scope": "bounded_local_public_fixture_smoke",
+    "signed_safe_bound": 32768
+  },
+  "receipt_policy": {
+    "ciphertext_material_committed": false,
+    "decrypted_fixture_values_remain_verification_data": true,
+    "failure_receipt_required_on_gate_or_comparison_failure": true,
+    "public_receipt_exports_claim_only": true,
+    "receipt_emitted_only_after_reference_comparison": true,
+    "receipt_schema": "fre.support_mode.receipt.v0.2",
+    "runtime_objects_committed": false,
+    "secret_keys_committed": false
+  },
+  "status": "next_bounded_local_smoke_admitted_not_executed"
+}
