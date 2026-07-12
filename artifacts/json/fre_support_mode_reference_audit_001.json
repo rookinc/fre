@@ -1,0 +1,160 @@
+{
+  "artifact_id": "fre.support_mode.reference_audit.001",
+  "audit_pass": true,
+  "boundary": {
+    "decryption_performed": false,
+    "encryption_performed": false,
+    "evaluation_performed": false,
+    "fre_receipt_emitted": false,
+    "key_generation_performed": false,
+    "observational_closure": false,
+    "openfhe_backend_admitted": false,
+    "physical_claim": false,
+    "receipt_congruence_established": false,
+    "reference_pipeline_only": true
+  },
+  "checks": {
+    "algebraic_control_count_two": true,
+    "all_fixture_rows_pass": true,
+    "certified_claim_count_two": true,
+    "fixture_count_six": true,
+    "hash_binding_pass": true,
+    "rejected_control_count_two": true,
+    "scale_relation_pass": true
+  },
+  "fixture_set_id": "fre.support_mode.fixture_set.v0.1",
+  "pipeline_id": "support_mode_reference_v0.1",
+  "rows": [
+    {
+      "circuit_match": true,
+      "claim_boundary_match": true,
+      "expected_well_typed": true,
+      "fixture_id": "regular_uniform_10",
+      "kind": "admitted_geometric",
+      "observed": {
+        "K": 0,
+        "S": 60,
+        "d": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "pipeline_id": "support_mode_reference_v0.1",
+        "regular": true,
+        "source_class": "six_support_register"
+      },
+      "pass": true,
+      "rejection_match": null,
+      "returncode": 0
+    },
+    {
+      "circuit_match": true,
+      "claim_boundary_match": true,
+      "expected_well_typed": true,
+      "fixture_id": "regular_uniform_20",
+      "kind": "admitted_geometric",
+      "observed": {
+        "K": 0,
+        "S": 120,
+        "d": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "pipeline_id": "support_mode_reference_v0.1",
+        "regular": true,
+        "source_class": "six_support_register"
+      },
+      "pass": true,
+      "rejection_match": null,
+      "returncode": 0
+    },
+    {
+      "circuit_match": true,
+      "claim_boundary_match": true,
+      "expected_well_typed": true,
+      "fixture_id": "balanced_exchange_10",
+      "kind": "algebraic_negative_control",
+      "observed": {
+        "K": 72,
+        "S": 60,
+        "d": [
+          6,
+          -6,
+          0,
+          0,
+          0,
+          0
+        ],
+        "pipeline_id": "support_mode_reference_v0.1",
+        "regular": false,
+        "source_class": "six_support_register"
+      },
+      "pass": true,
+      "rejection_match": null,
+      "returncode": 0
+    },
+    {
+      "circuit_match": true,
+      "claim_boundary_match": true,
+      "expected_well_typed": true,
+      "fixture_id": "balanced_exchange_20",
+      "kind": "algebraic_scale_control",
+      "observed": {
+        "K": 288,
+        "S": 120,
+        "d": [
+          12,
+          -12,
+          0,
+          0,
+          0,
+          0
+        ],
+        "pipeline_id": "support_mode_reference_v0.1",
+        "regular": false,
+        "source_class": "six_support_register"
+      },
+      "pass": true,
+      "rejection_match": null,
+      "returncode": 0
+    },
+    {
+      "circuit_match": null,
+      "claim_boundary_match": null,
+      "expected_well_typed": false,
+      "fixture_id": "invalid_coordinate_count",
+      "kind": "rejected_control",
+      "observed": null,
+      "pass": true,
+      "rejection_match": true,
+      "returncode": 2
+    },
+    {
+      "circuit_match": null,
+      "claim_boundary_match": null,
+      "expected_well_typed": false,
+      "fixture_id": "invalid_nonpositive_support",
+      "kind": "rejected_control",
+      "observed": null,
+      "pass": true,
+      "rejection_match": true,
+      "returncode": 3
+    }
+  ],
+  "source_hashes": {
+    "contract_sha256": "25622e5185cd1289f28e51157d9236d13fc5ddaf863097522ac46b6d9e4ccda6",
+    "fixture_set_sha256": "bb7a62eb248a0ee47de9a6e46e69e778c015d415544d5cdce5591faa964a1f2d",
+    "receipt_schema_sha256": "6235f085e55fa00e07f380ab96531d50b0d45ef738ea6dc54f98a8e7a5d3bda9",
+    "reference_cli_sha256": "e342db085cbbf8c9328125ca84dfde191ddf2c217a418287b64f6546b20118b1",
+    "reference_header_sha256": "c1b13e2d4521ae17fb35f1deb72f0983111b73f1d1098c155b8809a588594bce",
+    "reference_source_sha256": "4aae249f9141b077038950a35e16966625c54abb37ed83f4b62bd979d4bbf194"
+  },
+  "verdict": "plaintext_reference_matches_predeclared_fixtures"
+}
