@@ -1,0 +1,166 @@
+{
+  "bindings": {
+    "native_generator_checkpoint": {
+      "path": "artifacts/json/fre_g900_native_generator_checkpoint_audit_001.json",
+      "sha256": "4b755358bde7e3407693d33b88ca7c0c4aff9e0ba4436331f99e3b7254ae16a5"
+    },
+    "recursive_host_contract": {
+      "path": "contracts/fre_g900_recursive_host_v0.1.json",
+      "recursive_host_admitted": false,
+      "sha256": "8b8baa98a8d0252f7433f800a5c118c995dee7e078c55be5db787cade1b0d83c"
+    },
+    "repository_head": "6f3cf24ee6d2fff847a223104f43bff1231a69c3"
+  },
+  "claim_boundary": {
+    "external_truth_claim": false,
+    "grammar_declaration_only": true,
+    "independent_bridge_present": false,
+    "observational_closure": false,
+    "physical_claim": false,
+    "receipt_emitted": false,
+    "recursive_host_claim": false,
+    "transport_cycle_executed": false,
+    "universal_all_vertex_claim": false
+  },
+  "contract_id": "fre.g900.bounce_grammar.v0.1",
+  "cycle": {
+    "cycle_id": "fre.g900.bounce.cycle.000",
+    "literal_physical_angle_or_time_claim": false,
+    "next_cycle_after_receipt": 1,
+    "phase_measure": "360+180+360=900",
+    "phase_units": "discrete_symbolic_ticks",
+    "state_count_including_endpoints": 901,
+    "t": 0,
+    "t_fixed_during_cycle": true,
+    "t_role": "current_cycle_index",
+    "transition_count": 900
+  },
+  "layer_roles": {
+    "G15": "selected useful circuit edge",
+    "G30": "signed sheet and slip-bit layer",
+    "G60": "turnaround chamber-lock layer",
+    "G900": "relatable full address and receipt carrier"
+  },
+  "negative_controls": {
+    "alternate_edge_not_admitted": true,
+    "receiptless_return_not_congruent": true,
+    "unlocked_return_not_congruent": true,
+    "wrong_half_flip_rejected": true,
+    "wrong_phase_total_rejected": true
+  },
+  "oriented_edge": {
+    "G15": {
+      "canonical_sign": 1,
+      "slot_from": 0,
+      "slot_to": 1
+    },
+    "half_flip": "h(alpha)=alpha+30_mod_60",
+    "reverse_check": {
+      "h_of_30": 0,
+      "returns_to_source": true
+    },
+    "selection_rule": "lexicographically_first_canonical_signed_G15_edge",
+    "source": {
+      "local": 0,
+      "slot": 0,
+      "vertex": 0
+    },
+    "target": {
+      "local": 30,
+      "slot": 1,
+      "vertex": 90
+    }
+  },
+  "permissions": {
+    "bounce_execution_allowed": false,
+    "encrypted_execution_allowed": false,
+    "independent_bridge_execution_allowed": false,
+    "plaintext_reference_source_allowed_next_packet": true,
+    "receipt_emission_allowed": false,
+    "recursive_host_admission_allowed": false
+  },
+  "purpose": "Define one receipt-bearing 360 + 180 + 360 bounce over a single oriented signed G15 carrier edge lifted into G900.",
+  "receipt": {
+    "emission_changes_state": true,
+    "emission_tick": 900,
+    "no_receipts_no_true": true,
+    "prior_receipt_for_t0": null,
+    "receipt_id": "I_0",
+    "required_fields": [
+      "grammar_contract_id",
+      "cycle_t",
+      "oriented_edge",
+      "phase_partition",
+      "trace_sha256",
+      "prior_receipt_sha256"
+    ],
+    "symbolic_family": "I_t"
+  },
+  "segments": [
+    {
+      "arrival_effect": "apply canonical sign; G30 slip bit becomes 1",
+      "end_vertex_role": "target",
+      "name": "outward",
+      "start_vertex_role": "source",
+      "transition_count": 360,
+      "transition_ticks": [
+        1,
+        360
+      ]
+    },
+    {
+      "completion_effect": "reverse direction and set G60 chamber lock to 1",
+      "end_vertex_role": "target",
+      "name": "turnaround",
+      "start_vertex_role": "target",
+      "transition_count": 180,
+      "transition_ticks": [
+        361,
+        540
+      ]
+    },
+    {
+      "arrival_effect": "apply half-flip a second time; G30 slip bit returns to 0; preserve G60 chamber lock",
+      "end_vertex_role": "source",
+      "name": "return",
+      "start_vertex_role": "target",
+      "transition_count": 360,
+      "transition_ticks": [
+        541,
+        900
+      ]
+    }
+  ],
+  "state": {
+    "fields": [
+      "cycle_t",
+      "phase_tick",
+      "segment",
+      "vertex_role",
+      "direction",
+      "G30_slip_bit",
+      "G60_chamber_lock",
+      "receipt_state"
+    ],
+    "final": {
+      "G30_slip_bit": 0,
+      "G60_chamber_lock": 1,
+      "direction": "returned",
+      "phase_tick": 900,
+      "receipt_state": "I_0",
+      "vertex_role": "source"
+    },
+    "initial": {
+      "G30_slip_bit": 0,
+      "G60_chamber_lock": 0,
+      "direction": "outward",
+      "phase_tick": 0,
+      "receipt_state": "absent",
+      "vertex_role": "source"
+    },
+    "same_final_state_as_initial": false,
+    "same_final_vertex_as_initial": true
+  },
+  "status": "predeclared_plaintext_bounce_grammar_not_executed",
+  "version": "0.1"
+}

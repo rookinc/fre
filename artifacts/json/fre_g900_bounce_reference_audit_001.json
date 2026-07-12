@@ -1,0 +1,110 @@
+{
+  "artifact_id": "fre.g900.bounce_reference.audit.001",
+  "audit_pass": true,
+  "bindings": {
+    "capture_sha256": "0bbca88737e20904fbba9cef76e1a9e76eeb78a1bc3c9f0a0586a4ea3c1d71de",
+    "execution_gate_sha256": "9a9644ebeb939740b830f149e2086ae90e16e0cee7c5e22fcfbdd3b8e5d695d8",
+    "grammar_contract_sha256": "80ac01520f3cc229425dd925a11efdda2c82d3a3fb8e9eead3fb424f86e66cfe",
+    "native_generator_checkpoint_sha256": "4b755358bde7e3407693d33b88ca7c0c4aff9e0ba4436331f99e3b7254ae16a5",
+    "reference_source_sha256": "2d3c78d6ebe199bc394d980bfb413a31f55fb153c795e670e8d7525ab1074af3"
+  },
+  "boundary": {
+    "external_truth_claim": false,
+    "graph_payload_read": false,
+    "independent_bridge_present": false,
+    "observational_closure": false,
+    "physical_claim": false,
+    "public_receipt_emitted": false,
+    "recursive_host_admitted": false
+  },
+  "checks": {
+    "all_internal_checks_pass": true,
+    "binding_fre_g900_bounce_grammar_v0.1": true,
+    "binding_fre_g900_bounce_reference_execution_gate_v0.1": true,
+    "binding_fre_g900_native_generator_checkpoint_audit_001": true,
+    "binding_run_g900_bounce_reference": true,
+    "capture_hash_locked": true,
+    "chamber_lock_persisted": true,
+    "contract_id_exact": true,
+    "cycle_t_zero": true,
+    "phase_measure_exact": true,
+    "physical_claim_false": true,
+    "pipeline_id_exact": true,
+    "receipt_hash_locked": true,
+    "receipt_id_I0": true,
+    "receipt_present": true,
+    "reference_not_rerun_by_audit": true,
+    "return_to_source": true,
+    "slip_closed": true,
+    "source_zero_target_ninety": true,
+    "states_901": true,
+    "trace_hash_locked": true,
+    "transitions_900": true
+  },
+  "claim_scope": {
+    "graph_transport_execution_claim": false,
+    "plaintext_reference_trace": true,
+    "recursive_host_claim": false,
+    "same_final_automaton_state": false,
+    "same_final_vertex": true,
+    "universal_all_vertex_claim": false
+  },
+  "receipt": {
+    "classification": "reference_receipt_candidate",
+    "public_recursive_host_receipt": false,
+    "receipt_id": "I_0",
+    "receipt_sha256": "1ee381695c107e5f28f43940348504fad6fb9c363fbfc29711143e7226b7a446",
+    "trace_sha256": "841e7bec36225dd83a069f252f41bab206e3d21be2d04dad4ae41b33717fe467"
+  },
+  "run": {
+    "maximum_invocations": 1,
+    "observed": {
+      "checks": {
+        "lock_persists_on_return": true,
+        "lock_set_at_540": true,
+        "receipt_only_at_completion": true,
+        "return_state_distinct": true,
+        "segment_counts_exact": true,
+        "slip_involution_closed": true,
+        "source_returned_at_900": true,
+        "state_count_901": true,
+        "target_reached_at_360": true,
+        "transition_count_900": true
+      },
+      "contract_id": "fre.g900.bounce_grammar.v0.1",
+      "cycle_id": "fre.g900.bounce.cycle.000",
+      "cycle_t": 0,
+      "final_state": {
+        "G30_slip_bit": 0,
+        "G60_chamber_lock": 1,
+        "cycle_t": 0,
+        "direction": "returned",
+        "phase_tick": 900,
+        "receipt_state": "I_0",
+        "segment": "return",
+        "segment_step": 360,
+        "vertex_role": "source"
+      },
+      "phase_measure": "360+180+360=900",
+      "physical_claim": false,
+      "pipeline_id": "fre.g900.bounce_reference.v0.1",
+      "receipt_id": "I_0",
+      "receipt_sha256": "1ee381695c107e5f28f43940348504fad6fb9c363fbfc29711143e7226b7a446",
+      "segment_state_counts": {
+        "initial": 1,
+        "outward": 360,
+        "return": 360,
+        "turnaround": 180
+      },
+      "source_vertex": 0,
+      "state_count": 901,
+      "target_vertex": 90,
+      "trace_sha256": "841e7bec36225dd83a069f252f41bab206e3d21be2d04dad4ae41b33717fe467",
+      "transition_count": 900
+    },
+    "reference_rerun_by_audit": false,
+    "run_id": "fre.g900.bounce_reference.run.001"
+  },
+  "status": "plaintext_900_transition_bounce_reference_recorded",
+  "verdict": "900_transition_reference_bounce_returns_to_source_with_receipt_distinguished_state"
+}

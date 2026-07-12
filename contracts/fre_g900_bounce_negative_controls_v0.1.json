@@ -1,0 +1,120 @@
+{
+  "bindings": {
+    "bounce_grammar": {
+      "path": "contracts/fre_g900_bounce_grammar_v0.1.json",
+      "sha256": "80ac01520f3cc229425dd925a11efdda2c82d3a3fb8e9eead3fb424f86e66cfe"
+    },
+    "positive_reference_audit": {
+      "path": "artifacts/json/fre_g900_bounce_reference_audit_001.json",
+      "receipt_sha256": "1ee381695c107e5f28f43940348504fad6fb9c363fbfc29711143e7226b7a446",
+      "sha256": "63064b56d350a2c434c70ad9ab9a481f2d2633bcd26888f6625e04fbc4c04879",
+      "trace_sha256": "841e7bec36225dd83a069f252f41bab206e3d21be2d04dad4ae41b33717fe467"
+    },
+    "reference_source": {
+      "modification_allowed": false,
+      "path": "tools/run_g900_bounce_reference.py",
+      "sha256": "2d3c78d6ebe199bc394d980bfb413a31f55fb153c795e670e8d7525ab1074af3"
+    },
+    "repository_head": "6f3cf24ee6d2fff847a223104f43bff1231a69c3"
+  },
+  "claim_boundary": {
+    "automaton_sensitivity_controls_only": true,
+    "external_truth_claim": false,
+    "graph_transport_execution_claim": false,
+    "independent_bridge_present": false,
+    "observational_closure": false,
+    "physical_claim": false,
+    "recursive_host_claim": false,
+    "universal_all_vertex_claim": false
+  },
+  "contract_id": "fre.g900.bounce_negative_controls.v0.1",
+  "evaluation_law": {
+    "all_declared_fields_must_match": true,
+    "control_receipts_emitted": false,
+    "rejection_records_only": true,
+    "same_vertex_is_not_sufficient": true,
+    "tolerance": 0
+  },
+  "permissions": {
+    "bridge_execution_allowed": false,
+    "negative_control_execution_allowed": false,
+    "negative_control_source_allowed_next_packet": true,
+    "positive_reference_rerun_allowed": false,
+    "public_receipt_emission_allowed": false,
+    "recursive_host_admission_allowed": false
+  },
+  "purpose": "Show that return to the source vertex does not collapse phase, edge, slip, chamber lock, and receipt distinctions.",
+  "status": "five_bounce_negative_controls_predeclared_not_executed",
+  "suite": {
+    "case_count": 5,
+    "cases": [
+      {
+        "case_id": "wrong_phase_total",
+        "expected_accepted": false,
+        "expected_reason": "phase_partition_must_equal_360_180_360",
+        "mutation": {
+          "outward": 360,
+          "return": 360,
+          "total": 899,
+          "turnaround": 179
+        },
+        "same_source_vertex_possible": true
+      },
+      {
+        "case_id": "receiptless_return",
+        "expected_accepted": false,
+        "expected_reason": "receipt_I_0_required_at_completion",
+        "mutation": {
+          "final_lock": 1,
+          "final_receipt_state": "absent",
+          "final_vertex": 0
+        },
+        "same_source_vertex": true
+      },
+      {
+        "case_id": "wrong_half_flip",
+        "expected_accepted": false,
+        "expected_half_flip_local": 30,
+        "expected_reason": "signed_half_flip_endpoint_mismatch",
+        "expected_target_vertex": 90,
+        "mutation": {
+          "local_from": 0,
+          "local_to": 29,
+          "slot_from": 0,
+          "slot_to": 1,
+          "target_vertex": 89
+        }
+      },
+      {
+        "case_id": "alternate_edge",
+        "expected_accepted": false,
+        "expected_reason": "oriented_edge_not_admitted_for_cycle_000",
+        "mutation": {
+          "local_from": 0,
+          "local_to": 30,
+          "slot_from": 0,
+          "slot_to": 4,
+          "target_vertex": 270
+        },
+        "predeclared_target_vertex": 90
+      },
+      {
+        "case_id": "unlocked_return",
+        "expected_accepted": false,
+        "expected_reason": "G60_chamber_lock_must_persist",
+        "mutation": {
+          "final_lock": 0,
+          "final_receipt_state": "I_0",
+          "final_slip_bit": 0,
+          "final_vertex": 0
+        },
+        "same_source_vertex": true
+      }
+    ],
+    "cycle_t": 0,
+    "expected_accepted_count": 0,
+    "expected_rejected_count": 5,
+    "suite_id": "fre.g900.bounce_negative_controls.suite.001"
+  },
+  "version": "0.1"
+}

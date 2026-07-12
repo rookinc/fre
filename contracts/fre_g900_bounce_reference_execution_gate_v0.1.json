@@ -1,0 +1,100 @@
+{
+  "admission": {
+    "allowed_command": [
+      "python",
+      "tools/run_g900_bounce_reference.py"
+    ],
+    "allowed_data_reads": [
+      "contracts/fre_g900_bounce_grammar_v0.1.json"
+    ],
+    "allowed_project_writes": [],
+    "forbidden_data_reads": [
+      "fixtures/g900/g15_slot_edges.csv",
+      "fixtures/g900/g60_local_edges.csv",
+      "fixtures/g900/carrier_signing_table.csv",
+      "fixtures/g900/x_sigma_edges.csv",
+      "artifacts/json/fre_g900_native_generator_checkpoint_audit_001.json",
+      "$HOME/tmp/fre_g900_native_generator_run_001.json",
+      "$HOME/tmp/fre_g900_target_canonicalization_001.json"
+    ],
+    "maximum_invocations": 1,
+    "run_id": "fre.g900.bounce_reference.run.001",
+    "runtime_capture": "$HOME/tmp/fre_g900_bounce_reference_run_001.json",
+    "runtime_capture_may_commit": false
+  },
+  "bindings": {
+    "bounce_grammar": {
+      "path": "contracts/fre_g900_bounce_grammar_v0.1.json",
+      "sha256": "80ac01520f3cc229425dd925a11efdda2c82d3a3fb8e9eead3fb424f86e66cfe"
+    },
+    "native_generator_checkpoint": {
+      "path": "artifacts/json/fre_g900_native_generator_checkpoint_audit_001.json",
+      "read_by_reference_source": false,
+      "sha256": "4b755358bde7e3407693d33b88ca7c0c4aff9e0ba4436331f99e3b7254ae16a5"
+    },
+    "reference_source": {
+      "path": "tools/run_g900_bounce_reference.py",
+      "sha256": "2d3c78d6ebe199bc394d980bfb413a31f55fb153c795e670e8d7525ab1074af3"
+    },
+    "repository_head": "6f3cf24ee6d2fff847a223104f43bff1231a69c3"
+  },
+  "claim_boundary": {
+    "external_truth_claim": false,
+    "independent_bridge_present": false,
+    "observational_closure": false,
+    "physical_claim": false,
+    "plaintext_reference_trace_only": true,
+    "public_receipt_emitted": false,
+    "recursive_host_claim": false,
+    "universal_all_vertex_claim": false
+  },
+  "gate_id": "fre.g900.bounce_reference_execution_gate.v0.1",
+  "permissions": {
+    "encrypted_execution_allowed": false,
+    "independent_bridge_execution_allowed": false,
+    "public_recursive_host_receipt_allowed": false,
+    "recursive_host_admission_allowed": false,
+    "reference_execution_allowed_next_packet": true,
+    "reference_receipt_candidate_allowed": true,
+    "reference_source_modification_allowed": false
+  },
+  "predeclared_output_requirements": {
+    "all_internal_checks_pass": true,
+    "contract_id": "fre.g900.bounce_grammar.v0.1",
+    "cycle_id": "fre.g900.bounce.cycle.000",
+    "cycle_t": 0,
+    "final_state": {
+      "G30_slip_bit": 0,
+      "G60_chamber_lock": 1,
+      "cycle_t": 0,
+      "direction": "returned",
+      "phase_tick": 900,
+      "receipt_state": "I_0",
+      "segment": "return",
+      "segment_step": 360,
+      "vertex_role": "source"
+    },
+    "phase_measure": "360+180+360=900",
+    "physical_claim": false,
+    "pipeline_id": "fre.g900.bounce_reference.v0.1",
+    "receipt_id": "I_0",
+    "receipt_sha256": {
+      "status": "to_be_observed_from_locked_trace"
+    },
+    "segment_state_counts": {
+      "initial": 1,
+      "outward": 360,
+      "return": 360,
+      "turnaround": 180
+    },
+    "source_vertex": 0,
+    "state_count": 901,
+    "target_vertex": 90,
+    "trace_sha256": {
+      "status": "to_be_observed_from_locked_reference"
+    },
+    "transition_count": 900
+  },
+  "status": "one_plaintext_bounce_reference_run_admitted_not_executed",
+  "version": "0.1"
+}

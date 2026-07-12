@@ -1,0 +1,122 @@
+{
+  "artifact_id": "fre.g900.bounce_negative_controls.audit.001",
+  "audit_pass": true,
+  "bindings": {
+    "capture_sha256": "dd7dc2d8f39703132360604171f9dd1b7ccc01801353502ff3ca26c33f2239f6",
+    "control_source_sha256": "ee58cbf554508841909f0bba46686ce57b75f03112c39b9d7014df8e9ba0facc",
+    "execution_gate_sha256": "232c858ee264d5f15db42c8f19ce2c84c090faf35da9feb3890e4f9b8b424771",
+    "grammar_contract_sha256": "80ac01520f3cc229425dd925a11efdda2c82d3a3fb8e9eead3fb424f86e66cfe",
+    "marker_sha256": "24b8430cb87ef91aa9afb5c94482f277ec674df9d455e13e6a1ef88ce6bc2059",
+    "negative_control_contract_sha256": "5ba5491f131bd5ec4726aa83b80b6c0e19b8155d7a740519205bd04be2a1f140",
+    "positive_reference_audit_sha256": "63064b56d350a2c434c70ad9ab9a481f2d2633bcd26888f6625e04fbc4c04879"
+  },
+  "boundary": {
+    "external_truth_claim": false,
+    "independent_bridge_present": false,
+    "observational_closure": false,
+    "physical_claim": false,
+    "public_receipt_emitted": false,
+    "recursive_host_admitted": false
+  },
+  "checks": {
+    "accepted_count_zero": true,
+    "all_expected_rejections": true,
+    "all_predeclared_results_match": true,
+    "all_results_rejected": true,
+    "binding_fre_g900_bounce_grammar_v0.1": true,
+    "binding_fre_g900_bounce_negative_control_execution_gate_v0.1": true,
+    "binding_fre_g900_bounce_negative_controls_v0.1": true,
+    "binding_fre_g900_bounce_reference_audit_001": true,
+    "binding_run_g900_bounce_negative_controls": true,
+    "capture_hash_locked": true,
+    "case_count_five": true,
+    "contract_id_exact": true,
+    "marker_branch_main": true,
+    "marker_command_exact": true,
+    "marker_hash_locked": true,
+    "marker_head_locked": true,
+    "marker_run_id_exact": true,
+    "negative_evaluator_not_rerun_by_audit": true,
+    "no_control_receipts": true,
+    "physical_claim_false": true,
+    "pipeline_id_exact": true,
+    "rejected_count_five": true,
+    "results_exact": true,
+    "same_vertex_not_sufficient": true,
+    "suite_id_exact": true
+  },
+  "claim_scope": {
+    "automaton_sensitivity_controls_only": true,
+    "graph_transport_execution_claim": false,
+    "recursive_host_claim": false,
+    "same_vertex_is_not_sufficient": true,
+    "universal_all_vertex_claim": false
+  },
+  "receipt_policy": {
+    "control_receipts_emitted": false,
+    "public_recursive_host_receipt": false
+  },
+  "run": {
+    "marker": {
+      "attempt_started_at": "2026-07-12T15:59:23+00:00",
+      "branch": "main",
+      "command": "python tools/run_g900_bounce_negative_controls.py",
+      "head": "6f3cf24ee6d2fff847a223104f43bff1231a69c3",
+      "run_id": "fre.g900.bounce_negative_controls.run.001"
+    },
+    "maximum_invocations": 1,
+    "negative_evaluator_rerun_by_audit": false,
+    "observed": {
+      "accepted_count": 0,
+      "all_expected_rejections": true,
+      "case_count": 5,
+      "contract_id": "fre.g900.bounce_negative_controls.v0.1",
+      "control_receipts_emitted": false,
+      "physical_claim": false,
+      "pipeline_id": "fre.g900.bounce_negative_controls.reference.v0.1",
+      "rejected_count": 5,
+      "results": [
+        {
+          "accepted": false,
+          "case_id": "wrong_phase_total",
+          "matches_predeclared_result": true,
+          "reason": "phase_partition_must_equal_360_180_360",
+          "receipt_emitted": false
+        },
+        {
+          "accepted": false,
+          "case_id": "receiptless_return",
+          "matches_predeclared_result": true,
+          "reason": "receipt_I_0_required_at_completion",
+          "receipt_emitted": false
+        },
+        {
+          "accepted": false,
+          "case_id": "wrong_half_flip",
+          "matches_predeclared_result": true,
+          "reason": "signed_half_flip_endpoint_mismatch",
+          "receipt_emitted": false
+        },
+        {
+          "accepted": false,
+          "case_id": "alternate_edge",
+          "matches_predeclared_result": true,
+          "reason": "oriented_edge_not_admitted_for_cycle_000",
+          "receipt_emitted": false
+        },
+        {
+          "accepted": false,
+          "case_id": "unlocked_return",
+          "matches_predeclared_result": true,
+          "reason": "G60_chamber_lock_must_persist",
+          "receipt_emitted": false
+        }
+      ],
+      "same_vertex_is_not_sufficient": true,
+      "suite_id": "fre.g900.bounce_negative_controls.suite.001"
+    },
+    "run_id": "fre.g900.bounce_negative_controls.run.001"
+  },
+  "status": "five_predeclared_bounce_negative_controls_recorded",
+  "verdict": "five_predeclared_bounce_negative_controls_rejected_without_receipts"
+}

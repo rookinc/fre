@@ -62,3 +62,20 @@ See [G900 native-generator checkpoint](notes/g900_native_generator_checkpoint_00
 
 This remains a structural result. No transport cycle, independent
 bridge, recursive-host admission, or observational closure is claimed.
+
+## G900 bounce checkpoint
+
+A bounded plaintext bounce checkpoint now records the `t=0` grammar
+`360 + 180 + 360 = 900`, with 901 states, source vertex `0`, target vertex
+`90`, persistent `G60` chamber lock, closing `G30` slip bit, and plaintext
+receipt candidate `I_0`.
+
+All five predeclared negative controls were rejected without receipts, showing
+that return to the same vertex is insufficient by itself. No physical,
+graph-transport, recursive-host, public-receipt, universal, observational
+closure, or graph non-isomorphism claim is made.
+
+See [G900 bounce checkpoint](notes/g900_bounce_checkpoint_001.md), the
+[positive reference audit](artifacts/json/fre_g900_bounce_reference_audit_001.json),
+and the
+[negative-control audit](artifacts/json/fre_g900_bounce_negative_controls_audit_001.json).
