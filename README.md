@@ -26,3 +26,15 @@ No key generation, encryption, evaluation, or decryption is performed.
 No cryptographic security theorem is claimed.
 No global dodecahedral support-chamber test is claimed.
 No physical interpretation is claimed.
+
+## Completed local OpenFHE throughline
+
+The bounded support-mode circuit completed one admitted local OpenFHE
+batch. All four encrypted outputs matched the plaintext reference. Two
+certified fixtures earned regularity receipts; two algebraic controls
+retained unavailable geometric claims.
+
+See [OpenFHE support-mode throughline](notes/openfhe_support_mode_throughline_001.md).
+
+The one-shot gate is consumed. Closure remains local, not observational.
+No production-security or external-truth claim is made.
