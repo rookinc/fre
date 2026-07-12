@@ -1,0 +1,129 @@
+{
+  "artifact_id": "fre.support_mode.openfhe_execution_audit.001",
+  "audit_pass": true,
+  "bindings": {
+    "contract_id": "fre.support_mode.regularity.v0.2",
+    "contract_sha256": "a7c28f080730aa5fa7f4183573b1270794c3246939137aac4240d90eaf5a69ba",
+    "gate_id": "fre.support_mode.openfhe_execution_gate.v0.1",
+    "gate_sha256": "810b7ae6261f5989b5249bfeb1b43a1b4cea842d40935a3ada7dd21e268387f4",
+    "profile_id": "fre.openfhe.bgv.evalmult.executed.v0.1",
+    "reference_audit_id": "fre.support_mode.reference_audit.002",
+    "schema_sha256": "3b256060e49d2f6599e9a1713eaf2c2b3aa27e135e5537ca8b967ee937127741"
+  },
+  "checks": {
+    "all_fixture_rows_match": true,
+    "all_slot_tails_zero": true,
+    "batch_reference_match": true,
+    "context_generated": true,
+    "eval_mult_key_generated": true,
+    "executable_not_rerun_by_audit": true,
+    "fixture_count_four": true,
+    "fixture_ids_exact": true,
+    "key_generated": true,
+    "private_material_not_committed": true
+  },
+  "claim_boundary": {
+    "encrypted_reference_outputs_congruent": true,
+    "fre_receipt_emitted": false,
+    "observational_closure": false,
+    "physical_claim": false,
+    "receipt_congruence_established": false
+  },
+  "fixture_results": [
+    {
+      "K": 0,
+      "S": 60,
+      "certification_class": "certified_geometric",
+      "computed_regular": true,
+      "d": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixture_id": "regular_uniform_10",
+      "geometric_claim_available": true,
+      "reference_match": true,
+      "slot_tail_zero": true
+    },
+    {
+      "K": 0,
+      "S": 120,
+      "certification_class": "certified_geometric",
+      "computed_regular": true,
+      "d": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixture_id": "regular_uniform_20",
+      "geometric_claim_available": true,
+      "reference_match": true,
+      "slot_tail_zero": true
+    },
+    {
+      "K": 72,
+      "S": 60,
+      "certification_class": "algebraic_control",
+      "computed_regular": false,
+      "d": [
+        6,
+        -6,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixture_id": "balanced_exchange_10",
+      "geometric_claim_available": false,
+      "reference_match": true,
+      "slot_tail_zero": true
+    },
+    {
+      "K": 288,
+      "S": 120,
+      "certification_class": "algebraic_control",
+      "computed_regular": false,
+      "d": [
+        12,
+        -12,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fixture_id": "balanced_exchange_20",
+      "geometric_claim_available": false,
+      "reference_match": true,
+      "slot_tail_zero": true
+    }
+  ],
+  "material_boundary": {
+    "ciphertexts_committed": false,
+    "keys_committed": false,
+    "private_material_committed": false,
+    "runtime_objects_committed": false
+  },
+  "run_id": "fre.support_mode.openfhe.batch.001",
+  "runtime_evidence": {
+    "executed_binary_sha256": "220a1fff7de561b0ae36f3a5c38bf0cdc2f3fb3b108a5dd6cafd264d100303d6",
+    "operations_completed": [
+      "ContextGen",
+      "KeyGen",
+      "EvalMultKeyGen",
+      "Encrypt",
+      "EvalAdd",
+      "EvalMult",
+      "DecryptVerify"
+    ],
+    "production_security_claim": false,
+    "saved_output_sha256": "eb42568cdf308e8afda8fce67bece77563ee4ca6269119f68eba350fbcad4229",
+    "scope": "bounded_local_public_fixture_batch"
+  },
+  "verdict": "bounded_openfhe_execution_matches_plaintext_reference"
+}

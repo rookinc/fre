@@ -1,0 +1,60 @@
+{
+  "boundary": [
+    "fixture_id=balanced_exchange_20",
+    "execution_audit_id=fre.support_mode.openfhe_execution_audit.001",
+    "execution_audit_sha256=9f7dbc0b41ab1ab91ab6916ed7994361a81344ea86537e0ab676557900975f2d",
+    "local_test_profile_only",
+    "public_fixture_inputs_only",
+    "geometric_regularity_unavailable_without_C_D_certification",
+    "no_production_security_claim",
+    "no_observational_closure"
+  ],
+  "circuit_id": "support_mode_polynomial_v0.1",
+  "claim": {
+    "result": null,
+    "status": "unavailable",
+    "type": "regularity"
+  },
+  "closure": {
+    "class": "local",
+    "external_truth_claim": false
+  },
+  "comparison": {
+    "contract_sha256": "a7c28f080730aa5fa7f4183573b1270794c3246939137aac4240d90eaf5a69ba",
+    "execution_gate_id": "fre.support_mode.openfhe_execution_gate.v0.1",
+    "fre_pipeline_id": "support_mode_openfhe_v0.1",
+    "profile_id": "fre.openfhe.bgv.evalmult.executed.v0.1",
+    "reference_congruence": true,
+    "reference_pipeline_id": "support_mode_reference_v0.1",
+    "rule": "exact_integer_equality",
+    "tolerance": 0
+  },
+  "contract_id": "fre.support_mode.regularity.v0.2",
+  "controls": {
+    "negative_controls_passed": true
+  },
+  "envelope_id": "fre.support_mode.receipt.balanced_exchange_20.001",
+  "gate": {
+    "admitted": true,
+    "reason": "predeclared_public_fixture_in_bounded_local_batch"
+  },
+  "input_certification": "unavailable",
+  "operation_names": [
+    "ContextGen",
+    "KeyGen",
+    "EvalMultKeyGen",
+    "Encrypt",
+    "EvalAdd",
+    "EvalMult",
+    "DecryptVerify"
+  ],
+  "privacy": {
+    "ciphertexts_exposed": false,
+    "keys_exposed": false,
+    "private_material_committed": false,
+    "runtime_objects_committed": false,
+    "secret_inputs_exposed": false
+  },
+  "receipt_schema": "fre.support_mode.receipt.v0.2",
+  "source_class": "six_support_register"
+}

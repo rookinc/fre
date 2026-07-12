@@ -1,0 +1,57 @@
+{
+  "artifact_id": "fre.support_mode.openfhe_receipt_audit.001",
+  "audit_pass": true,
+  "checks": {
+    "all_seven_operations_exact": true,
+    "earned_claim_count_two": true,
+    "execution_audit_bound": true,
+    "external_truth_claim_false": true,
+    "local_closure_only": true,
+    "negative_controls_passed": true,
+    "private_material_absent": true,
+    "receipt_file_set_exact": true,
+    "receipt_hashes_locked": true,
+    "top_level_fields_exact": true,
+    "unavailable_claim_count_two": true
+  },
+  "closure": {
+    "class": "local",
+    "external_truth_claim": false,
+    "observational": false
+  },
+  "execution_audit_id": "fre.support_mode.openfhe_execution_audit.001",
+  "execution_audit_sha256": "9f7dbc0b41ab1ab91ab6916ed7994361a81344ea86537e0ab676557900975f2d",
+  "receipt_count": 4,
+  "receipts": [
+    {
+      "claim_status": "unavailable",
+      "fixture_id": "balanced_exchange_10",
+      "receipt_file": "artifacts/receipts/fre_support_mode_receipt_balanced_exchange_10_001.json",
+      "receipt_sha256": "7fe1cb54e1cefa62db5cc6a85e72422083a30637ee17165c26ddb03e493906a4",
+      "reference_congruence": true
+    },
+    {
+      "claim_status": "unavailable",
+      "fixture_id": "balanced_exchange_20",
+      "receipt_file": "artifacts/receipts/fre_support_mode_receipt_balanced_exchange_20_001.json",
+      "receipt_sha256": "2230b6ab967ecde31753e2a7603e64c52efa47ca8196a536c68e221b6a710d9f",
+      "reference_congruence": true
+    },
+    {
+      "claim_status": "earned",
+      "fixture_id": "regular_uniform_10",
+      "receipt_file": "artifacts/receipts/fre_support_mode_receipt_regular_uniform_10_001.json",
+      "receipt_sha256": "9fdb5d514c44430b14d710892b75061e454753ecb14549b4463ab064ce8cc08f",
+      "reference_congruence": true
+    },
+    {
+      "claim_status": "earned",
+      "fixture_id": "regular_uniform_20",
+      "receipt_file": "artifacts/receipts/fre_support_mode_receipt_regular_uniform_20_001.json",
+      "receipt_sha256": "cbcf3ddaf3cfa8e429c6f56f7caaffe937a133fc1e3006dec19918b87b168078",
+      "reference_congruence": true
+    }
+  ],
+  "schema_sha256": "3b256060e49d2f6599e9a1713eaf2c2b3aa27e135e5537ca8b967ee937127741",
+  "verdict": "schema_bound_receipt_congruence_for_bounded_local_batch"
+}

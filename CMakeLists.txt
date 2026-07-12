@@ -165,6 +165,34 @@ if(FRE_ENABLE_OPENFHE)
         BUILD_RPATH "${FRE_OPENFHE_PREFIX}/lib"
     )
 
+    add_executable(fre_openfhe_support_mode_smoke
+        src/backends/openfhe/openfhe_support_mode.cpp
+        src/cli/fre_openfhe_support_mode_smoke.cpp
+    )
+
+    target_link_libraries(fre_openfhe_support_mode_smoke
+        PRIVATE
+            fre_reference
+            fre_openfhe_backend
+            OPENFHEpke
+            OPENFHEbinfhe
+            OPENFHEcore
+            omp
+    )
+
+    if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+        target_compile_options(fre_openfhe_support_mode_smoke
+            PRIVATE -Wall -Wextra -Werror
+        )
+        target_link_options(fre_openfhe_support_mode_smoke
+            PRIVATE -Wl,--no-as-needed
+        )
+    endif()
+
+    set_target_properties(fre_openfhe_support_mode_smoke PROPERTIES
+        BUILD_RPATH "${FRE_OPENFHE_PREFIX}/lib"
+    )
+
     if(BUILD_TESTING)
         add_test(
             NAME fre_openfhe_link_status
