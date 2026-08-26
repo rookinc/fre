@@ -1,0 +1,86 @@
+{
+  "artifact_id": "fre_g900_endpoint_projection_fibre_witness_001",
+  "audit_pass": true,
+  "boundary": {
+    "external_truth_claim": false,
+    "graph_transport_claim": false,
+    "new_crypto": false,
+    "new_execution": false,
+    "new_receipt_emission": false,
+    "observational_closure": false,
+    "physical_claim": false,
+    "plaintext_G900_evidence_only": true,
+    "recursive_host_admission": false,
+    "witness_only": true
+  },
+  "earned_statements": [
+    "pi_vertex is noninjective on the witnessed registered-state set",
+    "endpoint equality does not imply registered-state equality",
+    "endpoint equality does not imply receipt congruence",
+    "information discarded by pi_vertex is operationally relevant to FRE validation or refusal"
+  ],
+  "forbidden_promotions": [
+    "group_action",
+    "group_representation",
+    "covering_space",
+    "topological_cover",
+    "cryptographic_security_theorem",
+    "physical_interpretation",
+    "observational_closure",
+    "external_truth",
+    "universal_G900_theorem"
+  ],
+  "keeper_line": "A returned endpoint does not erase the receipt history that earned the return.",
+  "negative_control_support": {
+    "contract_receiptless_return_not_congruent": true,
+    "contract_unlocked_return_not_congruent": true,
+    "receiptless_return": {
+      "accepted": false,
+      "case_id": "receiptless_return",
+      "matches_predeclared_result": true,
+      "reason": "receipt_I_0_required_at_completion",
+      "receipt_emitted": false
+    },
+    "same_vertex_is_not_sufficient": true,
+    "unlocked_return": {
+      "accepted": false,
+      "case_id": "unlocked_return",
+      "matches_predeclared_result": true,
+      "reason": "G60_chamber_lock_must_persist",
+      "receipt_emitted": false
+    }
+  },
+  "next_gate": "fre_openfhe_endpoint_projection_conformance_scout_001",
+  "projection": {
+    "codomain_description": "G900 endpoint vertex",
+    "domain_description": "registered G900 bounce state carrying endpoint plus retained phase, edge, slip, chamber-lock, receipt, and history information",
+    "projection_id": "pi_vertex",
+    "rule": "pi_vertex(s) = s.vertex"
+  },
+  "requirements": {
+    "R1_reference_returns_to_source": true,
+    "R2_returned_state_retains_registered_distinction": true,
+    "R3_same_vertex_negative_control_rule_present": true,
+    "R4_endpoint_sharing_controls_reject_or_fail_congruence": true,
+    "R5_rejection_depends_on_nonendpoint_registered_information": true,
+    "R6_private_crypto_body_not_required_for_witness": true
+  },
+  "source_sha256": {
+    "artifacts/json/fre_g900_bounce_negative_controls_audit_001.json": "cf01428ed0c43ce5a488eab737074658ad22ed13e91b4052406fa3485f5bfb44",
+    "artifacts/json/fre_g900_bounce_reference_audit_001.json": "63064b56d350a2c434c70ad9ab9a481f2d2633bcd26888f6625e04fbc4c04879",
+    "contracts/fre_g900_bounce_grammar_v0.1.json": "80ac01520f3cc229425dd925a11efdda2c82d3a3fb8e9eead3fb424f86e66cfe",
+    "contracts/fre_g900_bounce_negative_controls_v0.1.json": "5ba5491f131bd5ec4726aa83b80b6c0e19b8155d7a740519205bd04be2a1f140"
+  },
+  "status": "endpoint_projection_fibre_witness_established",
+  "witness": {
+    "final_G30_slip_bit": 0,
+    "final_G60_chamber_lock": 1,
+    "final_phase_tick": 900,
+    "final_receipt_state": "I_0",
+    "final_vertex_role": "source",
+    "receipt_id": "I_0",
+    "same_final_automaton_state": false,
+    "same_final_vertex": true,
+    "source_vertex": 0
+  }
+}
