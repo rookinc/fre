@@ -1,0 +1,170 @@
+{
+  "artifact_id": "fre_openfhe_endpoint_projection_conformance_witness_001",
+  "audit_pass": true,
+  "boundary": {
+    "G900_equivalence_claim": false,
+    "ciphertext_bytes_read": false,
+    "conformance_witness_only": true,
+    "cryptographic_security_claim": false,
+    "existing_evidence_only": true,
+    "new_OpenFHE_execution": false,
+    "new_decryption": false,
+    "new_encryption": false,
+    "new_eval": false,
+    "new_key_generation": false,
+    "physical_claim": false,
+    "private_body_required": false
+  },
+  "counterfactual_metadata_cases": [
+    {
+      "candidate_parent_handles": [
+        "cth_openfhe_evalmult_b_001",
+        "cth_openfhe_evalmult_a_001"
+      ],
+      "case_id": "swap_parent_order",
+      "crypto_performed": false,
+      "executed": false,
+      "payload_shape": "packed_int64_8",
+      "registered_parent_binding_exact": false,
+      "role": "metadata_counterfactual_only",
+      "same_projection": true
+    },
+    {
+      "candidate_parent_handles": [
+        "cth_openfhe_evalmult_a_001"
+      ],
+      "case_id": "drop_parent",
+      "crypto_performed": false,
+      "executed": false,
+      "payload_shape": "packed_int64_8",
+      "registered_parent_binding_exact": false,
+      "role": "metadata_counterfactual_only",
+      "same_projection": true
+    },
+    {
+      "candidate_parent_handles": [
+        "cth_openfhe_evalmult_a_001",
+        "cth_openfhe_evalmult_a_001"
+      ],
+      "case_id": "duplicate_parent",
+      "crypto_performed": false,
+      "executed": false,
+      "payload_shape": "packed_int64_8",
+      "registered_parent_binding_exact": false,
+      "role": "metadata_counterfactual_only",
+      "same_projection": true
+    },
+    {
+      "candidate_parent_handles": [
+        "cth_openfhe_evalmult_a_001",
+        "cth_openfhe_evalmult_out_001"
+      ],
+      "case_id": "replace_parent_with_output",
+      "crypto_performed": false,
+      "executed": false,
+      "payload_shape": "packed_int64_8",
+      "registered_parent_binding_exact": false,
+      "role": "metadata_counterfactual_only",
+      "same_projection": true
+    }
+  ],
+  "earned_statements": [
+    "pi_payload_shape is noninjective on the witnessed registered handle set",
+    "payload-shape equality does not imply registered-handle equality",
+    "payload-shape equality does not determine parent provenance",
+    "FRE binding and refusal rules depend on registered provenance discarded by pi_payload_shape",
+    "payload-shape equality alone is insufficient for FRE congruence",
+    "G900 and OpenFHE instantiate a common bounded FRE projection-provenance invariant"
+  ],
+  "existing_rule_support": {
+    "adapter_boundary_refusal_rule": true,
+    "negative_controls": {
+      "eval_stub_output_handle_mismatch_refuses": true,
+      "minimal_packet_output_handle_mismatch": true,
+      "receipt_input_output_binding_mismatch": true
+    },
+    "template_parent_binding_rule": true
+  },
+  "fibre": {
+    "handle_ids": [
+      "cth_openfhe_evalmult_a_001",
+      "cth_openfhe_evalmult_b_001",
+      "cth_openfhe_evalmult_out_001"
+    ],
+    "member_count": 3,
+    "operation_digests": [
+      "20680ca2575bc6513de27a1b1b85843cd792769500fb7066fe1946bb918a7c48",
+      "f3845609d66b9d8bfd4af4b602ce9de9b2189cb24d710165d07703897b39b408",
+      "8ebab263512433b286da04706cde873730d5041b4ecc65c09736c5d11241197d"
+    ],
+    "parent_histories": [
+      [],
+      [],
+      [
+        "cth_openfhe_evalmult_a_001",
+        "cth_openfhe_evalmult_b_001"
+      ]
+    ]
+  },
+  "forbidden_promotions": [
+    "G900_OpenFHE_equivalence",
+    "group_action",
+    "group_representation",
+    "covering_space",
+    "topological_cover",
+    "Paper_13_representation_theorem",
+    "cryptographic_security_theorem",
+    "physical_interpretation",
+    "observational_closure",
+    "external_truth"
+  ],
+  "keeper_line": "The public shape may coincide. The receipt history still decides what the coincidence means.",
+  "next_gate": "fre_projection_provenance_invariant_001",
+  "positive_binding": {
+    "expected_equals_actual": true,
+    "input_handles": [
+      "cth_openfhe_evalmult_a_001",
+      "cth_openfhe_evalmult_b_001"
+    ],
+    "output_handle": "cth_openfhe_evalmult_out_001",
+    "output_handle_found": true,
+    "parent_binding_exact": true,
+    "registered_parent_handles": [
+      "cth_openfhe_evalmult_a_001",
+      "cth_openfhe_evalmult_b_001"
+    ],
+    "verify_pass": true
+  },
+  "projection": {
+    "codomain_description": "public payload-shape metadata",
+    "domain_description": "registered public OpenFHE ciphertext-handle receipt state",
+    "projection_id": "pi_payload_shape",
+    "rule": "pi_payload_shape(h) = h.payload_shape",
+    "witness_value": "packed_int64_8"
+  },
+  "requirements": {
+    "R1_multiple_registered_states_share_payload_shape": true,
+    "R2_public_registered_provenance_distinguishes_fibre_members": true,
+    "R3_existing_FRE_rule_requires_handle_parent_binding": true,
+    "R4_existing_negative_controls_refuse_binding_mismatch": true,
+    "R5_positive_packet_has_exact_binding_and_verified_receipt": true
+  },
+  "shared_FRE_invariant": {
+    "G900_projection": "pi_vertex(s) = s.vertex",
+    "OpenFHE_projection": "pi_payload_shape(h) = h.payload_shape",
+    "equivalence_claim": false,
+    "statement": "A lossy public projection cannot substitute for registered provenance when FRE decides congruence.",
+    "status": "bounded_cross_domain_protocol_invariant"
+  },
+  "source_sha256": {
+    "/data/data/com.termux/files/home/dev/cori/protocols/fre/artifacts/json/fre_g900_endpoint_projection_fibre_witness_001.json": "08c889143cc84b4a3198b2bcd9a1c8e09aeabdacf705a2ee6ad26bd99a5a9dbb",
+    "/data/data/com.termux/files/home/dev/cori/research/computing/aletheos/adapters/openfhe/receipts/handles/eval_mult_live_ciphertext_handles_001.json": "ffe948b40da793b61413f00ec3b541e737689c7984df3839fe0c3c1add44d381",
+    "/data/data/com.termux/files/home/dev/cori/research/computing/aletheos/adapters/openfhe/receipts/packets/eval_mult_fre_packet_instance_001.json": "d6c66efa60edfc465758f65e6c5516e2bf3676b0934d3349e58572e9537a1c08",
+    "/data/data/com.termux/files/home/dev/cori/research/computing/aletheos/adapters/openfhe/receipts/templates/eval_mult_fre_packet_template_001.json": "7f6be05ecd8949fb1e25405c72c40f55116de97367fb4d906fdf38510aa898de",
+    "/data/data/com.termux/files/home/dev/cori/research/computing/aletheos/artifacts/json/b32k_fre_fhe_eval_stub_contract_shape_check_001.json": "dcd3609938227d86bbc7b155321782034619ca390ddce66451f5b566dba47d78",
+    "/data/data/com.termux/files/home/dev/cori/research/computing/aletheos/artifacts/json/b32k_fre_fhe_minimal_packet_fixture_001.json": "7963972708e6127adbe5608e808ced39cdd0c0a85f8aa119d1d466b89a8ccf25",
+    "/data/data/com.termux/files/home/dev/cori/research/computing/aletheos/artifacts/json/b32k_fre_fhe_openfhe_adapter_boundary_001.json": "74011565d5ba4fb0cee6fc659cd43e6f649f09df89ec82f4a6c3076f879e1e1b",
+    "/data/data/com.termux/files/home/dev/cori/research/computing/aletheos/artifacts/json/b32k_fre_fhe_receipt_shape_check_001.json": "1aa2fe25d82c5dced5ec47fec37b8d57a6f5f94a2a28f14e9d89de66e94bcb42"
+  },
+  "status": "openfhe_endpoint_projection_conformance_witness_established"
+}
