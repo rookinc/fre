@@ -1,0 +1,306 @@
+{
+  "ablations": [
+    {
+      "R3_survives": true,
+      "R4_survives": true,
+      "R5_survives": true,
+      "classification": "REDUNDANT_ON_CURRENT_RECEIPTS",
+      "formal_kernel_survives": true,
+      "operational_extension_survives": true,
+      "remaining_predicates": [
+        "diad_tests_closure",
+        "same_boundary_closure",
+        "surviving_boundary_preservation"
+      ],
+      "remaining_support": {
+        "R3": [
+          {
+            "predicate": "same_boundary_closure",
+            "receipts": [
+              "G900:R2_returned_state_retains_registered_distinction",
+              "G900:R3_same_vertex_negative_control_rule_present"
+            ]
+          }
+        ],
+        "R4": [
+          {
+            "predicate": "diad_tests_closure",
+            "receipts": [
+              "G900:R1_reference_returns_to_source",
+              "G900:R3_same_vertex_negative_control_rule_present",
+              "G900:R4_endpoint_sharing_controls_reject_or_fail_congruence"
+            ]
+          },
+          {
+            "predicate": "same_boundary_closure",
+            "receipts": [
+              "G900:R3_same_vertex_negative_control_rule_present",
+              "G900:R4_endpoint_sharing_controls_reject_or_fail_congruence",
+              "G900:R5_rejection_depends_on_nonendpoint_registered_information"
+            ]
+          }
+        ],
+        "R5": [
+          {
+            "predicate": "surviving_boundary_preservation",
+            "receipts": [
+              "G900:R2_returned_state_retains_registered_distinction",
+              "G900:R5_rejection_depends_on_nonendpoint_registered_information",
+              "OpenFHE:R2_public_registered_provenance_distinguishes_fibre_members",
+              "OpenFHE:R3_existing_FRE_rule_requires_handle_parent_binding",
+              "OpenFHE:R4_existing_negative_controls_refuse_binding_mismatch"
+            ]
+          }
+        ]
+      },
+      "removed_predicate": "boundary_decides_survival"
+    },
+    {
+      "R3_survives": true,
+      "R4_survives": true,
+      "R5_survives": true,
+      "classification": "REDUNDANT_ON_CURRENT_RECEIPTS",
+      "formal_kernel_survives": true,
+      "operational_extension_survives": true,
+      "remaining_predicates": [
+        "boundary_decides_survival",
+        "same_boundary_closure",
+        "surviving_boundary_preservation"
+      ],
+      "remaining_support": {
+        "R3": [
+          {
+            "predicate": "same_boundary_closure",
+            "receipts": [
+              "G900:R2_returned_state_retains_registered_distinction",
+              "G900:R3_same_vertex_negative_control_rule_present"
+            ]
+          }
+        ],
+        "R4": [
+          {
+            "predicate": "same_boundary_closure",
+            "receipts": [
+              "G900:R3_same_vertex_negative_control_rule_present",
+              "G900:R4_endpoint_sharing_controls_reject_or_fail_congruence",
+              "G900:R5_rejection_depends_on_nonendpoint_registered_information"
+            ]
+          }
+        ],
+        "R5": [
+          {
+            "predicate": "boundary_decides_survival",
+            "receipts": [
+              "OpenFHE:R3_existing_FRE_rule_requires_handle_parent_binding",
+              "OpenFHE:R4_existing_negative_controls_refuse_binding_mismatch",
+              "OpenFHE:R5_positive_packet_has_exact_binding_and_verified_receipt"
+            ]
+          },
+          {
+            "predicate": "surviving_boundary_preservation",
+            "receipts": [
+              "G900:R2_returned_state_retains_registered_distinction",
+              "G900:R5_rejection_depends_on_nonendpoint_registered_information",
+              "OpenFHE:R2_public_registered_provenance_distinguishes_fibre_members",
+              "OpenFHE:R3_existing_FRE_rule_requires_handle_parent_binding",
+              "OpenFHE:R4_existing_negative_controls_refuse_binding_mismatch"
+            ]
+          }
+        ]
+      },
+      "removed_predicate": "diad_tests_closure"
+    },
+    {
+      "R3_survives": false,
+      "R4_survives": true,
+      "R5_survives": true,
+      "classification": "FORMAL_WITNESS_NECESSARY",
+      "formal_kernel_survives": false,
+      "operational_extension_survives": true,
+      "remaining_predicates": [
+        "boundary_decides_survival",
+        "diad_tests_closure",
+        "surviving_boundary_preservation"
+      ],
+      "remaining_support": {
+        "R3": [],
+        "R4": [
+          {
+            "predicate": "diad_tests_closure",
+            "receipts": [
+              "G900:R1_reference_returns_to_source",
+              "G900:R3_same_vertex_negative_control_rule_present",
+              "G900:R4_endpoint_sharing_controls_reject_or_fail_congruence"
+            ]
+          }
+        ],
+        "R5": [
+          {
+            "predicate": "boundary_decides_survival",
+            "receipts": [
+              "OpenFHE:R3_existing_FRE_rule_requires_handle_parent_binding",
+              "OpenFHE:R4_existing_negative_controls_refuse_binding_mismatch",
+              "OpenFHE:R5_positive_packet_has_exact_binding_and_verified_receipt"
+            ]
+          },
+          {
+            "predicate": "surviving_boundary_preservation",
+            "receipts": [
+              "G900:R2_returned_state_retains_registered_distinction",
+              "G900:R5_rejection_depends_on_nonendpoint_registered_information",
+              "OpenFHE:R2_public_registered_provenance_distinguishes_fibre_members",
+              "OpenFHE:R3_existing_FRE_rule_requires_handle_parent_binding",
+              "OpenFHE:R4_existing_negative_controls_refuse_binding_mismatch"
+            ]
+          }
+        ]
+      },
+      "removed_predicate": "same_boundary_closure"
+    },
+    {
+      "R3_survives": true,
+      "R4_survives": true,
+      "R5_survives": true,
+      "classification": "REDUNDANT_ON_CURRENT_RECEIPTS",
+      "formal_kernel_survives": true,
+      "operational_extension_survives": true,
+      "remaining_predicates": [
+        "boundary_decides_survival",
+        "diad_tests_closure",
+        "same_boundary_closure"
+      ],
+      "remaining_support": {
+        "R3": [
+          {
+            "predicate": "same_boundary_closure",
+            "receipts": [
+              "G900:R2_returned_state_retains_registered_distinction",
+              "G900:R3_same_vertex_negative_control_rule_present"
+            ]
+          }
+        ],
+        "R4": [
+          {
+            "predicate": "diad_tests_closure",
+            "receipts": [
+              "G900:R1_reference_returns_to_source",
+              "G900:R3_same_vertex_negative_control_rule_present",
+              "G900:R4_endpoint_sharing_controls_reject_or_fail_congruence"
+            ]
+          },
+          {
+            "predicate": "same_boundary_closure",
+            "receipts": [
+              "G900:R3_same_vertex_negative_control_rule_present",
+              "G900:R4_endpoint_sharing_controls_reject_or_fail_congruence",
+              "G900:R5_rejection_depends_on_nonendpoint_registered_information"
+            ]
+          }
+        ],
+        "R5": [
+          {
+            "predicate": "boundary_decides_survival",
+            "receipts": [
+              "OpenFHE:R3_existing_FRE_rule_requires_handle_parent_binding",
+              "OpenFHE:R4_existing_negative_controls_refuse_binding_mismatch",
+              "OpenFHE:R5_positive_packet_has_exact_binding_and_verified_receipt"
+            ]
+          }
+        ]
+      },
+      "removed_predicate": "surviving_boundary_preservation"
+    }
+  ],
+  "artifact_id": "fre_projection_provenance_direct_witness_drop_one_001",
+  "audit_pass": true,
+  "baseline_support": {
+    "R3": [
+      {
+        "predicate": "same_boundary_closure",
+        "receipts": [
+          "G900:R2_returned_state_retains_registered_distinction",
+          "G900:R3_same_vertex_negative_control_rule_present"
+        ]
+      }
+    ],
+    "R4": [
+      {
+        "predicate": "diad_tests_closure",
+        "receipts": [
+          "G900:R1_reference_returns_to_source",
+          "G900:R3_same_vertex_negative_control_rule_present",
+          "G900:R4_endpoint_sharing_controls_reject_or_fail_congruence"
+        ]
+      },
+      {
+        "predicate": "same_boundary_closure",
+        "receipts": [
+          "G900:R3_same_vertex_negative_control_rule_present",
+          "G900:R4_endpoint_sharing_controls_reject_or_fail_congruence",
+          "G900:R5_rejection_depends_on_nonendpoint_registered_information"
+        ]
+      }
+    ],
+    "R5": [
+      {
+        "predicate": "boundary_decides_survival",
+        "receipts": [
+          "OpenFHE:R3_existing_FRE_rule_requires_handle_parent_binding",
+          "OpenFHE:R4_existing_negative_controls_refuse_binding_mismatch",
+          "OpenFHE:R5_positive_packet_has_exact_binding_and_verified_receipt"
+        ]
+      },
+      {
+        "predicate": "surviving_boundary_preservation",
+        "receipts": [
+          "G900:R2_returned_state_retains_registered_distinction",
+          "G900:R5_rejection_depends_on_nonendpoint_registered_information",
+          "OpenFHE:R2_public_registered_provenance_distinguishes_fibre_members",
+          "OpenFHE:R3_existing_FRE_rule_requires_handle_parent_binding",
+          "OpenFHE:R4_existing_negative_controls_refuse_binding_mismatch"
+        ]
+      }
+    ]
+  },
+  "boundary": {
+    "AC36_membership_reopened": false,
+    "U_AC36_application_reopened": false,
+    "category_claim": false,
+    "cryptographic_security_claim": false,
+    "group_claim": false,
+    "new_theorem": false,
+    "physical_claim": false,
+    "topology_claim": false
+  },
+  "checks": {
+    "all_referenced_source_receipts_true": true,
+    "baseline_R3_supported": true,
+    "baseline_R4_supported": true,
+    "baseline_R5_supported": true,
+    "direct_predicate_set_exact": true,
+    "four_drop_one_cases": true,
+    "g900_source_pass": true,
+    "input_alignment_pass": true,
+    "input_invariant_pass": true,
+    "openfhe_source_pass": true
+  },
+  "formal_kernel": {
+    "R2": "explicit lossy projection",
+    "R3": "noninjective witnessed projection",
+    "R4": "projection equality does not imply FRE congruence"
+  },
+  "interpretation_boundary": {
+    "U_AC36_used_for_minimality": false,
+    "drop_one_is_receipt_dependency_test": true,
+    "logical_predicate_necessity_proved": false,
+    "logical_predicate_sufficiency_proved": false,
+    "predicate_equivalence_proved": false,
+    "predicate_independence_proved": false
+  },
+  "keeper_line": "Drop one predicate, not one fact: the surviving receipts decide the dependency.",
+  "next_gate": "fre_projection_provenance_kernel_reduction_001",
+  "operational_extension": {
+    "R5": "discarded provenance is operationally relevant"
+  },
+  "status": "direct_witness_drop_one_receipt_anatomy_established"
+}

@@ -1,0 +1,257 @@
+{
+  "artifact_id": "fre_ac36_ten_field_adjudication_001",
+  "audit_pass": true,
+  "boundary": {
+    "AC36_membership_declared": false,
+    "U_AC36_applied": false,
+    "category_claim": false,
+    "cryptographic_security_claim": false,
+    "group_claim": false,
+    "new_theorem": false,
+    "physical_claim": false,
+    "representation_claim": false,
+    "topology_claim": false
+  },
+  "field_count": 10,
+  "keeper_line": "Ten receipts may open the AC36 gate; resemblance never does.",
+  "missing_fields": [],
+  "next_gate": "fre_ac36_membership_candidate_001",
+  "non_circularity": {
+    "AC36_membership_assumed": false,
+    "U_AC36_used_to_establish_fields": false,
+    "sources_are_pre_membership_committed_artifacts": true
+  },
+  "present_exact_count": 5,
+  "present_translatable_count": 5,
+  "rows": [
+    {
+      "classification": "PRESENT_TRANSLATABLE",
+      "evidence": {
+        "binding_mismatch_refused": true,
+        "positive_verified_receipt": true
+      },
+      "field": "declared_boundary_receipt_role",
+      "reason": "Receipt state operationally decides validation/refusal at the declared boundary.",
+      "source": "/data/data/com.termux/files/home/dev/cori/protocols/fre/artifacts/json/fre_openfhe_endpoint_projection_conformance_witness_001.json"
+    },
+    {
+      "classification": "PRESENT_TRANSLATABLE",
+      "evidence": {
+        "controls_reject_or_fail_congruence": true,
+        "reference_returns": true,
+        "same_vertex_negative_control": true
+      },
+      "field": "declared_diad_closure_role",
+      "reason": "The positive return and same-endpoint negative controls form a finite two-sided closure test.",
+      "source": "/data/data/com.termux/files/home/dev/cori/protocols/fre/artifacts/json/fre_g900_endpoint_projection_fibre_witness_001.json"
+    },
+    {
+      "classification": "PRESENT_TRANSLATABLE",
+      "evidence": {
+        "earned_statement": "endpoint equality does not imply receipt congruence",
+        "nonendpoint_information_required": true,
+        "same_public_boundary": "same G900 endpoint vertex"
+      },
+      "field": "declared_same_boundary_closure_test",
+      "reason": "The same endpoint boundary is held fixed while receipt provenance changes the congruence result.",
+      "source": "/data/data/com.termux/files/home/dev/cori/protocols/fre/artifacts/json/fre_g900_endpoint_projection_fibre_witness_001.json"
+    },
+    {
+      "classification": "PRESENT_TRANSLATABLE",
+      "evidence": {
+        "G900_retained": [
+          "phase",
+          "edge",
+          "slip",
+          "chamber_lock",
+          "receipt_history"
+        ],
+        "OpenFHE_retained": [
+          "handle_identity",
+          "operation_digest",
+          "parent_handles",
+          "receipt_provenance"
+        ]
+      },
+      "field": "declared_surviving_boundary_set",
+      "reason": "The committed invariant explicitly identifies provenance that survives public projection and remains operational.",
+      "source": "/data/data/com.termux/files/home/dev/cori/protocols/fre/artifacts/json/fre_projection_provenance_invariant_001.json"
+    },
+    {
+      "classification": "PRESENT_TRANSLATABLE",
+      "evidence": {
+        "sample": [
+          {
+            "action": "adopt_backend",
+            "source": "v_linked",
+            "target": "v_adopted"
+          },
+          {
+            "action": "declare_profile",
+            "source": "v_adopted",
+            "target": "v_profile"
+          },
+          {
+            "action": "KeyGen",
+            "source": "v_profile",
+            "target": "v_keygen"
+          }
+        ],
+        "source_action_target_edge_count": 14
+      },
+      "field": "declared_triad_action_role",
+      "reason": "Committed operation edges explicitly instantiate source-action-target triples.",
+      "source": "/data/data/com.termux/files/home/dev/cori/research/computing/aletheos/adapters/openfhe/receipts/thalean/openfhe_operation_graph_export_001.json"
+    },
+    {
+      "classification": "PRESENT_EXACT",
+      "evidence": {
+        "boundary": {
+          "G900_OpenFHE_equivalence_claim": false,
+          "bounded_protocol_invariant_only": true,
+          "cryptographic_security_claim": false,
+          "external_truth_claim": false,
+          "group_structure_claim": false,
+          "new_G900_execution": false,
+          "new_OpenFHE_execution": false,
+          "new_crypto": false,
+          "new_execution": false,
+          "observational_closure": false,
+          "physical_claim": false,
+          "private_body_read": false,
+          "topological_structure_claim": false,
+          "two_witness_instances_only": true,
+          "universal_FRE_theorem_claim": false
+        },
+        "forbidden_promotions": [
+          "G900_OpenFHE_equivalence",
+          "universal_FRE_theorem",
+          "group_action",
+          "group_representation",
+          "fibre_group",
+          "covering_space",
+          "topological_cover",
+          "bundle_structure",
+          "Paper_13_representation_theorem",
+          "cryptographic_security_theorem",
+          "physical_interpretation",
+          "observational_closure",
+          "external_truth"
+        ]
+      },
+      "field": "explicit_non_claim_boundary_set",
+      "reason": "The FRE invariant explicitly records forbidden promotions and false claim boundaries.",
+      "source": "/data/data/com.termux/files/home/dev/cori/protocols/fre/artifacts/json/fre_projection_provenance_invariant_001.json"
+    },
+    {
+      "classification": "PRESENT_EXACT",
+      "evidence": {
+        "audit_pass": true,
+        "finite_witness_artifact": true,
+        "receipt_id": "I_0"
+      },
+      "field": "finite_receipt_surface",
+      "reason": "A committed finite receipt witness exists and is auditable.",
+      "source": "/data/data/com.termux/files/home/dev/cori/protocols/fre/artifacts/json/fre_g900_endpoint_projection_fibre_witness_001.json"
+    },
+    {
+      "classification": "PRESENT_EXACT",
+      "evidence": {
+        "boundary": {
+          "geometry_claim": false,
+          "graph_mutation": false,
+          "morphism_spec_only": true,
+          "new_crypto": false,
+          "new_decryption": false,
+          "new_encryption": false,
+          "new_eval": false,
+          "new_key_generation": false,
+          "physics_claim": false
+        },
+        "morphism_type": "theory_project",
+        "preserved_invariants": [
+          "source vertex coverage",
+          "source edge coverage",
+          "edge source-target resolvability from scanned graph",
+          "operation order",
+          "admission requirements",
+          "edge receipts",
+          "public/private boundary",
+          "material_committed=false",
+          "ciphertext handles remain quotient carriers",
+          "DecryptVerify remains separate from Eval",
+          "geometry_status=none",
+          "physics_claim=false"
+        ]
+      },
+      "field": "morphism_or_translation_boundary",
+      "reason": "A committed admissible-action morphism boundary already exists.",
+      "source": "/data/data/com.termux/files/home/dev/cori/research/computing/aletheos/adapters/openfhe/receipts/thalean/openfhe_to_admissible_action_morphism_001.json"
+    },
+    {
+      "classification": "PRESENT_EXACT",
+      "evidence": {
+        "false_claim_boundaries": {
+          "G900_OpenFHE_equivalence_claim": false,
+          "cryptographic_security_claim": false,
+          "external_truth_claim": false,
+          "group_structure_claim": false,
+          "physical_claim": false,
+          "topological_structure_claim": false,
+          "universal_FRE_theorem_claim": false
+        },
+        "forbidden_promotions": [
+          "G900_OpenFHE_equivalence",
+          "universal_FRE_theorem",
+          "group_action",
+          "group_representation",
+          "fibre_group",
+          "covering_space",
+          "topological_cover",
+          "bundle_structure",
+          "Paper_13_representation_theorem",
+          "cryptographic_security_theorem",
+          "physical_interpretation",
+          "observational_closure",
+          "external_truth"
+        ]
+      },
+      "field": "no_hidden_escalation",
+      "reason": "The committed invariant explicitly blocks escalation beyond its earned scope.",
+      "source": "/data/data/com.termux/files/home/dev/cori/protocols/fre/artifacts/json/fre_projection_provenance_invariant_001.json"
+    },
+    {
+      "classification": "PRESENT_EXACT",
+      "evidence": {
+        "preserved_invariants": [
+          "source vertex coverage",
+          "source edge coverage",
+          "edge source-target resolvability from scanned graph",
+          "operation order",
+          "admission requirements",
+          "edge receipts",
+          "public/private boundary",
+          "material_committed=false",
+          "ciphertext handles remain quotient carriers",
+          "DecryptVerify remains separate from Eval",
+          "geometry_status=none",
+          "physics_claim=false"
+        ],
+        "validation_checks": {
+          "edge_map_total": true,
+          "graph_geometry_none": true,
+          "graph_physics_false": true,
+          "graph_status_ok": true,
+          "schema_status_ok": true,
+          "surface_scan_passed": true,
+          "vertex_map_total": true
+        }
+      },
+      "field": "scanable_preservation_relation",
+      "reason": "The committed morphism exposes explicit preservation obligations and Boolean validation checks.",
+      "source": "/data/data/com.termux/files/home/dev/cori/research/computing/aletheos/adapters/openfhe/receipts/thalean/openfhe_to_admissible_action_morphism_001.json"
+    }
+  ],
+  "status": "ten_fields_accounted_pre_membership",
+  "unresolved_fields": []
+}

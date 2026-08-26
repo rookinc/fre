@@ -1,0 +1,79 @@
+{
+  "artifact_id": "fre_projection_provenance_r4_not_r5_countermodel_admission_001",
+  "audit_pass": true,
+  "boundary": {
+    "AC36_membership_reopened": false,
+    "U_AC36_application_reopened": false,
+    "category_claim": false,
+    "congruence_redefined": false,
+    "countermodel_admitted": true,
+    "cryptographic_security_claim": false,
+    "group_claim": false,
+    "new_FRE_semantics": false,
+    "new_universal_theorem": false,
+    "physical_claim": false,
+    "representation_claim": false,
+    "topology_claim": false
+  },
+  "checks": {
+    "R4_true": true,
+    "R5_false": true,
+    "candidate_added_no_new_FRE_semantics": true,
+    "candidate_did_not_redefine_congruence": true,
+    "candidate_source_pass": true,
+    "candidate_status_exact": true,
+    "committed_R4_is_formal_obstruction": true,
+    "committed_R5_is_separate_operational_extension": true,
+    "invariant_source_pass": true,
+    "kernel_source_pass": true,
+    "registered_noncongruence": true,
+    "same_operational_outcome": true,
+    "same_projection": true
+  },
+  "countermodel": {
+    "FRE_congruence": {
+      "a~b": false
+    },
+    "operational_outcome": {
+      "O(a)": "accept",
+      "O(b)": "accept"
+    },
+    "projection": {
+      "pi(a)": "y",
+      "pi(b)": "y"
+    },
+    "registered_states": [
+      "a",
+      "b"
+    ]
+  },
+  "earned_statement": "Within the committed FRE projection-provenance semantics, the formal obstruction R4 does not by itself entail the operational relevance condition R5.",
+  "formal_result": {
+    "R4": true,
+    "R4_entails_R5": false,
+    "R5": false
+  },
+  "keeper_line": "R4 says the projection forgot a registered distinction. R5 says FRE cares that it forgot.",
+  "kernel_consequence": {
+    "R2_classification": "DECLARATIVE_INFRASTRUCTURE",
+    "R3_classification": "LOGICALLY_ENTAILED_BY_R4",
+    "R4_classification": "FORMAL_OBSTRUCTION",
+    "R4_only_kernel_rejected": true,
+    "R5_classification": "ADDITIONAL_OPERATIONAL_CONDITION",
+    "reduced_kernel": "R4 + R5"
+  },
+  "next_gate": "fre_projection_provenance_reduced_kernel_boundary_001",
+  "non_claims": {
+    "R4_R5_biconditional_refuted": false,
+    "R5_entails_R4": null,
+    "R5_unique_operational_realization": false,
+    "full_R4_R5_independence": false,
+    "kernel_logical_minimality_theorem": false
+  },
+  "source_receipts": {
+    "artifacts/json/fre_projection_provenance_invariant_001.json": "2afac9e984194d40068dc8c00ee9882630a01553a696e2edb3a8bb6b0078c108",
+    "artifacts/json/fre_projection_provenance_kernel_reduction_001.json": "69906eea83e5cc854a5b3f19663d6a4e50c31f2ae0e193784db3be058474e3b8",
+    "artifacts/json/fre_projection_provenance_r4_r5_independence_candidate_001.json": "11a5693821b0578b8474d2042f285be511bee28d23b565b263d033c07f958ace"
+  },
+  "status": "r4_not_r5_countermodel_admitted"
+}

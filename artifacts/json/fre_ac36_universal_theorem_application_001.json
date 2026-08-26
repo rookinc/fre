@@ -1,0 +1,125 @@
+{
+  "application": {
+    "carrier": "FRE_projection_provenance_registered_state_carrier",
+    "membership": "C_FRE in AC36",
+    "non_claim_gate": "N_AC36",
+    "predicate_family": "P_AC36",
+    "theorem": "U_AC36",
+    "translation_gate": "T_AC36"
+  },
+  "application_statement": "Because the FRE projection-provenance registered-state carrier is admitted in AC36 and the admitted AC36 schema, T_AC36, N_AC36, predicate semantics, and proof rule are satisfied by the receipted premises, U_AC36 applies to C_FRE and concludes the six P_AC36 predicates.",
+  "artifact_id": "fre_ac36_universal_theorem_application_001",
+  "audit_pass": true,
+  "boundary": {
+    "AC36_membership_reopened": false,
+    "bundle_claim": false,
+    "covering_space_claim": false,
+    "cryptographic_security_claim": false,
+    "fibre_group_claim": false,
+    "full_category_theorem": false,
+    "global_associativity": false,
+    "global_composition_closure": false,
+    "group_claim": false,
+    "new_theorem": false,
+    "new_universal_theorem": false,
+    "physical_claim": false,
+    "representation_claim": false,
+    "topology_claim": false,
+    "universal_morphism_theorem": false
+  },
+  "checks": {
+    "FRE_projection_provenance_invariant_preexists": true,
+    "N_AC36_admitted": true,
+    "N_AC36_symbol_exact": true,
+    "P_AC36_predicate_count_six": true,
+    "P_AC36_predicates_exact": true,
+    "P_AC36_semantics_admitted": true,
+    "T_AC36_admitted": true,
+    "T_AC36_symbol_exact": true,
+    "membership_carrier_exact": true,
+    "membership_did_not_use_U_AC36": true,
+    "membership_domain_exact": true,
+    "membership_flag_true": true,
+    "membership_not_assumed": true,
+    "membership_receipt_passed": true,
+    "membership_schema_receipted": true,
+    "membership_status_admitted": true,
+    "predicate_truth_not_used_for_membership": true,
+    "ten_field_receipt_passed": true,
+    "ten_fields_all_accounted": true,
+    "ten_fields_exact_count": true,
+    "universal_admission_final": true,
+    "universal_predicate_scope_exact": true,
+    "universal_proof_rule_admitted": true,
+    "universal_quantifier_domain_exact": true,
+    "universal_theorem_admitted": true,
+    "universal_theorem_scope_exact": true,
+    "universal_theorem_status_preserved": true,
+    "universal_theorem_symbol_exact": true
+  },
+  "independent_FRE_invariant": {
+    "artifact": "artifacts/json/fre_projection_provenance_invariant_001.json",
+    "reproved_by_U_AC36": false,
+    "statement": "A lossy public projection cannot substitute for registered provenance when FRE decides congruence.",
+    "status": "projection_provenance_invariant_established",
+    "used_as_replacement_for_P_AC36": false
+  },
+  "keeper_line": "The carrier entered AC36 by receipts. U_AC36 now speaks only because membership was already earned.",
+  "next_gate": "fre_ac36_projection_provenance_theorem_alignment_001",
+  "non_circularity": {
+    "FRE_invariant_preexists_theorem_application": true,
+    "U_AC36_used_to_establish_AC36_membership": false,
+    "membership_receipt_preexists_theorem_application": true,
+    "predicate_conclusion_used_as_application_premise": false
+  },
+  "predicate_conclusions": [
+    {
+      "carrier": "FRE_projection_provenance_registered_state_carrier",
+      "concluded_by": "U_AC36",
+      "predicate": "triad_carries_action",
+      "value": true
+    },
+    {
+      "carrier": "FRE_projection_provenance_registered_state_carrier",
+      "concluded_by": "U_AC36",
+      "predicate": "diad_tests_closure",
+      "value": true
+    },
+    {
+      "carrier": "FRE_projection_provenance_registered_state_carrier",
+      "concluded_by": "U_AC36",
+      "predicate": "boundary_decides_survival",
+      "value": true
+    },
+    {
+      "carrier": "FRE_projection_provenance_registered_state_carrier",
+      "concluded_by": "U_AC36",
+      "predicate": "same_boundary_closure",
+      "value": true
+    },
+    {
+      "carrier": "FRE_projection_provenance_registered_state_carrier",
+      "concluded_by": "U_AC36",
+      "predicate": "surviving_boundary_preservation",
+      "value": true
+    },
+    {
+      "carrier": "FRE_projection_provenance_registered_state_carrier",
+      "concluded_by": "U_AC36",
+      "predicate": "non_claims_survive_translation",
+      "value": true
+    }
+  ],
+  "source_receipts": {
+    "/data/data/com.termux/files/home/dev/cori/research/mathematics/36-admissible-action-theory/artifacts/json/project36_status_after_universal_theorem_admission_001.json": "a5987edf64b127551351e797d755fe5598ae696e7b1dac813ad4efc98c81a1fa",
+    "/data/data/com.termux/files/home/dev/cori/research/mathematics/36-admissible-action-theory/artifacts/json/project36_u4_translation_preservation_boundary_001.json": "e72f6747ab7886ad06b0c1df6caf4d499b61e1bb512085cf8671cd809c950c7f",
+    "/data/data/com.termux/files/home/dev/cori/research/mathematics/36-admissible-action-theory/artifacts/json/project36_u5_non_claim_closure_boundary_001.json": "96b51a4582d6b7639d271511e8e2b728cf7b7d1d35fa5fc36f08e9f0e2975f8c",
+    "/data/data/com.termux/files/home/dev/cori/research/mathematics/36-admissible-action-theory/artifacts/json/project36_u7_formal_predicate_semantics_boundary_001.json": "a5300c8287d0585aa25d10b27e4ca38e76f352d5a6a0daf71ba04f1be63c78be",
+    "/data/data/com.termux/files/home/dev/cori/research/mathematics/36-admissible-action-theory/artifacts/json/project36_universal_theorem_admission_boundary_001_repair.json": "8a9fcf99aed212b66be17229b0023f4ada91be8d24d45aa06ae6a49dd75d760a",
+    "artifacts/json/fre_ac36_membership_admission_001.json": "4aadab38c3989185ccb84e0d2befb5086d04326b1169add16474ecb0d017b803",
+    "artifacts/json/fre_ac36_ten_field_adjudication_001.json": "5598ef625413a1116910d2d6e5aaf313bb21a90376761e84c2166b2e9b3c4f6e",
+    "artifacts/json/fre_projection_provenance_invariant_001.json": "2afac9e984194d40068dc8c00ee9882630a01553a696e2edb3a8bb6b0078c108"
+  },
+  "status": "fre_ac36_universal_theorem_applied",
+  "theorem_statement": "For every carrier C in AC36, if C satisfies the AC36 schema and its T_AC36 and N_AC36 gates are preserved under admissible construction and translation, then the six P_AC36 invariant predicates hold on C."
+}

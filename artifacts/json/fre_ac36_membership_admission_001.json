@@ -1,0 +1,56 @@
+{
+  "AC36_membership_admitted": true,
+  "artifact_id": "fre_ac36_membership_admission_001",
+  "audit_pass": true,
+  "boundary": {
+    "P_AC36_concluded": false,
+    "U_AC36_applied": false,
+    "cryptographic_security_claim": false,
+    "full_category_theorem": false,
+    "global_associativity": false,
+    "global_composition_closure": false,
+    "group_claim": false,
+    "new_theorem": false,
+    "physical_claim": false,
+    "representation_claim": false,
+    "topology_claim": false,
+    "universal_morphism_theorem": false
+  },
+  "carrier": "FRE_projection_provenance_registered_state_carrier",
+  "checks": {
+    "all_candidate_checks_present": true,
+    "all_candidate_checks_true": true,
+    "candidate_carrier_exact": true,
+    "candidate_did_not_apply_U_AC36": true,
+    "candidate_did_not_pre_admit_membership": true,
+    "candidate_domain_AC36": true,
+    "candidate_membership_not_assumed": true,
+    "candidate_not_resemblance_based": true,
+    "candidate_passed": true,
+    "candidate_pre_membership_receipts_only": true,
+    "candidate_predicate_truth_not_premise": true,
+    "candidate_status_passed": true,
+    "ten_field_U_AC36_not_used": true,
+    "ten_field_artifact_passed": true,
+    "ten_field_count_exact": true,
+    "ten_field_membership_not_assumed": true,
+    "ten_field_no_missing": true,
+    "ten_field_no_unresolved": true,
+    "ten_fields_accounted_pre_membership": true
+  },
+  "domain": "AC36",
+  "keeper_line": "The carrier has entered the domain; the universal theorem has not yet spoken.",
+  "membership_statement": "The FRE projection-provenance registered-state carrier is admitted as a member of AC36.",
+  "next_gate": "fre_ac36_universal_theorem_application_001",
+  "non_circularity": {
+    "U_AC36_used_to_establish_membership": false,
+    "membership_assumed": false,
+    "membership_based_on_schema_and_boundary_receipts": true,
+    "predicate_truth_used_to_establish_membership": false
+  },
+  "source_receipts": {
+    "artifacts/json/fre_ac36_membership_candidate_001.json": "5e211398ecceba1bcc1422a71d82ca0dcd993c534c0f4bf5553cf8615a1778c0",
+    "artifacts/json/fre_ac36_ten_field_adjudication_001.json": "5598ef625413a1116910d2d6e5aaf313bb21a90376761e84c2166b2e9b3c4f6e"
+  },
+  "status": "fre_ac36_membership_admitted"
+}

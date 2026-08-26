@@ -1,0 +1,47 @@
+{
+  "R4": "exists x,x' with pi(x)=pi(x') and not(x ~_FRE x')",
+  "R5": "provenance discarded by pi is operationally relevant to FRE",
+  "artifact_id": "fre_projection_provenance_r4_r5_independence_candidate_001",
+  "audit_pass": true,
+  "boundary": {
+    "AC36_reopened": false,
+    "U_AC36_reopened": false,
+    "category_claim": false,
+    "congruence_redefined": false,
+    "countermodel_candidate_only": true,
+    "full_independence_theorem": false,
+    "group_claim": false,
+    "kernel_minimality_theorem": false,
+    "new_FRE_semantics": false,
+    "physical_claim": false,
+    "security_claim": false,
+    "topology_claim": false
+  },
+  "candidate_conclusion": {
+    "R4_R5_full_logical_independence": false,
+    "R4_entails_R5": false,
+    "R5_entails_R4": null,
+    "R5_is_additional_operational_condition": true
+  },
+  "countermodel_R4_not_R5": {
+    "FRE_congruence": {
+      "a~b": false
+    },
+    "operational_outcome": {
+      "O(a)": "accept",
+      "O(b)": "accept"
+    },
+    "projection": {
+      "pi(a)": "y",
+      "pi(b)": "y"
+    },
+    "registered_states": [
+      "a",
+      "b"
+    ]
+  },
+  "interpretation": "The formal projection-congruence obstruction can be modeled without an operational outcome difference unless FRE congruence is separately defined to encode that outcome. No such definition was found in the committed provenance.",
+  "keeper_line": "Non-congruence can mark a distinction without yet saying that the distinction changes an outcome.",
+  "next_gate": "fre_projection_provenance_r4_not_r5_countermodel_admission_001",
+  "status": "r4_does_not_entail_r5_candidate"
+}

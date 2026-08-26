@@ -1,0 +1,66 @@
+{
+  "artifact_id": "fre_ac36_membership_candidate_001",
+  "audit_pass": true,
+  "boundary": {
+    "AC36_membership_admitted": false,
+    "U_AC36_applied": false,
+    "cryptographic_security_claim": false,
+    "full_category_theorem": false,
+    "global_associativity": false,
+    "global_composition_closure": false,
+    "group_claim": false,
+    "new_theorem": false,
+    "physical_claim": false,
+    "representation_claim": false,
+    "six_P_AC36_predicates_concluded_for_FRE": false,
+    "topology_claim": false,
+    "universal_morphism_theorem": false
+  },
+  "candidate_carrier": "FRE_projection_provenance_registered_state_carrier",
+  "checks": {
+    "AC36_domain_schema_ok": true,
+    "AC36_domain_surface_valid": true,
+    "FRE_invariant_preexists_membership_test": true,
+    "N_AC36_exists_independently": true,
+    "T_AC36_exists_independently": true,
+    "declared_translation_boundary": true,
+    "explicit_non_claim_boundary_set": true,
+    "finite_or_finitely_receipted_witness_surface": true,
+    "membership_test_non_circular": true,
+    "predicate_semantics_schema_backed": true,
+    "scanable_preservation_relation": true,
+    "six_predicates_have_declared_semantics": true,
+    "ten_fields_accounted": true
+  },
+  "domain": "AC36",
+  "field_classifications": {
+    "declared_boundary_receipt_role": "PRESENT_TRANSLATABLE",
+    "declared_diad_closure_role": "PRESENT_TRANSLATABLE",
+    "declared_same_boundary_closure_test": "PRESENT_TRANSLATABLE",
+    "declared_surviving_boundary_set": "PRESENT_TRANSLATABLE",
+    "declared_triad_action_role": "PRESENT_TRANSLATABLE",
+    "explicit_non_claim_boundary_set": "PRESENT_EXACT",
+    "finite_receipt_surface": "PRESENT_EXACT",
+    "morphism_or_translation_boundary": "PRESENT_EXACT",
+    "no_hidden_escalation": "PRESENT_EXACT",
+    "scanable_preservation_relation": "PRESENT_EXACT"
+  },
+  "keeper_line": "Membership must be earned before the universal theorem may speak.",
+  "membership_basis": {
+    "AC36_domain_definition": "/data/data/com.termux/files/home/dev/cori/research/mathematics/36-admissible-action-theory/artifacts/json/project36_universal_carrier_domain_candidate_001.json",
+    "AC36_domain_surface_scan": "/data/data/com.termux/files/home/dev/cori/research/mathematics/36-admissible-action-theory/artifacts/json/project36_universal_carrier_domain_surface_scan_001.json",
+    "non_claim_closure_law": "/data/data/com.termux/files/home/dev/cori/research/mathematics/36-admissible-action-theory/artifacts/json/project36_u5_non_claim_closure_boundary_001.json",
+    "predicate_semantics": "/data/data/com.termux/files/home/dev/cori/research/mathematics/36-admissible-action-theory/artifacts/json/project36_u7_formal_predicate_semantics_boundary_001.json",
+    "ten_field_adjudication": "artifacts/json/fre_ac36_ten_field_adjudication_001.json",
+    "translation_law": "/data/data/com.termux/files/home/dev/cori/research/mathematics/36-admissible-action-theory/artifacts/json/project36_u4_translation_preservation_boundary_001.json"
+  },
+  "next_gate": "fre_ac36_membership_admission_001",
+  "non_circularity": {
+    "U_AC36_used": false,
+    "membership_assumed": false,
+    "membership_inferred_from_resemblance": false,
+    "pre_membership_receipts_only": true,
+    "predicate_truth_used_as_membership_premise": false
+  },
+  "status": "fre_ac36_membership_candidate_passed"
+}

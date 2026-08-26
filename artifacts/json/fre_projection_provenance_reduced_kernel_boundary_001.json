@@ -1,0 +1,87 @@
+{
+  "artifact_id": "fre_projection_provenance_reduced_kernel_boundary_001",
+  "audit_pass": true,
+  "boundary": {
+    "AC36_membership_reopened": false,
+    "U_AC36_application_reopened": false,
+    "bundle_claim": false,
+    "covering_space_claim": false,
+    "cryptographic_security_claim": false,
+    "fibre_group_claim": false,
+    "full_category_theorem": false,
+    "global_associativity": false,
+    "global_composition_closure": false,
+    "group_claim": false,
+    "new_universal_theorem": false,
+    "physical_claim": false,
+    "representation_claim": false,
+    "topology_claim": false,
+    "universal_morphism_theorem": false
+  },
+  "checks": {
+    "R2_declarative": true,
+    "R3_entailed_by_R4": true,
+    "R4_does_not_entail_R5": true,
+    "R4_formal_obstruction": true,
+    "R4_only_rejected": true,
+    "R4_true_in_countermodel": true,
+    "R5_additional_operational_condition": true,
+    "R5_false_in_countermodel": true,
+    "countermodel_admission_pass": true,
+    "countermodel_status_admitted": true,
+    "formal_statement_preserved": true,
+    "invariant_pass": true,
+    "kernel_reduction_pass": true,
+    "reduced_kernel_exact": true
+  },
+  "earned_statement": "The committed FRE projection-provenance invariant reduces to a formal projection-congruence obstruction R4 together with an additional operational-relevance condition R5.",
+  "interpretation": {
+    "R4": "R4 says the public projection forgot a registered distinction.",
+    "R5": "R5 says that the forgotten distinction matters to FRE.",
+    "combined": "FRE projection-provenance requires both a distinction hidden by the public projection and receipt-backed evidence that the hidden distinction remains operationally relevant."
+  },
+  "keeper_line": "R4 says the projection forgot a distinction. R5 says the distinction still matters.",
+  "logical_status": {
+    "R4_entails_R3": true,
+    "R4_entails_R5": false,
+    "R4_only_sufficient_for_formal_obstruction": true,
+    "R4_only_sufficient_for_operational_invariant": false,
+    "R4_plus_R5_is_current_reduced_protocol_kernel": true,
+    "R5_entails_R4": null
+  },
+  "next_gate": "fre_projection_provenance_kernel_to_fre_architecture_001",
+  "non_claims": {
+    "R4_R5_equivalence": false,
+    "R5_entails_R4_decided": false,
+    "R5_unique_realization": false,
+    "full_R4_R5_independence": false,
+    "kernel_minimality_theorem": false,
+    "universal_FRE_theorem": false
+  },
+  "reduced_kernel": {
+    "declarative_infrastructure": {
+      "R2": "explicit lossy projection pi: X -> Y"
+    },
+    "entailed_condition": {
+      "R3": "noninjectivity on the witnessed registered-state set",
+      "entailed_by": "R4"
+    },
+    "formal_obstruction": {
+      "meaning": "Public projection equality does not determine registered FRE congruence.",
+      "statement": "exists x,x' in X such that pi(x)=pi(x') and not(x ~_FRE x')",
+      "symbol": "R4"
+    },
+    "kernel": "R4 + R5",
+    "operational_condition": {
+      "meaning": "The registered distinction forgotten by the public projection changes an FRE-relevant outcome.",
+      "statement": "Provenance discarded by pi is operationally relevant to FRE.",
+      "symbol": "R5"
+    }
+  },
+  "source_receipts": {
+    "artifacts/json/fre_projection_provenance_invariant_001.json": "2afac9e984194d40068dc8c00ee9882630a01553a696e2edb3a8bb6b0078c108",
+    "artifacts/json/fre_projection_provenance_kernel_reduction_001.json": "69906eea83e5cc854a5b3f19663d6a4e50c31f2ae0e193784db3be058474e3b8",
+    "artifacts/json/fre_projection_provenance_r4_not_r5_countermodel_admission_001.json": "7eff3fa5d08b8845f8526d57cf0b77e3861c5ba55540c6ea67df7c91a0321eb3"
+  },
+  "status": "projection_provenance_reduced_kernel_boundary_recorded"
+}

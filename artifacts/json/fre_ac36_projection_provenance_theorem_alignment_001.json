@@ -1,0 +1,121 @@
+{
+  "alignment": [
+    {
+      "classification": "STRUCTURAL_SUPPORT",
+      "field_classification": "PRESENT_TRANSLATABLE",
+      "field_reason": "Committed operation edges explicitly instantiate source-action-target triples.",
+      "field_source": "/data/data/com.termux/files/home/dev/cori/research/computing/aletheos/adapters/openfhe/receipts/thalean/openfhe_operation_graph_export_001.json",
+      "predicate": "triad_carries_action",
+      "reason": "Committed source-action-target operation edges provide the action-bearing carrier on which projection-provenance is registered, but those edges are not themselves the projection-provenance witness.",
+      "schema_field": "declared_triad_action_role"
+    },
+    {
+      "classification": "DIRECT_WITNESS",
+      "field_classification": "PRESENT_TRANSLATABLE",
+      "field_reason": "The positive return and same-endpoint negative controls form a finite two-sided closure test.",
+      "field_source": "/data/data/com.termux/files/home/dev/cori/protocols/fre/artifacts/json/fre_g900_endpoint_projection_fibre_witness_001.json",
+      "predicate": "diad_tests_closure",
+      "reason": "The positive return and same-endpoint negative controls directly compare closure/congruence outcomes while public endpoint equality is insufficient.",
+      "schema_field": "declared_diad_closure_role"
+    },
+    {
+      "classification": "DIRECT_WITNESS",
+      "field_classification": "PRESENT_TRANSLATABLE",
+      "field_reason": "Receipt state operationally decides validation/refusal at the declared boundary.",
+      "field_source": "/data/data/com.termux/files/home/dev/cori/protocols/fre/artifacts/json/fre_openfhe_endpoint_projection_conformance_witness_001.json",
+      "predicate": "boundary_decides_survival",
+      "reason": "Committed receipt and binding state directly changes validation or refusal at the declared public boundary.",
+      "schema_field": "declared_boundary_receipt_role"
+    },
+    {
+      "classification": "DIRECT_WITNESS",
+      "field_classification": "PRESENT_TRANSLATABLE",
+      "field_reason": "The same endpoint boundary is held fixed while receipt provenance changes the congruence result.",
+      "field_source": "/data/data/com.termux/files/home/dev/cori/protocols/fre/artifacts/json/fre_g900_endpoint_projection_fibre_witness_001.json",
+      "predicate": "same_boundary_closure",
+      "reason": "The witness holds the public endpoint boundary fixed while registered provenance changes the congruence result.",
+      "schema_field": "declared_same_boundary_closure_test"
+    },
+    {
+      "classification": "DIRECT_WITNESS",
+      "field_classification": "PRESENT_TRANSLATABLE",
+      "field_reason": "The committed invariant explicitly identifies provenance that survives public projection and remains operational.",
+      "field_source": "/data/data/com.termux/files/home/dev/cori/protocols/fre/artifacts/json/fre_projection_provenance_invariant_001.json",
+      "predicate": "surviving_boundary_preservation",
+      "reason": "The invariant itself identifies retained provenance that survives public projection and remains operationally relevant to FRE.",
+      "schema_field": "declared_surviving_boundary_set"
+    },
+    {
+      "classification": "BOUNDARY_PRESERVATION",
+      "field_classification": "PRESENT_EXACT",
+      "field_reason": "The FRE invariant explicitly records forbidden promotions and false claim boundaries.",
+      "field_source": "/data/data/com.termux/files/home/dev/cori/protocols/fre/artifacts/json/fre_projection_provenance_invariant_001.json",
+      "predicate": "non_claims_survive_translation",
+      "reason": "The explicit non-claim boundary prevents the cross-instance G900/OpenFHE formulation from escalating into equivalence, group, topology, security, physics, or universal FRE claims.",
+      "schema_field": "explicit_non_claim_boundary_set"
+    }
+  ],
+  "artifact_id": "fre_ac36_projection_provenance_theorem_alignment_001",
+  "audit_pass": true,
+  "boundary": {
+    "bundle_claim": false,
+    "covering_space_claim": false,
+    "cryptographic_security_claim": false,
+    "fibre_group_claim": false,
+    "full_category_theorem": false,
+    "global_associativity": false,
+    "global_composition_closure": false,
+    "group_claim": false,
+    "new_theorem": false,
+    "new_universal_theorem": false,
+    "physical_claim": false,
+    "representation_claim": false,
+    "topology_claim": false,
+    "universal_morphism_theorem": false
+  },
+  "carrier": "FRE_projection_provenance_registered_state_carrier",
+  "checks": {
+    "FRE_invariant_preexists": true,
+    "U_AC36_application_passed": true,
+    "alignment_predicates_exact": true,
+    "alignment_row_count_six": true,
+    "all_alignment_fields_receipted": true,
+    "all_six_P_AC36_concluded": true,
+    "application_carrier_exact": true,
+    "boundary_preservation_count_one": true,
+    "direct_witness_count_four": true,
+    "membership_admitted": true,
+    "structural_support_count_one": true
+  },
+  "classification_counts": {
+    "BOUNDARY_PRESERVATION": 1,
+    "COEXISTING": 0,
+    "DIRECT_WITNESS": 4,
+    "STRUCTURAL_SUPPORT": 1,
+    "UNRESOLVED": 0
+  },
+  "earned_statement": "On the admitted FRE AC36 carrier, the independently established projection-provenance invariant has a receipt-level AC36 predicate anatomy consisting of four direct-witness predicates, one structural-support predicate, and one boundary-preservation predicate.",
+  "independent_invariant": {
+    "formal_statement": "exists x,x' with pi(x)=pi(x') and not(x ~_FRE x')",
+    "name": "FRE projection-provenance invariant",
+    "reproved_by_U_AC36": false,
+    "statement": "A lossy public projection cannot substitute for registered provenance when FRE decides congruence."
+  },
+  "keeper_line": "The theorem supplies the predicate family; the receipts reveal its anatomy.",
+  "next_gate": "fre_projection_provenance_direct_witness_minimality_001",
+  "non_implications": {
+    "P_AC36_equivalent_to_projection_provenance": false,
+    "U_AC36_proves_projection_provenance": false,
+    "all_P_AC36_imply_projection_provenance": false,
+    "individual_predicate_necessity_claim": false,
+    "individual_predicate_sufficiency_claim": false,
+    "projection_provenance_implies_all_P_AC36": false
+  },
+  "source_receipts": {
+    "artifacts/json/fre_ac36_membership_admission_001.json": "4aadab38c3989185ccb84e0d2befb5086d04326b1169add16474ecb0d017b803",
+    "artifacts/json/fre_ac36_ten_field_adjudication_001.json": "5598ef625413a1116910d2d6e5aaf313bb21a90376761e84c2166b2e9b3c4f6e",
+    "artifacts/json/fre_ac36_universal_theorem_application_001.json": "f24a46f27f08a5c4b98c085ec90795ee108d8c597a0a4c023510a1c47672efa0",
+    "artifacts/json/fre_projection_provenance_invariant_001.json": "2afac9e984194d40068dc8c00ee9882630a01553a696e2edb3a8bb6b0078c108"
+  },
+  "status": "projection_provenance_predicate_anatomy_established"
+}

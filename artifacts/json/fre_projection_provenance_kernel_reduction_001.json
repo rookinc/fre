@@ -1,0 +1,72 @@
+{
+  "artifact_id": "fre_projection_provenance_kernel_reduction_001",
+  "audit_pass": true,
+  "boundary": {
+    "AC36_membership_reopened": false,
+    "U_AC36_application_reopened": false,
+    "category_claim": false,
+    "cryptographic_security_claim": false,
+    "group_claim": false,
+    "new_theorem": false,
+    "physical_claim": false,
+    "topology_claim": false
+  },
+  "drop_one_consistency": {
+    "boundary_decides_drop_preserves_R5": true,
+    "diad_drop_preserves_current_formal_kernel": true,
+    "same_boundary_drop_breaks_current_formal_kernel": true,
+    "surviving_boundary_drop_preserves_R5": true
+  },
+  "formal_kernel": {
+    "checks": {
+      "K1_projection_declared": true,
+      "K2_projection_noninjective": true,
+      "K3_projection_equality_not_congruence": true
+    },
+    "formal_statement": "exists x,x' in X such that pi(x)=pi(x') and not(x ~_FRE x')",
+    "requirements": [
+      "R2_explicit_lossy_projection",
+      "R3_noninjective_on_witnessed_registered_states",
+      "R4_projection_equality_not_FRE_congruence"
+    ]
+  },
+  "interpretation": {
+    "combined": "The formal kernel establishes the distinction; the operational extension establishes that the distinction matters to FRE.",
+    "formal_layer": "R2-R4 establish that public projection equality does not determine registered FRE congruence.",
+    "operational_layer": "R5 establishes that the discarded registered distinction changes an FRE-relevant outcome."
+  },
+  "keeper_line": "R2-R4 make the distinction. R5 makes the distinction matter.",
+  "next_gate": "fre_projection_provenance_kernel_independence_scout_001",
+  "non_claims": {
+    "R5_unique_realization": false,
+    "logical_minimality_theorem": false,
+    "predicate_equivalence_theorem": false,
+    "predicate_necessity_theorem": false,
+    "predicate_sufficiency_theorem": false,
+    "same_boundary_closure_universally_necessary": false
+  },
+  "operational_extension": {
+    "G900_receipts": {
+      "rejection_depends_on_nonendpoint_information": true,
+      "retained_registered_distinction": true
+    },
+    "OpenFHE_receipts": {
+      "binding_mismatch_refused": true,
+      "binding_requires_parent_provenance": true,
+      "positive_binding_verified": true,
+      "registered_provenance_distinguishes_fibre_members": true
+    },
+    "pass": true,
+    "requirement": "R5_discarded_provenance_is_operationally_relevant"
+  },
+  "reduced_anatomy": {
+    "alternative_operational_receipt_surfaces": [
+      "boundary_decides_survival",
+      "surviving_boundary_preservation"
+    ],
+    "current_receipt_anchor_for_R3_R4": "same_boundary_closure",
+    "formal_kernel": "R2 + R3 + R4",
+    "operational_extension": "R5"
+  },
+  "status": "projection_provenance_reduced_kernel_established"
+}
