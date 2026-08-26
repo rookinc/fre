@@ -1,0 +1,134 @@
+{
+  "architecture_roles": {
+    "X_registered_state": {
+      "G900": "registered G900 bounce state carrying endpoint plus retained phase, edge, slip, chamber-lock, receipt, and history information",
+      "OpenFHE": "registered public OpenFHE ciphertext-handle receipt state",
+      "classification": "MULTIPLE_REALIZATIONS"
+    },
+    "Y_public_projection": {
+      "G900": "G900 endpoint vertex",
+      "OpenFHE": "public payload-shape metadata",
+      "classification": "MULTIPLE_REALIZATIONS"
+    },
+    "hidden_registered_distinction": {
+      "G900": [
+        "phase",
+        "edge",
+        "slip",
+        "chamber_lock",
+        "receipt_history"
+      ],
+      "OpenFHE": [
+        "handle_identity",
+        "operation_digest",
+        "parent_handles",
+        "receipt_provenance"
+      ],
+      "classification": "MULTIPLE_REALIZATIONS"
+    },
+    "operational_relevance_R5": {
+      "G900": [
+        "validation",
+        "congruence",
+        "refusal"
+      ],
+      "OpenFHE": [
+        "binding",
+        "validation",
+        "congruence",
+        "refusal"
+      ],
+      "classification": "MULTIPLE_REALIZATIONS"
+    },
+    "pi_projection": {
+      "G900": "pi_vertex",
+      "OpenFHE": "pi_payload_shape",
+      "classification": "MULTIPLE_REALIZATIONS"
+    },
+    "private_body_role": {
+      "classification": "NOT_REQUIRED_BY_KERNEL",
+      "private_body_equals_X": false
+    },
+    "public_face_role": {
+      "classification": "PRESENT_TRANSLATABLE",
+      "public_face_equals_Y": false,
+      "role": "architectural public region containing projection-visible coordinates and registered public protocol state"
+    },
+    "receipt_role": {
+      "classification": "MULTIPLE_REALIZATIONS",
+      "identity_with_R5": false,
+      "roles": [
+        "registered provenance carrier",
+        "public bounded evidence",
+        "operational decision evidence"
+      ]
+    }
+  },
+  "architecture_statement": "The committed FRE R4+R5 projection-provenance kernel is realized across multiple bounded architectural surfaces. Registered state, public projection, retained provenance, and operational relevance are roles rather than globally identical FRE compartments.",
+  "artifact_id": "fre_projection_provenance_architecture_boundary_001",
+  "audit_pass": true,
+  "boundary": {
+    "AC36_membership_reopened": false,
+    "R4_R5_reduction_reopened": false,
+    "U_AC36_application_reopened": false,
+    "category_claim": false,
+    "cryptographic_security_claim": false,
+    "group_claim": false,
+    "new_FRE_primitive": false,
+    "new_theorem": false,
+    "physical_claim": false,
+    "representation_claim": false,
+    "topology_claim": false,
+    "unique_architecture_theorem": false
+  },
+  "checks": {
+    "g900_operational_effect_present": true,
+    "g900_pi_exact": true,
+    "g900_public_projection_declared": true,
+    "g900_registered_state_declared": true,
+    "g900_retained_provenance_present": true,
+    "g900_witness_pass": true,
+    "invariant_pass": true,
+    "openfhe_operational_effect_present": true,
+    "openfhe_pi_exact": true,
+    "openfhe_public_projection_declared": true,
+    "openfhe_registered_state_declared": true,
+    "openfhe_retained_provenance_present": true,
+    "openfhe_witness_pass": true,
+    "private_body_not_required": true,
+    "reduced_kernel_boundary_pass": true,
+    "reduced_kernel_exact": true
+  },
+  "keeper_line": "FRE partitions information by protocol role; projection-provenance tracks which distinctions survive that partition strongly enough to matter.",
+  "next_gate": "fre_projection_provenance_architecture_to_packet_lifecycle_001",
+  "non_identifications": {
+    "Private_Body_equals_X": false,
+    "Public_Face_equals_Y": false,
+    "R4_R5_uniquely_determine_FRE_architecture": false,
+    "Receipt_equals_R5": false
+  },
+  "reduced_kernel": "R4 + R5",
+  "separation_principle": {
+    "FRE_compartment_decomposition": [
+      "Private Body",
+      "Public Face",
+      "Receipt"
+    ],
+    "global_one_to_one_identification": false,
+    "projection_provenance_decomposition": [
+      "X",
+      "Y",
+      "pi",
+      "R4",
+      "R5"
+    ],
+    "statement": "The FRE compartment decomposition and the projection-provenance decomposition are distinct structural views of the protocol."
+  },
+  "source_receipts": {
+    "artifacts/json/fre_g900_endpoint_projection_fibre_witness_001.json": "08c889143cc84b4a3198b2bcd9a1c8e09aeabdacf705a2ee6ad26bd99a5a9dbb",
+    "artifacts/json/fre_openfhe_endpoint_projection_conformance_witness_001.json": "ec61974d5c6a44789b771f1e115b0283dbbc834fc78655daae85c0d47fff751e",
+    "artifacts/json/fre_projection_provenance_invariant_001.json": "2afac9e984194d40068dc8c00ee9882630a01553a696e2edb3a8bb6b0078c108",
+    "artifacts/json/fre_projection_provenance_reduced_kernel_boundary_001.json": "f64a107b4289cc99868453ea3166abbead629b7b8da63e2728b881edf35b9e3f"
+  },
+  "status": "projection_provenance_architecture_boundary_recorded"
+}
