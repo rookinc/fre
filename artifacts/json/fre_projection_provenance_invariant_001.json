@@ -1,0 +1,116 @@
+{
+  "artifact_id": "fre_projection_provenance_invariant_001",
+  "audit_pass": true,
+  "boundary": {
+    "G900_OpenFHE_equivalence_claim": false,
+    "bounded_protocol_invariant_only": true,
+    "cryptographic_security_claim": false,
+    "external_truth_claim": false,
+    "group_structure_claim": false,
+    "new_G900_execution": false,
+    "new_OpenFHE_execution": false,
+    "new_crypto": false,
+    "new_execution": false,
+    "observational_closure": false,
+    "physical_claim": false,
+    "private_body_read": false,
+    "topological_structure_claim": false,
+    "two_witness_instances_only": true,
+    "universal_FRE_theorem_claim": false
+  },
+  "earned_statements": [
+    "public projection equality does not imply registered protocol congruence",
+    "a public projection may be noninjective over operationally distinct registered states",
+    "registered provenance may remain FRE-relevant after public projection coordinates coincide",
+    "FRE congruence is not determined by the witnessed public projection alone",
+    "G900 and OpenFHE provide two bounded instances of the same projection-provenance schema"
+  ],
+  "forbidden_promotions": [
+    "G900_OpenFHE_equivalence",
+    "universal_FRE_theorem",
+    "group_action",
+    "group_representation",
+    "fibre_group",
+    "covering_space",
+    "topological_cover",
+    "bundle_structure",
+    "Paper_13_representation_theorem",
+    "cryptographic_security_theorem",
+    "physical_interpretation",
+    "observational_closure",
+    "external_truth"
+  ],
+  "formal_schema": {
+    "FRE_congruence_relation": "~_FRE",
+    "projection": "pi: X -> Y",
+    "public_projection_space": "Y",
+    "registered_state_space": "X",
+    "witness_form": "there exist x,x' in X such that pi(x)=pi(x') and not(x ~_FRE x')"
+  },
+  "instances": {
+    "G900": {
+      "operational_effect": [
+        "validation",
+        "congruence",
+        "refusal"
+      ],
+      "projection": "pi_vertex(s) = s.vertex",
+      "public_equality": "same endpoint vertex",
+      "retained_provenance": [
+        "phase",
+        "edge",
+        "slip",
+        "chamber_lock",
+        "receipt_history"
+      ]
+    },
+    "OpenFHE": {
+      "operational_effect": [
+        "binding",
+        "validation",
+        "congruence",
+        "refusal"
+      ],
+      "projection": "pi_payload_shape(h) = h.payload_shape",
+      "public_equality": "same payload shape",
+      "retained_provenance": [
+        "handle_identity",
+        "operation_digest",
+        "parent_handles",
+        "receipt_provenance"
+      ]
+    }
+  },
+  "invariant": {
+    "compact_statement": "public projection equality does not imply registered protocol congruence",
+    "formal_statement": "exists x,x' with pi(x)=pi(x') and not(x ~_FRE x')",
+    "interpretation": "Some distinctions inside a public projection fibre remain operationally relevant registered provenance.",
+    "name": "FRE projection-provenance invariant",
+    "protocol_statement": "A lossy public projection cannot substitute for registered provenance when FRE decides congruence."
+  },
+  "keeper_line": "Projection may forget provenance. FRE congruence may not.",
+  "next_gate": "fre_projection_fibre_structure_scout_001",
+  "requirements": {
+    "R1_both_source_witnesses_pass": true,
+    "R2_both_sources_define_explicit_lossy_projections": true,
+    "R3_both_projections_are_noninjective_on_witnessed_sets": true,
+    "R4_projection_equality_does_not_imply_FRE_congruence": true,
+    "R5_discarded_provenance_is_operationally_relevant": true,
+    "R6_no_new_execution_required": true,
+    "R7_no_physical_claim_imported": true,
+    "R8_no_G900_OpenFHE_equivalence_imported": true
+  },
+  "source_witnesses": {
+    "G900": {
+      "artifact": "artifacts/json/fre_g900_endpoint_projection_fibre_witness_001.json",
+      "artifact_id": "fre_g900_endpoint_projection_fibre_witness_001",
+      "sha256": "08c889143cc84b4a3198b2bcd9a1c8e09aeabdacf705a2ee6ad26bd99a5a9dbb"
+    },
+    "OpenFHE": {
+      "artifact": "artifacts/json/fre_openfhe_endpoint_projection_conformance_witness_001.json",
+      "artifact_id": "fre_openfhe_endpoint_projection_conformance_witness_001",
+      "sha256": "ec61974d5c6a44789b771f1e115b0283dbbc834fc78655daae85c0d47fff751e"
+    }
+  },
+  "status": "projection_provenance_invariant_established"
+}
